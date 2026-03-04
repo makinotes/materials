@@ -1,0 +1,2316 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人材料分享 — 持续更新的安装实录、学习笔记、精选资源">
+      
+      
+        <meta name="author" content="makino">
+      
+      
+        <link rel="canonical" href="https://makinote.cn/materials/ai-learning/2026-03-04_AI%E7%BC%96%E7%A8%8B-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/">
+      
+      
+        <link rel="prev" href="../2026-03-04_AI-Agent%E5%AE%9E%E8%B7%B5-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/">
+      
+      
+        <link rel="next" href="../2026-03-04_AI%E8%AE%A4%E7%9F%A5%E4%B8%8E%E8%B6%8B%E5%8A%BF-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>2026-03-04 AI 编程 - makino's materials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=system-ui,+-apple-system,+sans-serif:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"system-ui, -apple-system, sans-serif";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="makino&#39;s materials" class="md-header__button md-logo" aria-label="makino's materials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            makino's materials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2026-03-04 AI 编程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/makinotes/materials" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    makinotes/materials
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="makino&#39;s materials" class="md-nav__button md-logo" aria-label="makino's materials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    makino's materials
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/makinotes/materials" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    makinotes/materials
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../openclaw/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenClaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openclaw/2026-03-04_OpenClaw-VPS%E9%83%A8%E7%BD%B2%E5%AE%9E%E5%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 VPS 部署实录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openclaw/2026-03-04_OpenClaw%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 优质文章清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 学习笔记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI 学习笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_Context-Engineering%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 Context Engineering
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--['进行中', '已发布', 'archived']"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI-Agent%E5%AE%9E%E8%B7%B5-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI Agent 实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 编程
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-google-api-keys-werent-secrets-but-then-gemini-changed-the-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Google API Keys Weren't Secrets. But then Gemini Changed the Rules.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 脑细胞组成的计算机跑起了《毁灭战士》！20万活体神经元实时学习开枪杀敌，代码全部开源
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-claude-code-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Claude Code 之父分享 10 大使用技巧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clipdeepseek-ocr-2llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 告别CLIP！DeepSeek-OCR-2开源：首创视觉因果流，用LLM重构视觉编码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-3000ainvidiagpu50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 初创用3000万美元造一颗不可编程的AI芯片，推理速度却是Nvidia最强GPU的50倍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gif-optimization-tool-using-webassembly-and-gifsicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. GIF optimization tool using WebAssembly and Gifsicle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-githubtop-3ultrarag-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. GitHub热榜Top 3！UltraRAG 3.0开源：拒绝盲盒，让推理逻辑像素级可视
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-scaleup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 谈谈基于ScaleUP的存储扩展和三网融合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-macbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 黑客挖出苹果隐藏硬件！你的MacBook里有加速计/陀螺仪，摔没摔过售后都知道
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-mindcodeno58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 为什么有些人看起来毫不费力却成就很大？｜MindCode周报No.58
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-12-claude-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 我收集了 12 条技术社区疯传的 Claude Prompt，如今这篇帖子火遍全网
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cloudflare-code-orange-fail-small" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 多次全球性中断后，Cloudflare 推出了“Code Orange: Fail Small”韧性计划
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-directory-snapshots-resumable-project-state-for-sandboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Directory Snapshots: Resumable project state for Sandboxes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-quoting-claudecomimport-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Quoting claude.com/import-memory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Claude Code 新功能：手机远程控制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-build-hour-prompt-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Build Hour: Prompt Caching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-ai-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. 用 AI 后，我效率翻 3 倍，人却更疲惫，别再掉进这个陷阱了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-cursor-chatcut-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 视频剪辑的「Cursor 时刻」来了？｜对谈 ChatCut 创始人李凯文：从金马导演到 AI 创业
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. 对话赵君：每周工作5小时，实现自动盈利，独立开发者“不内卷”出海心法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-bitter-lessons-in-venture-vs-growth-anthropic-vs-openai-noam-shazeer-world-labs-thinking-machines-cursor-asic-economics-martin-casado-sarah-wang-of-a16z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Bitter Lessons in Venture vs Growth: Anthropic vs OpenAI, Noam Shazeer, World Labs, Thinking Machines, Cursor, ASIC Economics — Martin Casado &amp; Sarah Wang of a16z
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-deepmind-anthropic-agi-vital-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. DeepMind &amp; Anthropic：当 AGI 来临后｜Vital Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-ai2500gpt-5253gpt-4o27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. 所有AI全军覆没！近千名学者出2500道题，GPT-5得分25.3%，GPT-4o只有2.7%
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-llm-eccvrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. 范式跃迁：LLM + EC重构算法设计范式，华为&amp;港城大夺冠CVRP国际顶级赛事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-ai-kimi-k25-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24. 告别 AI 土味审美！Kimi K2.5 实测：扔个视频复刻 iOS 级丝滑动效
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        25. 未来两年软件工程展望：从写代码到管 AI，程序员正分化成两种职业
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26. 独家专访千寻创始人：20 亿新融资、具身模型淘汰赛、落地非共识
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        27. Head of Claude Code: What happens after coding is solved | Boris Cherny
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-codex-claude-code-5-openal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28. 前 Codex 大神倒戈实锤！吹爆 Claude Code：编程提速 5 倍，点破 OpenAl 死穴在上下文
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-mindcodeno62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29. 为什么越聪明的人，越容易在技术革命里亏钱? ｜MindCode周报No.62
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        30. “最怕”AI失控的人，放弃了？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        31. “钱袋子”起火了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        32. 是的，美国和伊朗的冲突让全世界的AI中断了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-bigquery-sql-17-ai-3800-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33. BigQuery 新功能：SQL 直调 17 万 + AI 模型，3800 万行数据处理成本仅 2 美元
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-free-claude-max-for-large-project-open-source-maintainers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        34. Free Claude Max for (large project) open source maintainers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-cloudflare-matrix-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        35. Cloudflare 的 Matrix 家庭服务器演示引发了关于 AI 生成代码的争论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-prompt-mindcode-no60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        36. 佛祖也写免责声明？和你的prompt有什么关系 ｜MindCode周报 No.60
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-robotaxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        37. 曹操出行：跨越商业化迷雾， Robotaxi 不只是给车装上 “脑子”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-linkedin-kafka-xds-zookeeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        38. LinkedIn 重构服务发现：在大规模环境中用 Kafka 和 xDS 取代 Zookeeper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-310-claude-ibm-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        39. 一夜蒸发 310 亿美元！Claude 新工具干翻 IBM 摇钱树，AI 正在「清零」人类工位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40-300karpathyopenclaw500" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        40. 300万人围观，Karpathy怒喷OpenClaw。然后推荐了一个500行的替代品。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        41. AI看不懂的色盲测试背后，藏着一场像素与诗意的战争。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-ainews-the-unreasonable-effectiveness-of-closing-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        42. [AINews] The Unreasonable Effectiveness of Closing the Loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-i-vibe-coded-my-dream-macos-presentation-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        43. I vibe coded my dream macOS presentation app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-hoard-things-you-know-how-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        44. Hoard things you know how to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-how-to-kill-the-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        45. How to Kill the Code Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-the-warning-signs-your-ai-vendor-is-becoming-your-cage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        46. The warning signs your AI vendor is becoming your cage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-k25-kimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        47. K2.5，是 Kimi 的一个分水岭
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        48. 最适合非编程人士的Openclaw部署方式。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        49. 让机器人替你回微信？他让机器人学会看屏操作，不插数据线就能像人一样戳手机
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-mit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        50. 大模型黑箱被撬开：MIT华人博士联创，造出能追溯思考过程的大模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI%E8%AE%A4%E7%9F%A5%E4%B8%8E%E8%B6%8B%E5%8A%BF-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 认知与趋势
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI%E5%AD%A6%E6%9C%AF%E4%B8%8E%E5%89%8D%E6%B2%BF-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 学术与前沿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI%E5%A4%9A%E6%A8%A1%E6%80%81-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 多模态
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-google-api-keys-werent-secrets-but-then-gemini-changed-the-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Google API Keys Weren't Secrets. But then Gemini Changed the Rules.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 脑细胞组成的计算机跑起了《毁灭战士》！20万活体神经元实时学习开枪杀敌，代码全部开源
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-claude-code-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Claude Code 之父分享 10 大使用技巧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clipdeepseek-ocr-2llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 告别CLIP！DeepSeek-OCR-2开源：首创视觉因果流，用LLM重构视觉编码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-3000ainvidiagpu50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 初创用3000万美元造一颗不可编程的AI芯片，推理速度却是Nvidia最强GPU的50倍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gif-optimization-tool-using-webassembly-and-gifsicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. GIF optimization tool using WebAssembly and Gifsicle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-githubtop-3ultrarag-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. GitHub热榜Top 3！UltraRAG 3.0开源：拒绝盲盒，让推理逻辑像素级可视
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-scaleup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 谈谈基于ScaleUP的存储扩展和三网融合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-macbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 黑客挖出苹果隐藏硬件！你的MacBook里有加速计/陀螺仪，摔没摔过售后都知道
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-mindcodeno58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 为什么有些人看起来毫不费力却成就很大？｜MindCode周报No.58
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-12-claude-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 我收集了 12 条技术社区疯传的 Claude Prompt，如今这篇帖子火遍全网
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cloudflare-code-orange-fail-small" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 多次全球性中断后，Cloudflare 推出了“Code Orange: Fail Small”韧性计划
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-directory-snapshots-resumable-project-state-for-sandboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Directory Snapshots: Resumable project state for Sandboxes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-quoting-claudecomimport-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Quoting claude.com/import-memory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Claude Code 新功能：手机远程控制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-build-hour-prompt-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Build Hour: Prompt Caching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-ai-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. 用 AI 后，我效率翻 3 倍，人却更疲惫，别再掉进这个陷阱了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-cursor-chatcut-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 视频剪辑的「Cursor 时刻」来了？｜对谈 ChatCut 创始人李凯文：从金马导演到 AI 创业
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. 对话赵君：每周工作5小时，实现自动盈利，独立开发者“不内卷”出海心法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-bitter-lessons-in-venture-vs-growth-anthropic-vs-openai-noam-shazeer-world-labs-thinking-machines-cursor-asic-economics-martin-casado-sarah-wang-of-a16z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Bitter Lessons in Venture vs Growth: Anthropic vs OpenAI, Noam Shazeer, World Labs, Thinking Machines, Cursor, ASIC Economics — Martin Casado &amp; Sarah Wang of a16z
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-deepmind-anthropic-agi-vital-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. DeepMind &amp; Anthropic：当 AGI 来临后｜Vital Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-ai2500gpt-5253gpt-4o27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. 所有AI全军覆没！近千名学者出2500道题，GPT-5得分25.3%，GPT-4o只有2.7%
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-llm-eccvrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. 范式跃迁：LLM + EC重构算法设计范式，华为&amp;港城大夺冠CVRP国际顶级赛事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-ai-kimi-k25-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24. 告别 AI 土味审美！Kimi K2.5 实测：扔个视频复刻 iOS 级丝滑动效
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        25. 未来两年软件工程展望：从写代码到管 AI，程序员正分化成两种职业
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26. 独家专访千寻创始人：20 亿新融资、具身模型淘汰赛、落地非共识
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        27. Head of Claude Code: What happens after coding is solved | Boris Cherny
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-codex-claude-code-5-openal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28. 前 Codex 大神倒戈实锤！吹爆 Claude Code：编程提速 5 倍，点破 OpenAl 死穴在上下文
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-mindcodeno62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29. 为什么越聪明的人，越容易在技术革命里亏钱? ｜MindCode周报No.62
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        30. “最怕”AI失控的人，放弃了？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        31. “钱袋子”起火了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        32. 是的，美国和伊朗的冲突让全世界的AI中断了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-bigquery-sql-17-ai-3800-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33. BigQuery 新功能：SQL 直调 17 万 + AI 模型，3800 万行数据处理成本仅 2 美元
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-free-claude-max-for-large-project-open-source-maintainers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        34. Free Claude Max for (large project) open source maintainers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-cloudflare-matrix-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        35. Cloudflare 的 Matrix 家庭服务器演示引发了关于 AI 生成代码的争论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-prompt-mindcode-no60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        36. 佛祖也写免责声明？和你的prompt有什么关系 ｜MindCode周报 No.60
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-robotaxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        37. 曹操出行：跨越商业化迷雾， Robotaxi 不只是给车装上 “脑子”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-linkedin-kafka-xds-zookeeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        38. LinkedIn 重构服务发现：在大规模环境中用 Kafka 和 xDS 取代 Zookeeper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-310-claude-ibm-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        39. 一夜蒸发 310 亿美元！Claude 新工具干翻 IBM 摇钱树，AI 正在「清零」人类工位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40-300karpathyopenclaw500" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        40. 300万人围观，Karpathy怒喷OpenClaw。然后推荐了一个500行的替代品。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        41. AI看不懂的色盲测试背后，藏着一场像素与诗意的战争。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-ainews-the-unreasonable-effectiveness-of-closing-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        42. [AINews] The Unreasonable Effectiveness of Closing the Loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-i-vibe-coded-my-dream-macos-presentation-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        43. I vibe coded my dream macOS presentation app
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-hoard-things-you-know-how-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        44. Hoard things you know how to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-how-to-kill-the-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        45. How to Kill the Code Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-the-warning-signs-your-ai-vendor-is-becoming-your-cage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        46. The warning signs your AI vendor is becoming your cage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-k25-kimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        47. K2.5，是 Kimi 的一个分水岭
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        48. 最适合非编程人士的Openclaw部署方式。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        49. 让机器人替你回微信？他让机器人学会看屏操作，不插数据线就能像人一样戳手机
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-mit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        50. 大模型黑箱被撬开：MIT华人博士联创，造出能追溯思考过程的大模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ai">AI 编程：优质文章清单</h1>
+<blockquote>
+<p>Vibe Coding、Claude Code、Cursor、Copilot 等 AI 编程工具的使用技巧与深度评测。
+从简报系统 937 篇 AI 文章中按评分精选 Top 50，持续更新。</p>
+</blockquote>
+<hr />
+<h3 id="1-google-api-keys-werent-secrets-but-then-gemini-changed-the-rules">1. Google API Keys Weren't Secrets. But then Gemini Changed the Rules.</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://simonwillison.net/2026/Feb/26/google-api-keys/#atom-everything">阅读原文</a></li>
+<li><strong>来源</strong>：Simon Willison</li>
+<li><strong>日期</strong>：2026-02-26</li>
+<li><strong>评分</strong>：100</li>
+<li><strong>要点</strong>：谷歌的API密钥管理存在一个严重的安全隐患。作者指出，谷歌地图和Gemini等服务共享同一套API密钥体系，但两者的安全属性截然不同：地图API密钥设计为公开嵌入网页，而Gemini密钥却能访问私人文件并产生计费请求。问题的核心在于，当一个原本为地图创建的公开API密钥被意外地在其所属项目中启用了Gemini API服务时，该密钥的权限会从无害的公开标识升级为可访问敏感端点的秘密凭证，而开发...</li>
+</ul>
+<h3 id="2-20">2. 脑细胞组成的计算机跑起了《毁灭战士》！20万活体神经元实时学习开枪杀敌，代码全部开源</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649791182&amp;idx=1&amp;sn=03668cb428cf0ff2c75067a62fd2d12a">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-03-02</li>
+<li><strong>评分</strong>：93</li>
+<li><strong>要点</strong>：澳大利亚Cortical Labs公司展示了其生物计算机CL1，利用约20万个活体人类神经元实时玩《毁灭战士》游戏。该演示基于其2022年发表的DishBrain实验，核心是利用自由能原理，通过电信号反馈训练神经元，使其学习速度（5分钟）快于传统深度强化学习（90分钟）。然而，开源代码揭示了一个关键问题：解码神经元信号的软件模块可能正在学习绕过神经元本身，独立做出游戏决策，这引发了关于系统实...</li>
+</ul>
+<h3 id="3-claude-code-10">3. Claude Code 之父分享 10 大使用技巧</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NzgzMjA4MQ==&amp;mid=2453480153&amp;idx=1&amp;sn=fceb96e89282fe0009aa2070db0e3d26">阅读原文</a></li>
+<li><strong>来源</strong>：AGI Hunt</li>
+<li><strong>日期</strong>：2026-02-02</li>
+<li><strong>评分</strong>：92</li>
+<li><strong>要点</strong>：Claude Code 的创造者分享了团队内部提升效率的十大技巧，强调没有唯一正确用法，关键在于找到适合自己的节奏。</li>
+</ul>
+<h3 id="4-clipdeepseek-ocr-2llm">4. 告别CLIP！DeepSeek-OCR-2开源：首创视觉因果流，用LLM重构视觉编码</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&amp;mid=2247717257&amp;idx=1&amp;sn=a3aec70f61b99d4c3192d4e33f63db8e">阅读原文</a></li>
+<li><strong>来源</strong>：PaperWeekly</li>
+<li><strong>日期</strong>：2026-01-27</li>
+<li><strong>评分</strong>：91</li>
+<li><strong>要点</strong>：DeepSeek开源DeepSeek-OCR-2，提出视觉因果流范式，用LLM替代CLIP作为视觉编码器，旨在解决文档解析中因光栅扫描导致的语义与序列错配问题。</li>
+</ul>
+<h3 id="5-3000ainvidiagpu50">5. 初创用3000万美元造一颗不可编程的AI芯片，推理速度却是Nvidia最强GPU的50倍</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649790646&amp;idx=2&amp;sn=22fbcde66f0e282da1b3ddd64f8f0273">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-21</li>
+<li><strong>评分</strong>：90</li>
+<li><strong>要点</strong>：报道了 Taalas 极致专用化的 AI 芯片 HC1，探讨了‘存算合一’与‘不可编程’如何带来 50 倍性能提升。</li>
+</ul>
+<h3 id="6-gif-optimization-tool-using-webassembly-and-gifsicle">6. GIF optimization tool using WebAssembly and Gifsicle</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://simonwillison.net/guides/agentic-engineering-patterns/gif-optimization/#atom-everything">阅读原文</a></li>
+<li><strong>来源</strong>：Simon Willison</li>
+<li><strong>日期</strong>：2026-03-02</li>
+<li><strong>评分</strong>：87</li>
+<li><strong>要点</strong>：作者 Simon Willison 为了优化博客文章中的GIF文件大小，利用Claude Code构建了一个基于WebAssembly的GIF优化工具网页。他选择将C语言编写的命令行工具Gifsicle编译为WASM，并开发了一个允许拖放上传GIF、预览不同压缩设置效果并提供下载的Web界面。这展示了如何将传统命令行工具现代化，为不熟悉命令行的用户提供便捷的浏览器端媒体处理能力。</li>
+</ul>
+<h3 id="7-githubtop-3ultrarag-30">7. GitHub热榜Top 3！UltraRAG 3.0开源：拒绝盲盒，让推理逻辑像素级可视</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&amp;mid=2247717225&amp;idx=1&amp;sn=7bbe511a31586ebb0148687ef07e7168">阅读原文</a></li>
+<li><strong>来源</strong>：PaperWeekly</li>
+<li><strong>日期</strong>：2026-01-26</li>
+<li><strong>评分</strong>：87</li>
+<li><strong>要点</strong>：UltraRAG 3.0是一个开源RAG框架，旨在通过可视化Pipeline构建器和白盒化推理过程，降低复杂RAG系统的开发与调试门槛。</li>
+</ul>
+<h3 id="8-scaleup">8. 谈谈基于ScaleUP的存储扩展和三网融合</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzUxNzQ5MTExNw==&amp;mid=2247497421&amp;idx=1&amp;sn=e921514eb03119288952963e82b47850">阅读原文</a></li>
+<li><strong>来源</strong>：zartbot</li>
+<li><strong>日期</strong>：2026-01-25</li>
+<li><strong>评分</strong>：86</li>
+<li><strong>要点</strong>：文章讨论了AI推理基础设施中ScaleUP、ScaleOut和FrontEnd三网融合的必要性与挑战，并指出GPU应成为数据中心的核心，重构服务器架构以扩展内存、存储和IO。</li>
+</ul>
+<h3 id="9-macbook">9. 黑客挖出苹果隐藏硬件！你的MacBook里有加速计/陀螺仪，摔没摔过售后都知道</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247870226&amp;idx=2&amp;sn=4dfaccdf9f15da23fdeced369b595b55">阅读原文</a></li>
+<li><strong>来源</strong>：量子位</li>
+<li><strong>日期</strong>：2026-02-24</li>
+<li><strong>评分</strong>：85</li>
+<li><strong>要点</strong>：① Claim 主张：黑客发现部分新款MacBook（如M3 Pro）内置了未公开的加速度计和陀螺仪接口，可以读取设备的运动数据。② Evidence 论据：开发者通过系统底层的IOKit HID接口读取到名为AppleSPUHIDDevice的传感器数据流，包括三轴加速度和角速度。③ Implication 启示：引发了用户对隐私和保修政策的担忧（如苹果可能利用此数据判断设备是否意外跌落）...</li>
+</ul>
+<h3 id="10-mindcodeno58">10. 为什么有些人看起来毫不费力却成就很大？｜MindCode周报No.58</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxNTYwMzcyNw==&amp;mid=2247485915&amp;idx=1&amp;sn=75483423d448683536b98694e47e734c">阅读原文</a></li>
+<li><strong>来源</strong>：MindCode</li>
+<li><strong>日期</strong>：2026-01-25</li>
+<li><strong>评分</strong>：84</li>
+<li><strong>要点</strong>：文章提出了成事的三个核心要素：纪律、频率和心率，强调通过简明的纪律、稳定的频率和温和灵活的心率状态来最大化个人成就。</li>
+</ul>
+<h3 id="11-12-claude-prompt">11. 我收集了 12 条技术社区疯传的 Claude Prompt，如今这篇帖子火遍全网</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651273399&amp;idx=3&amp;sn=b440532f1f3ba6e6829a9ba18eeee16f">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-01-28</li>
+<li><strong>评分</strong>：84</li>
+<li><strong>要点</strong>：一篇汇总了 12 条“被反复验证有效”的 Claude Prompt 的帖子在技术社区走红，这些提示词的核心是引导模型进行质疑、拆解和反思，而非直接产出结果。</li>
+</ul>
+<h3 id="12-cloudflare-code-orange-fail-small">12. 多次全球性中断后，Cloudflare 推出了“Code Orange: Fail Small”韧性计划</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651273758&amp;idx=4&amp;sn=a02fd111ed19b77797d004b462d48764">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-01-30</li>
+<li><strong>评分</strong>：84</li>
+<li><strong>要点</strong>：Cloudflare在经历两次重大全球性网络中断后，推出了名为‘Code Orange: Fail Small’的韧性计划，旨在通过受控发布和改进故障处理来防止大规模服务中断。</li>
+</ul>
+<h3 id="13-directory-snapshots-resumable-project-state-for-sandboxes">13. Directory Snapshots: Resumable project state for Sandboxes</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://modal.com/blog/directory-snapshots-resumable-project-state-for-sandboxes">阅读原文</a></li>
+<li><strong>来源</strong>：Modal Labs Blog</li>
+<li><strong>日期</strong>：2026-02-24</li>
+<li><strong>评分</strong>：83</li>
+<li><strong>要点</strong>：Modal Labs 推出了名为 Directory Snapshots 的新功能。该功能允许用户在运行中的 Sandbox 内，以编程方式对特定目录创建快照，并可在之后将其挂载到另一个独立的 Sandbox 中。这意味着快照内容与基础镜像和文件系统的其余部分完全解耦，实现了项目状态的独立保存与恢复。</li>
+</ul>
+<h3 id="14-quoting-claudecomimport-memory">14. Quoting claude.com/import-memory</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://simonwillison.net/2026/Mar/1/claude-import-memory/#atom-everything">阅读原文</a></li>
+<li><strong>来源</strong>：Simon Willison</li>
+<li><strong>日期</strong>：2026-03-01</li>
+<li><strong>评分</strong>：83</li>
+<li><strong>要点</strong>：主张：文章展示了一个用于从 Claude 导出所有存储记忆的详细提示词。论据：该提示词要求 Claude 列出所有关于用户的记忆，包括指令、个人细节、项目、工具偏好等，并以特定格式在代码块中完整输出，不得总结或遗漏。启示：这为用户提供了管理和迁移其 AI 记忆数据的具体方法，也揭示了 AI 记忆功能的潜在应用场景和数据可移植性需求。</li>
+</ul>
+<h3 id="15-claude-code">15. Claude Code 新功能：手机远程控制</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzkzNDQxOTU2MQ==&amp;mid=2247513353&amp;idx=1&amp;sn=4b2b8237fdf043efa807ee4a27cb5651">阅读原文</a></li>
+<li><strong>来源</strong>：赛博禅心</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：83</li>
+<li><strong>要点</strong>：① Anthropic为Claude Code新增了Remote Control功能，允许用户通过浏览器或手机远程连接和控制本地正在运行的Claude Code项目。② 用户可以通过扫描二维码、访问URL或在会话列表中找到在线会话进行连接，通信通过Anthropic API的HTTPS通道进行，本地无需开放入站端口。③ 该功能使开发者能够更灵活地通过移动设备监控和管理本地开发任务，但需注意它...</li>
+</ul>
+<h3 id="16-build-hour-prompt-caching">16. Build Hour: Prompt Caching</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://www.youtube.com/watch?v=tECAkJAI_Vk">阅读原文</a></li>
+<li><strong>来源</strong>：OpenAI YouTube</li>
+<li><strong>评分</strong>：82</li>
+<li><strong>要点</strong>：OpenAI的Build Hour视频介绍了提示词缓存技术，该技术旨在帮助开发者构建更快、更便宜、延迟更低的应用程序。视频解释了提示词缓存的工作原理，并指导如何设计提示词以最大化缓存命中率。内容涵盖了缓存的实际内容、适用场景，以及提示词的微小变化如何对成本和性能产生重大影响。</li>
+</ul>
+<h3 id="17-ai-3">17. 用 AI 后，我效率翻 3 倍，人却更疲惫，别再掉进这个陷阱了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651081567&amp;idx=1&amp;sn=f0149fda19f6ea9d25d22fe04a01bd48">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-21</li>
+<li><strong>评分</strong>：82</li>
+<li><strong>要点</strong>：从资深开发者视角探讨‘AI 疲劳’现象，揭示了产出效率与认知负荷之间的矛盾，并给出心理建设方案。</li>
+</ul>
+<h3 id="18-cursor-chatcut-ai">18. 视频剪辑的「Cursor 时刻」来了？｜对谈 ChatCut 创始人李凯文：从金马导演到 AI 创业</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649104239&amp;idx=1&amp;sn=82a2981e5bc15a3a531a04b554bcb57c">阅读原文</a></li>
+<li><strong>来源</strong>：十字路口Crossing</li>
+<li><strong>日期</strong>：2026-01-30</li>
+<li><strong>评分</strong>：81</li>
+<li><strong>要点</strong>：ChatCut创始人李凯文认为，AI视频剪辑的未来不在于生成像素，而在于服务‘还不是剪辑师’的用户，让AI成为工作在传统编辑器之上的智能助理。</li>
+</ul>
+<h3 id="19-5">19. 对话赵君：每周工作5小时，实现自动盈利，独立开发者“不内卷”出海心法</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxNTYwMzcyNw==&amp;mid=2247485950&amp;idx=1&amp;sn=71fdeec5b5de3910b0a1513a891ab322">阅读原文</a></li>
+<li><strong>来源</strong>：MindCode</li>
+<li><strong>日期</strong>：2026-02-04</li>
+<li><strong>评分</strong>：81</li>
+<li><strong>要点</strong>：文章分享了独立开发者赵君通过“横向复制”模式，在每周仅工作5小时的情况下实现多款产品自动盈利的经历与心法。</li>
+</ul>
+<h3 id="20-bitter-lessons-in-venture-vs-growth-anthropic-vs-openai-noam-shazeer-world-labs-thinking-machines-cursor-asic-economics-martin-casado-sarah-wang-of-a16z">20. Bitter Lessons in Venture vs Growth: Anthropic vs OpenAI, Noam Shazeer, World Labs, Thinking Machines, Cursor, ASIC Economics — Martin Casado &amp; Sarah Wang of a16z</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://www.latent.space/p/a16z">阅读原文</a></li>
+<li><strong>来源</strong>：Latent Space</li>
+<li><strong>评分</strong>：80</li>
+<li><strong>要点</strong>：a16z的合伙人Martin Casado和Sarah Wang讨论了AI领域新的融资模式，指出当前的融资轮次实质上是伪装的计算合同。他们解释了“融资→训练→发布→更大规模融资”的飞轮如何运作，并探讨了基础模型公司是否能够超过建立在它们之上的整个应用生态系统的支出。他们还分享了被低估的领域（无聊的企业软件）和过热的领域（人才战争和薪酬螺旋）。</li>
+</ul>
+<h3 id="21-deepmind-anthropic-agi-vital-views">21. DeepMind &amp; Anthropic：当 AGI 来临后｜Vital Views</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mzg4MzI4OTA3OQ==&amp;mid=2247518902&amp;idx=1&amp;sn=08cb4304a259c1432b6db14b521c5430">阅读原文</a></li>
+<li><strong>来源</strong>：緑洲资本 Vitalbridge</li>
+<li><strong>日期</strong>：2026-01-28</li>
+<li><strong>评分</strong>：80</li>
+<li><strong>要点</strong>：疑似 PR 稿</li>
+</ul>
+<h3 id="22-ai2500gpt-5253gpt-4o27">22. 所有AI全军覆没！近千名学者出2500道题，GPT-5得分25.3%，GPT-4o只有2.7%</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649791144&amp;idx=3&amp;sn=b07e64c6ac97045fc31ee989e82cb25d">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-03-01</li>
+<li><strong>评分</strong>：80</li>
+<li><strong>要点</strong>：报道Nature最新发布的HLE基准测试，揭示当前最强模型在专家级问题上的巨大差距。</li>
+</ul>
+<h3 id="23-llm-eccvrp">23. 范式跃迁：LLM + EC重构算法设计范式，华为&amp;港城大夺冠CVRP国际顶级赛事</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651018881&amp;idx=1&amp;sn=b1a610953f1cb57a931918ee0a1d5254">阅读原文</a></li>
+<li><strong>来源</strong>：机器之心</li>
+<li><strong>日期</strong>：2026-03-02</li>
+<li><strong>评分</strong>：80</li>
+<li><strong>要点</strong>：华为与香港城市大学联合团队在CVRPLib车辆路径规划国际竞赛中，凭借“大模型+进化计算”的创新架构，以显著优势夺冠。他们在100个超大规模算例中刷新了98个历史最优解，并为51个设立了新世界纪录。这标志着AI参与核心机制设计的算法首次在顶级竞赛中战胜人类专家算法，验证了AI在算法设计领域的颠覆性潜力。</li>
+</ul>
+<h3 id="24-ai-kimi-k25-ios">24. 告别 AI 土味审美！Kimi K2.5 实测：扔个视频复刻 iOS 级丝滑动效</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&amp;mid=2247495499&amp;idx=1&amp;sn=37e70156ebed4f8e50010b82bf6cf1ea">阅读原文</a></li>
+<li><strong>来源</strong>：歸藏的AI工具箱</li>
+<li><strong>日期</strong>：2026-01-27</li>
+<li><strong>评分</strong>：78</li>
+<li><strong>要点</strong>：文章实测Kimi K2.5模型，重点展示其通过视频多模态识别精准复刻复杂前端交互动效的能力，并认为其前端审美有显著提升。</li>
+</ul>
+<h3 id="25-ai">25. 未来两年软件工程展望：从写代码到管 AI，程序员正分化成两种职业</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274116&amp;idx=2&amp;sn=f8733e70950a25ff545ee67d1bf5b972">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-02-02</li>
+<li><strong>评分</strong>：78</li>
+<li><strong>要点</strong>：随着 AI 编程能力增强，软件工程师职业路径正在分化，初级开发者面临挑战，需要调整技能以适应新的行业需求。</li>
+</ul>
+<h3 id="26-20">26. 独家专访千寻创始人：20 亿新融资、具身模型淘汰赛、落地非共识</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247533464&amp;idx=1&amp;sn=595eee8fa566dadbf768e9d5f56b39c6">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-02-23</li>
+<li><strong>评分</strong>：78</li>
+<li><strong>要点</strong>：① Claim 主张：具身智能公司千寻智能完成近20亿融资，估值破百亿，创始人韩峰涛认为2026年行业竞争核心将是模型性能的比拼。② Evidence 论据：融资背景是行业认知收敛到“投具身大脑”，数据卡点被认为已解决；千寻开源的Spirit v1.5模型性能超越Pi0.5，并通过自研设备将数据采集成本降低90%。③ Implication 启示：巨额融资和估值表明资本市场对具身智能赛道的高...</li>
+</ul>
+<h3 id="27-head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny">27. Head of Claude Code: What happens after coding is solved | Boris Cherny</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens">阅读原文</a></li>
+<li><strong>来源</strong>：Lenny's Newsletter</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：Anthropic的Claude Code负责人Boris Cherny讨论了Claude Code如何从一个简单的终端原型成长为占公共GitHub提交4%的产品，并且其上月日活跃用户翻了一番。他分享了推动Claude Code成功的反直觉产品原则，并解释了他为何认为编码问题“已解决”。他还谈到了塑造Claude Code和Cowork的潜在需求，以及为团队提供无限令牌如何导致更好的AI产品。</li>
+</ul>
+<h3 id="28-codex-claude-code-5-openal">28. 前 Codex 大神倒戈实锤！吹爆 Claude Code：编程提速 5 倍，点破 OpenAl 死穴在上下文</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651275013&amp;idx=1&amp;sn=676ba2f122e957a2595dea61981f46e9">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-02-10</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：前OpenAI Codex核心研发者Calvin French-Owen高度评价Claude Code，认为其有效的上下文拆分能力是提升编程效率的关键。</li>
+</ul>
+<h3 id="29-mindcodeno62">29. 为什么越聪明的人，越容易在技术革命里亏钱? ｜MindCode周报No.62</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxNTYwMzcyNw==&amp;mid=2247486010&amp;idx=1&amp;sn=1f9ccbd59875061459f3fe2e53ffe3e8">阅读原文</a></li>
+<li><strong>来源</strong>：MindCode</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：① Claim 主张：作者提出“终局谬误”概念，指出聪明人容易因过早认定长期趋势的终局而忽视短期现实，导致投资决策失误，并以Google搜索在AI冲击下的表现为例。② Evidence 论据：ChatGPT出现后，市场认为Google搜索将死并抛售其股票，但Google搜索收入反而从2022年的404亿增至2025年的630亿美元，股价也从低点大幅反弹。③ Implication 启示：在技...</li>
+</ul>
+<h3 id="30-ai">30. “最怕”AI失控的人，放弃了？</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&amp;mid=2691565190&amp;idx=1&amp;sn=9c29fd8a8d97b9afb11df498fa68baf9">阅读原文</a></li>
+<li><strong>来源</strong>：腾讯科技</li>
+<li><strong>日期</strong>：2026-02-26</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：① Claim 主张：一直以“安全优先”为标签的Anthropic公司，在其最新版《负责任扩展政策》（RSP 3.0）中，删除了此前“若模型能力达到危险阈值且安全措施未就绪则暂停训练”的核心承诺。② Evidence 论据：对比2023年的RSP版本，其中明确包含“if-then”的暂停训练承诺。而2026年2月24日发布的RSP 3.0，将这一硬性约束替换为以路线图、风险报告和外部评审为核...</li>
+</ul>
+<h3 id="31">31. “钱袋子”起火了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&amp;mid=2656155301&amp;idx=1&amp;sn=4fed04cf2b241aba5da5212b45fc00d0">阅读原文</a></li>
+<li><strong>来源</strong>：虎嗅</li>
+<li><strong>日期</strong>：2026-03-03</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：Claim：文章分析了2026年3月初全球股市（尤其A股）大跌的原因、影响及后续展望。Evidence：大跌与美伊冲突升级引发的全球市场恐慌有关，A股自身也面临技术性调整压力。复盘历史地缘冲突，A股短期承压但一个月左右多能修复，关键脆弱点在于市场信心和内部基本面。Implication：战争本身对市场的冲击往往是脉冲式的，但若与市场内部的脆弱点（如信心不足、经济预期差）共振，则可能引发更持久...</li>
+</ul>
+<h3 id="32-ai">32. 是的，美国和伊朗的冲突让全世界的AI中断了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&amp;mid=2656155301&amp;idx=4&amp;sn=43064b6aff58b4c609aa236b58ca1531">阅读原文</a></li>
+<li><strong>来源</strong>：虎嗅</li>
+<li><strong>日期</strong>：2026-03-03</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：Claim：一次针对AWS中东数据中心（阿联酋me-central-1区域）的物理打击，导致了全球范围内多家AI服务（如Claude、Grok）的大面积中断。Evidence：不明物体击中数据中心电力设施，触发消防熔断机制导致断电。这暴露了云服务对实体基础设施的依赖，以及现有冗余架构对“物理打击”这类黑天鹅事件的脆弱性。Implication：此次事件警示，高度中心化的AI基础设施在极端地缘...</li>
+</ul>
+<h3 id="33-bigquery-sql-17-ai-3800-2">33. BigQuery 新功能：SQL 直调 17 万 + AI 模型，3800 万行数据处理成本仅 2 美元</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274349&amp;idx=4&amp;sn=75a926c8d04f079d37da28034bea7b61">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-02-04</li>
+<li><strong>评分</strong>：76</li>
+<li><strong>要点</strong>：Google BigQuery新增功能，允许用户通过SQL语句直接调用Hugging Face等平台的AI模型进行推理，简化了数据团队的AI部署流程。</li>
+</ul>
+<h3 id="34-free-claude-max-for-large-project-open-source-maintainers">34. Free Claude Max for (large project) open source maintainers</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://simonwillison.net/2026/Feb/27/claude-max-oss-six-months/#atom-everything">阅读原文</a></li>
+<li><strong>来源</strong>：Simon Willison</li>
+<li><strong>日期</strong>：2026-02-27</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：Anthropic公司为大型开源项目的维护者提供免费的Claude Max高级服务。符合特定条件的开源项目核心维护者可以申请获得价值200美元/月的Claude Max 20x计划，免费使用六个月。这表明AI公司正通过支持关键开源贡献者来培育生态系统，并可能吸引更多开发者使用其高级模型。</li>
+</ul>
+<h3 id="35-cloudflare-matrix-ai">35. Cloudflare 的 Matrix 家庭服务器演示引发了关于 AI 生成代码的争论</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274735&amp;idx=3&amp;sn=8f0cd5f4cceabd87ee4440824ae2953f">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-02-07</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：Cloudflare一篇展示无服务器Matrix家庭服务器的博客文章因技术声明不准确和疑似包含大量AI生成代码而引发争议，Matrix联合创始人指出其严重夸大了项目范围。</li>
+</ul>
+<h3 id="36-prompt-mindcode-no60">36. 佛祖也写免责声明？和你的prompt有什么关系 ｜MindCode周报 No.60</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxNTYwMzcyNw==&amp;mid=2247485970&amp;idx=1&amp;sn=d856e3b9332bc4a8db9264929c0232fd">阅读原文</a></li>
+<li><strong>来源</strong>：MindCode</li>
+<li><strong>日期</strong>：2026-02-08</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：文章借用佛教概念探讨AI时代的人机交互与个人价值，认为应避免被AI的固有概念束缚，并强调个人的独特“偏见”具有分发价值。</li>
+</ul>
+<h3 id="37-robotaxi">37. 曹操出行：跨越商业化迷雾， Robotaxi 不只是给车装上 “脑子”</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532866&amp;idx=1&amp;sn=408a77aa234e1d0c66119815abda0889">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-02-10</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：曹操出行提出Robotaxi不应仅是「给车装上脑子」的智驾竞赛，而应构建「智能定制车+智能驾驶技术+智能运营」三位一体的系统，目标是成为AI时代的物理移动底座。</li>
+</ul>
+<h3 id="38-linkedin-kafka-xds-zookeeper">38. LinkedIn 重构服务发现：在大规模环境中用 Kafka 和 xDS 取代 Zookeeper</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651275377&amp;idx=4&amp;sn=27faf5f51d6842d930aa45ef7894ab57">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-02-13</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：LinkedIn工程团队用Kafka和xDS协议重构了其服务发现平台，以解决基于ZooKeeper的传统架构的可扩展性问题。</li>
+</ul>
+<h3 id="39-310-claude-ibm-ai">39. 一夜蒸发 310 亿美元！Claude 新工具干翻 IBM 摇钱树，AI 正在「清零」人类工位</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651081671&amp;idx=1&amp;sn=cedd8cf155d5d1c33f47d4e8e088ed47">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-24</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：① Claim 主张：Anthropic发布博客称其编程工具Claude Code能帮助改造COBOL老旧系统，此举引发市场恐慌，导致IBM股价单日暴跌13.1%，市值蒸发约310亿美元。② Evidence 论据：COBOL是IBM核心盈利的遗留系统咨询业务的护城河，而Claude Code宣称能将原本以年计的现代化项目压缩到几个季度，显著降低了理解成本。③ Implication 启示：...</li>
+</ul>
+<h3 id="40-300karpathyopenclaw500">40. 300万人围观，Karpathy怒喷OpenClaw。然后推荐了一个500行的替代品。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247490420&amp;idx=1&amp;sn=e8b916bac5117aa5debc128dd69251ee">阅读原文</a></li>
+<li><strong>来源</strong>：探索AGI</li>
+<li><strong>日期</strong>：2026-02-27</li>
+<li><strong>评分</strong>：75</li>
+<li><strong>要点</strong>：Karpathy 评价 OpenClaw 的新观点集锦，推荐了极简替代品 NanoClaw 并总结了 AI 时代的编程新原则。</li>
+</ul>
+<h3 id="41-ai">41. AI看不懂的色盲测试背后，藏着一场像素与诗意的战争。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679542&amp;idx=1&amp;sn=7642fd6d16555c6b709b473ede9269f0">阅读原文</a></li>
+<li><strong>来源</strong>：数字生命卡兹克</li>
+<li><strong>日期</strong>：2026-02-03</li>
+<li><strong>评分</strong>：74</li>
+<li><strong>要点</strong>：文章通过实验发现，主流多模态AI模型在色盲测试图上表现糟糕，原因在于AI只是在“计算”像素和局部模式，而无法理解图像整体涌现的抽象意义（即“诗意”）。</li>
+</ul>
+<h3 id="42-ainews-the-unreasonable-effectiveness-of-closing-the-loop">42. [AINews] The Unreasonable Effectiveness of Closing the Loop</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://www.latent.space/p/ainews-the-unreasonable-effectiveness">阅读原文</a></li>
+<li><strong>来源</strong>：Latent Space</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：作者主张，当前AI开发工具领域出现了一个核心趋势，即“闭环”。论据是，过去十年开发工具的创新主要集中在“外循环”（云端部署、CI/CD），而“内循环”（本地IDE开发）多为免费开源工具；但AI的出现颠覆了这一格局，Copilot等工具引领了“内循环”的AI化浪潮。启示在于，如今领先的编程助手公司正开始将AI能力从“内循环”向“外循环”延伸，致力于弥合开发流程中的鸿沟，这可能预示着下一代开发工...</li>
+</ul>
+<h3 id="43-i-vibe-coded-my-dream-macos-presentation-app">43. I vibe coded my dream macOS presentation app</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://simonwillison.net/2026/Feb/25/present/#atom-everything">阅读原文</a></li>
+<li><strong>来源</strong>：Simon Willison</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：作者Simon Willison在演讲前夜通过‘氛围编码’快速开发了一款自定义的macOS演示应用，用于展示LLM领域的最新进展。他通过缩短总结周期（从一年到三个月）和穿戴已过时的Gemini 3毛衣等方式，生动体现了该领域的加速变化。</li>
+</ul>
+<h3 id="44-hoard-things-you-know-how-to-do">44. Hoard things you know how to do</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/#atom-everything">阅读原文</a></li>
+<li><strong>来源</strong>：Simon Willison</li>
+<li><strong>日期</strong>：2026-02-26</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：作者主张，高效构建软件的关键技能之一是积累“知道如何做”的知识库。他认为，软件开发的很大一部分技能在于了解什么是可能的、什么是不可能的，并对如何实现这些可能的事情至少有一个粗略的概念。积累这些问题的答案（例如“纯JavaScript能否进行OCR？”或“如何不将100GB JSON文件全部加载到内存中处理？”）能让你更有可能发现用技术解决问题的独特机会。仅仅知道某事在理论上可行，与亲眼见过它...</li>
+</ul>
+<h3 id="45-how-to-kill-the-code-review">45. How to Kill the Code Review</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://www.latent.space/p/reviews-dead">阅读原文</a></li>
+<li><strong>来源</strong>：Latent Space</li>
+<li><strong>日期</strong>：2026-03-02</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：文章主张在AI高速生成代码的时代，传统的人工逐行代码审查模式已难以为继，甚至可能成为瓶颈。作者引用数据显示，AI采用率高的团队完成任务数增加21%，合并PR数增加98%，但PR审查时间却增加了91%。他认为，团队应该放弃阅读所有代码的幻想，转而依靠能处理故障的系统（如功能标志、渐进式发布、即时回滚）来保证质量。</li>
+</ul>
+<h3 id="46-the-warning-signs-your-ai-vendor-is-becoming-your-cage">46. The warning signs your AI vendor is becoming your cage</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://gradientflow.substack.com/p/we-watched-this-happen-with-the-internet">阅读原文</a></li>
+<li><strong>来源</strong>：Gradient Flow</li>
+<li><strong>日期</strong>：2026-03-03</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：① 主张：AI目前仍处于平台为吸引用户而过度服务的“蜜月期”，但历史表明平台锁定用户的趋势将随之而来，企业需警惕被单一AI供应商“关进笼子”。② 论据：早期警告信号包括：核心能力的访问途径随时间变窄（如技术细节减少、部署选项变少）、供应商开始限制数据可移植性或提高切换成本。③ 启示：由于当前顶级模型的实际工作负载表现相近，且开源选项足够接近，将自己绑定在单一供应商的路线图上是一种选择，而非必...</li>
+</ul>
+<h3 id="47-k25-kimi">47. K2.5，是 Kimi 的一个分水岭</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzkzNDQxOTU2MQ==&amp;mid=2247511844&amp;idx=1&amp;sn=c94ef04e001a01ce3a2dd6614700dc3f">阅读原文</a></li>
+<li><strong>来源</strong>：赛博禅心</li>
+<li><strong>日期</strong>：2026-01-28</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：作者认为 Kimi K2.5 是月之暗面的一个分水岭，标志着其在国产旗舰模型中率先实现了原生多模态能力，并回归了其早期注重技术和开发者体验的“天才少年”质感。</li>
+</ul>
+<h3 id="48-openclaw">48. 最适合非编程人士的Openclaw部署方式。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3MDA3NzI1Nw==&amp;mid=2455087758&amp;idx=1&amp;sn=c142949d71a35b852c7bb46b7ef02663">阅读原文</a></li>
+<li><strong>来源</strong>：新西楼</li>
+<li><strong>日期</strong>：2026-02-05</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：作者分享了针对非编程人士部署Openclaw的经验，建议优先使用Docker并由Claude Code辅助部署，而非直接使用云服务器。</li>
+</ul>
+<h3 id="49">49. 让机器人替你回微信？他让机器人学会看屏操作，不插数据线就能像人一样戳手机</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649790715&amp;idx=3&amp;sn=3737b7ebe996c8e4afb7a50266951817">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-23</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：① 主张：UCL团队提出“See-Control”框架，让机器人通过纯视觉方式像人一样看屏操作手机，无需插数据线或开放开发者权限，解决了机器人操作智能手机的隐私与通用性痛点。② 论据：该框架使用多模态大模型理解屏幕内容，通过机械手指进行物理点击。团队设计了155个日常任务进行测试，并将问题建模为部分可观测马尔可夫决策过程。③ 启示：这为未来家用机器人接管手机相关杂活（如授权智能门锁、回复消息...</li>
+</ul>
+<h3 id="50-mit">50. 大模型黑箱被撬开：MIT华人博士联创，造出能追溯思考过程的大模型</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649790803&amp;idx=1&amp;sn=ca89eb661565e3e76d505395c41feb90">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-24</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：① Claim 主张：Guide Labs开源了可解释大模型Steerling-8B，其生成的每个词都可追溯到具体的提示词、概念和训练数据源。② Evidence 论据：该模型在架构中内置了概念层（含约3.3万个人工标注概念和10万个模型发现概念），实现了输入特征、概念和训练数据的三重归因。③ Implication 启示：为解决大模型“黑箱”问题提供了新思路，使调试、纠偏和版权追溯成为可能...</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/makinotes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

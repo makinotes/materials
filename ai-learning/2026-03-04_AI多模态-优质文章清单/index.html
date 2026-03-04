@@ -1,0 +1,2319 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人材料分享 — 持续更新的安装实录、学习笔记、精选资源">
+      
+      
+        <meta name="author" content="makino">
+      
+      
+        <link rel="canonical" href="https://makinote.cn/materials/ai-learning/2026-03-04_AI%E5%A4%9A%E6%A8%A1%E6%80%81-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/">
+      
+      
+        <link rel="prev" href="../2026-03-04_AI%E5%AD%A6%E6%9C%AF%E4%B8%8E%E5%89%8D%E6%B2%BF-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>2026-03-04 AI 多模态 - makino's materials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=system-ui,+-apple-system,+sans-serif:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"system-ui, -apple-system, sans-serif";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="makino&#39;s materials" class="md-header__button md-logo" aria-label="makino's materials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            makino's materials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2026-03-04 AI 多模态
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/makinotes/materials" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    makinotes/materials
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="makino&#39;s materials" class="md-nav__button md-logo" aria-label="makino's materials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    makino's materials
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/makinotes/materials" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    makinotes/materials
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../openclaw/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenClaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openclaw/2026-03-04_OpenClaw-VPS%E9%83%A8%E7%BD%B2%E5%AE%9E%E5%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 VPS 部署实录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openclaw/2026-03-04_OpenClaw%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 优质文章清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 学习笔记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI 学习笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_Context-Engineering%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 Context Engineering
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--['进行中', '已发布', 'archived']"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI-Agent%E5%AE%9E%E8%B7%B5-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI Agent 实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI%E7%BC%96%E7%A8%8B-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI%E8%AE%A4%E7%9F%A5%E4%B8%8E%E8%B6%8B%E5%8A%BF-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 认知与趋势
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_AI%E5%AD%A6%E6%9C%AF%E4%B8%8E%E5%89%8D%E6%B2%BF-%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 学术与前沿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 多模态
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-03-04 AI 多模态
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 想让机器人春晚包饺子？阿里达摩院：别急，先把「大脑」优化一下
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-app5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 昨天马斯克转发的那个App，我让一个5岁小孩试了试，他安静地玩了一晚上。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 在机器人眼中，玻璃并不存在
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 陶哲轩来给AI数学泼冷水了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 万字追问：当红的意识整合信息论，为何在他眼中只是一个漂亮的营销工具？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-vla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 陈亦伦和李震宇创立的具身公司它石智航，不做 VLA、不仿真，不走主流路线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 从“选择”迈向“生成”！华科团队最新综述：定义多模态推荐系统新范式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 全新视角看世界模型：从视频生成迈向通用世界模拟器
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-pi-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 深度｜蚂蚁灵波上桌，不止“性能超越Pi 0.5”，更是具身智能新分工时代
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 大家都在说它是 AI 时代的抖音，真的吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 对话拓竹陶冶：我们一群工程师，一起造个朴素的硬核公司
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-2160" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 21天让肿瘤缩小60%！加州理工团队研发尿素驱动气泡机器人，可自主导航精准引爆肿瘤
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-rynnbrain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 春晚机器人没切镜头，阿里RynnBrain让具身智能不再需要切换模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 三家中国大模型公司被卷入蒸馏风波，律师解读：Anthropic的指控从法律上很牵强
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-30-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 实测可灵3.0 - 属于每个人的AI导演时代。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-figure-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. 机器人成精了？Figure 03下厨房，不经意关抽屉那一下，太像人了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-ai-63-404" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 我用 AI 看了一个月新闻，63% 回答有问题，一堆 404 和瞎扯
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-mvggt3d3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. 告别上帝视角！MVGGT提出3D分割新范式，仅凭几张图精准锁定3D目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-clawdbot-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Clawdbot 教程 02：如何集成飞书，完全国产化！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-seedance-20-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Seedance 2.0 最全上手指南：4 大入口、火爆玩法、详细提示词都在这
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-rectified-flowiclr26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. 西湖大学破解Rectified Flow反演不稳定难题，实现零成本稳定增强｜ICLR'26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-genie-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. 蚂蚁深夜开源比肩Genie 3的世界模型，我也看到了具身智能的未来。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24. 从代工到品牌，被内容电商重塑的跨境生意
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        25. 特斯拉停产两款传奇车型，改建产线生产人形机器人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-seedance-20-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26. 实测即梦 Seedance 2.0：老外急着想注册，这就是中国 AI 视频的「黑神话」时刻
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-aisigaigushwork900" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        27. 速递｜企业需要“被AI找到”：SIG和光速创投领投，AI搜索营销平台Gushwork完成900万美元种子轮融资
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-nano-banana-2204k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28. Nano Banana 2深夜空降！一键生成20张图、4K高保真，价格还降了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29. 对话九合王啸：90%具身智能公司没未来，市场名额只有三五家
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-guiopen-cowork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        30. 支持远程操控和通用GUI操作，开源版桌面虚拟同事Open Cowork来了！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        31. 马斯克深夜点赞！内容的下一站是：玩！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        32. AI一分钟生成「塞尔达」，游戏巨头市值「雪崩」，任天堂却笑了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-minimax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33. MiniMax交卷，闫俊杰瞄准三大战场
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-3dnanobanana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        34. 3D领域的NanoBanana也来了，万物皆可用嘴操控。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-pi05lingbot-vla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        35. 从Pi0.5，再到LingBot-VLA：一条具身智能的路正在成型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-genie-3-yorollai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        36. 深度｜从 Genie 3 到 Yoroll，AI 视频原生游戏正在真正落地
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        37. 晚点独家丨小鹏自动驾驶、智能座舱中心合并，新成立通用智能中心
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        38. 从"看得见"到"能干活"，机器人的下一步是拥有触觉 | 对话戴盟机器人段江哗
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-mureka-v8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        39. 周亚辉为什么把时间花在“写歌”上？| 实测Mureka V8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        40. “会长大”的机器人来了！南科大颠覆人形机器人设计，柔性骨骼身高可缩放
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-seedance209n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        41. Seedance2.0又新出了9种神级商用玩法，变身骑士已经落后N个版本了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-openai-dime9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        42. 曝OpenAI 首款硬件定名「Dime」，坏消息：成本太高，9月首发只有「阉割版」
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-nano-banana-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        43. 刚刚，Nano Banana 2 发布！便宜又大碗还更懂中文，体验后我发现这些细节
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        44. 百度端侧大模型安全建设实践：在算力与保障之间找到平衡
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        45. 实测可灵3.0，普通人的导演梦成真了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-moss-tts-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        46. 复刻、长语音、对话、指令、音效全覆盖！模思智能推出MOSS-TTS Family！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        47. 一副手套，干翻硅谷炫技派！中国队杀入战场，狂卷100万小时数据
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-seedance20aaai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        48. Seedance2.0炸场后，又一中国黑马登顶AA榜单！AI味没了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        49. 烧光几个亿，奥特曼押注的AI记忆巨头为何突然退场？专家：记住一切，不等于创造价值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-vidu-q316sora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        50. 告别“哑剧”时代！Vidu Q3横空出世：16秒声画同出，硬刚Sora！
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 想让机器人春晚包饺子？阿里达摩院：别急，先把「大脑」优化一下
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-app5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 昨天马斯克转发的那个App，我让一个5岁小孩试了试，他安静地玩了一晚上。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 在机器人眼中，玻璃并不存在
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 陶哲轩来给AI数学泼冷水了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 万字追问：当红的意识整合信息论，为何在他眼中只是一个漂亮的营销工具？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-vla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 陈亦伦和李震宇创立的具身公司它石智航，不做 VLA、不仿真，不走主流路线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 从“选择”迈向“生成”！华科团队最新综述：定义多模态推荐系统新范式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 全新视角看世界模型：从视频生成迈向通用世界模拟器
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-pi-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 深度｜蚂蚁灵波上桌，不止“性能超越Pi 0.5”，更是具身智能新分工时代
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 大家都在说它是 AI 时代的抖音，真的吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 对话拓竹陶冶：我们一群工程师，一起造个朴素的硬核公司
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-2160" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 21天让肿瘤缩小60%！加州理工团队研发尿素驱动气泡机器人，可自主导航精准引爆肿瘤
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-rynnbrain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 春晚机器人没切镜头，阿里RynnBrain让具身智能不再需要切换模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 三家中国大模型公司被卷入蒸馏风波，律师解读：Anthropic的指控从法律上很牵强
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-30-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 实测可灵3.0 - 属于每个人的AI导演时代。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-figure-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. 机器人成精了？Figure 03下厨房，不经意关抽屉那一下，太像人了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-ai-63-404" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 我用 AI 看了一个月新闻，63% 回答有问题，一堆 404 和瞎扯
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-mvggt3d3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. 告别上帝视角！MVGGT提出3D分割新范式，仅凭几张图精准锁定3D目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-clawdbot-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Clawdbot 教程 02：如何集成飞书，完全国产化！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-seedance-20-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Seedance 2.0 最全上手指南：4 大入口、火爆玩法、详细提示词都在这
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-rectified-flowiclr26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. 西湖大学破解Rectified Flow反演不稳定难题，实现零成本稳定增强｜ICLR'26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-genie-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. 蚂蚁深夜开源比肩Genie 3的世界模型，我也看到了具身智能的未来。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24. 从代工到品牌，被内容电商重塑的跨境生意
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        25. 特斯拉停产两款传奇车型，改建产线生产人形机器人
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-seedance-20-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26. 实测即梦 Seedance 2.0：老外急着想注册，这就是中国 AI 视频的「黑神话」时刻
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-aisigaigushwork900" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        27. 速递｜企业需要“被AI找到”：SIG和光速创投领投，AI搜索营销平台Gushwork完成900万美元种子轮融资
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-nano-banana-2204k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28. Nano Banana 2深夜空降！一键生成20张图、4K高保真，价格还降了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        29. 对话九合王啸：90%具身智能公司没未来，市场名额只有三五家
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-guiopen-cowork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        30. 支持远程操控和通用GUI操作，开源版桌面虚拟同事Open Cowork来了！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        31. 马斯克深夜点赞！内容的下一站是：玩！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        32. AI一分钟生成「塞尔达」，游戏巨头市值「雪崩」，任天堂却笑了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-minimax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33. MiniMax交卷，闫俊杰瞄准三大战场
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-3dnanobanana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        34. 3D领域的NanoBanana也来了，万物皆可用嘴操控。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-pi05lingbot-vla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        35. 从Pi0.5，再到LingBot-VLA：一条具身智能的路正在成型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-genie-3-yorollai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        36. 深度｜从 Genie 3 到 Yoroll，AI 视频原生游戏正在真正落地
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        37. 晚点独家丨小鹏自动驾驶、智能座舱中心合并，新成立通用智能中心
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        38. 从"看得见"到"能干活"，机器人的下一步是拥有触觉 | 对话戴盟机器人段江哗
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-mureka-v8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        39. 周亚辉为什么把时间花在“写歌”上？| 实测Mureka V8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        40. “会长大”的机器人来了！南科大颠覆人形机器人设计，柔性骨骼身高可缩放
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-seedance209n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        41. Seedance2.0又新出了9种神级商用玩法，变身骑士已经落后N个版本了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-openai-dime9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        42. 曝OpenAI 首款硬件定名「Dime」，坏消息：成本太高，9月首发只有「阉割版」
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-nano-banana-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        43. 刚刚，Nano Banana 2 发布！便宜又大碗还更懂中文，体验后我发现这些细节
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        44. 百度端侧大模型安全建设实践：在算力与保障之间找到平衡
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        45. 实测可灵3.0，普通人的导演梦成真了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-moss-tts-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        46. 复刻、长语音、对话、指令、音效全覆盖！模思智能推出MOSS-TTS Family！
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        47. 一副手套，干翻硅谷炫技派！中国队杀入战场，狂卷100万小时数据
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-seedance20aaai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        48. Seedance2.0炸场后，又一中国黑马登顶AA榜单！AI味没了
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        49. 烧光几个亿，奥特曼押注的AI记忆巨头为何突然退场？专家：记住一切，不等于创造价值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-vidu-q316sora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        50. 告别“哑剧”时代！Vidu Q3横空出世：16秒声画同出，硬刚Sora！
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ai">AI 多模态：优质文章清单</h1>
+<blockquote>
+<p>视频生成、语音合成、具身智能、多模态大模型的最新进展。
+从简报系统 937 篇 AI 文章中按评分精选 Top 50，持续更新。</p>
+</blockquote>
+<hr />
+<h3 id="1">1. 想让机器人春晚包饺子？阿里达摩院：别急，先把「大脑」优化一下</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651016237&amp;idx=1&amp;sn=1d0611988c1bde2d83b482fdfb4d2d51">阅读原文</a></li>
+<li><strong>来源</strong>：机器之心</li>
+<li><strong>日期</strong>：2026-02-10</li>
+<li><strong>评分</strong>：85</li>
+<li><strong>要点</strong>：阿里达摩院开源了具身智能模型RynnBrain，通过将时空记忆和物理空间推理直接训练进模型，旨在提升机器人在复杂物理环境中的规划与执行能力。</li>
+</ul>
+<h3 id="2-app5">2. 昨天马斯克转发的那个App，我让一个5岁小孩试了试，他安静地玩了一晚上。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247490066&amp;idx=1&amp;sn=635cd2d609a26da028a6dea9f13254c7">阅读原文</a></li>
+<li><strong>来源</strong>：探索AGI</li>
+<li><strong>日期</strong>：2026-02-11</li>
+<li><strong>评分</strong>：84</li>
+<li><strong>要点</strong>：文章通过实际体验，认为Loopit的核心价值在于让AI生成可交互、可玩的内容，而不仅仅是观看的视频，这使其区别于Sora等AI视频生成工具。</li>
+</ul>
+<h3 id="3">3. 在机器人眼中，玻璃并不存在</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzkzNDQxOTU2MQ==&amp;mid=2247511795&amp;idx=1&amp;sn=e7603f418213005f1cd83e459afcf62e">阅读原文</a></li>
+<li><strong>来源</strong>：赛博禅心</li>
+<li><strong>日期</strong>：2026-01-27</li>
+<li><strong>评分</strong>：82</li>
+<li><strong>要点</strong>：机器人视觉系统长期存在无法准确识别透明或反光物体的问题，而开源项目LingBot-Depth通过AI模型补全缺失的深度信息，为解决此问题提供了新思路。</li>
+</ul>
+<h3 id="4-ai">4. 年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532900&amp;idx=1&amp;sn=17da5474eae944b3eb78833488b68ba6">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-02-12</li>
+<li><strong>评分</strong>：82</li>
+<li><strong>要点</strong>：文章回顾了2025年至2026年初AI领域的关键进展，涵盖模型、应用、巨头竞争、创业公司、具身智能、硬件及人文影响等多个主题，试图在快速变化中梳理出发展脉络。</li>
+</ul>
+<h3 id="5-ai">5. 陶哲轩来给AI数学泼冷水了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247870617&amp;idx=2&amp;sn=822c44d2ffa8c1a5d092859394fde186">阅读原文</a></li>
+<li><strong>来源</strong>：量子位</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：82</li>
+<li><strong>要点</strong>：① 陶哲轩指出，AI在生成大量数学新想法的同时，也显著降低了想法的平均质量，许多AI生成的方案被证明是错误的。② 他提出数学进步公式应修正为“优秀新想法数量”乘以“想法库信噪比”，AI可能通过增加低质量想法而降低整体信噪比。③ 为抑制负面影响，他建议开发一种用于描述数学策略（而非完整证明）的新形式化语言，为AI生成的想法引入“选择性摩擦”，引导其产出更优质的结果。</li>
+</ul>
+<h3 id="6">6. 万字追问：当红的意识整合信息论，为何在他眼中只是一个漂亮的营销工具？</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI3MjQ4MDMyOQ==&amp;mid=2247538428&amp;idx=1&amp;sn=1eeb265dc427e5a7b9ae4d6cb1a2258b">阅读原文</a></li>
+<li><strong>来源</strong>：追问nextquestion</li>
+<li><strong>日期</strong>：2026-01-29</li>
+<li><strong>评分</strong>：81</li>
+<li><strong>要点</strong>：认知科学家约夏·巴赫与物理学家徐道辉讨论了意识的本质，巴赫认为所有意识体验本质上都是虚拟的建构，并批评整合信息理论更像是一个营销工具。</li>
+</ul>
+<h3 id="7-vla">7. 陈亦伦和李震宇创立的具身公司它石智航，不做 VLA、不仿真，不走主流路线</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532565&amp;idx=1&amp;sn=ed6a3653fb40455e40c59710a7917d1b">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-02-02</li>
+<li><strong>评分</strong>：81</li>
+<li><strong>要点</strong>：它石智航由陈亦伦和李震宇创立，在具身智能领域采取反主流路线，不依赖 VLA 模型，而是自研 AWE 并采集真实场景数据。</li>
+</ul>
+<h3 id="8">8. 从“选择”迈向“生成”！华科团队最新综述：定义多模态推荐系统新范式</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&amp;mid=2247717544&amp;idx=2&amp;sn=3070472fb68191712a5849ee0f4f9b50">阅读原文</a></li>
+<li><strong>来源</strong>：PaperWeekly</li>
+<li><strong>评分</strong>：81</li>
+<li><strong>要点</strong>：华中科技大学团队在综述中提出，多模态推荐系统正从传统的“在库中选择”范式，转向“为用户个性化生成”的新范式。</li>
+</ul>
+<h3 id="9">9. 全新视角看世界模型：从视频生成迈向通用世界模拟器</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651016067&amp;idx=3&amp;sn=c25e731703e6caf8fe8e9ac53a9ef282">阅读原文</a></li>
+<li><strong>来源</strong>：机器之心</li>
+<li><strong>日期</strong>：2026-02-07</li>
+<li><strong>评分</strong>：80</li>
+<li><strong>要点</strong>：快手可灵团队与港科大（广州）团队联合发表综述，提出以“状态构建”与“动态建模”为双支柱的新分类体系，旨在将视频生成模型推进为具备推理和规划能力的“通用世界模拟器”。</li>
+</ul>
+<h3 id="10-pi-05">10. 深度｜蚂蚁灵波上桌，不止“性能超越Pi 0.5”，更是具身智能新分工时代</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247513705&amp;idx=1&amp;sn=1dc219caf617d0ae672a1b4d2f7bd942">阅读原文</a></li>
+<li><strong>来源</strong>：Z Potentials</li>
+<li><strong>日期</strong>：2026-01-28</li>
+<li><strong>评分</strong>：79</li>
+<li><strong>要点</strong>：蚂蚁灵波开源其具身大模型 LingBot-VLA 及全链路工具链，旨在为行业提供一个高性能、可泛化的智能基座，以解决机器人领域算法孤岛和全栈自研成本高的问题。</li>
+</ul>
+<h3 id="11-ai">11. 大家都在说它是 AI 时代的抖音，真的吗？</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649104605&amp;idx=1&amp;sn=39e656de860720663822cd9a3e541cb3">阅读原文</a></li>
+<li><strong>来源</strong>：十字路口Crossing</li>
+<li><strong>日期</strong>：2026-02-11</li>
+<li><strong>评分</strong>：79</li>
+<li><strong>要点</strong>：文章通过实测体验Loopit，探讨其作为「互动内容平台」与抖音等传统「观看型」内容平台的区别，认为其核心是让用户「玩」内容而不仅是「看」。</li>
+</ul>
+<h3 id="12">12. 对话拓竹陶冶：我们一群工程师，一起造个朴素的硬核公司</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532366&amp;idx=1&amp;sn=035f91c40b1eaa7fa4aca6ba4b15105a">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-01-26</li>
+<li><strong>评分</strong>：78</li>
+<li><strong>要点</strong>：文章讲述了拓竹科技如何通过硬核工程创新，将难用的消费级3D打印机变得易用，从而引爆市场，成为行业第一的创业故事。</li>
+</ul>
+<h3 id="13-2160">13. 21天让肿瘤缩小60%！加州理工团队研发尿素驱动气泡机器人，可自主导航精准引爆肿瘤</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649790010&amp;idx=1&amp;sn=b41f1d62e892121e23317758bf4d1651">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-08</li>
+<li><strong>评分</strong>：78</li>
+<li><strong>要点</strong>：加州理工团队研发出以尿素为动力的生物可吸收微泡机器人，能自主导航至肿瘤并定向释放药物，在小鼠实验中使肿瘤缩小60%。</li>
+</ul>
+<h3 id="14-rynnbrain">14. 春晚机器人没切镜头，阿里RynnBrain让具身智能不再需要切换模型</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&amp;mid=2247504426&amp;idx=2&amp;sn=9a698c404b63b6227b194bef8425c43a">阅读原文</a></li>
+<li><strong>来源</strong>：PaperAgent</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：78</li>
+<li><strong>要点</strong>：阿里开源的RynnBrain是一个统一的具身智能时空基础模型，将感知、定位、推理、规划四大核心能力集成于一体，无需为不同任务切换模型。该模型旨在让机器人在真实动态环境中实现“手眼脑”协同，如同今年春晚机器人表演一样流畅。这代表了具身智能从“多模型切换”迈向“统一大脑”的技术跨越。</li>
+</ul>
+<h3 id="15-anthropic">15. 三家中国大模型公司被卷入蒸馏风波，律师解读：Anthropic的指控从法律上很牵强</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&amp;mid=2691565169&amp;idx=1&amp;sn=59b19b790fa9e0be1661af8702c88f50">阅读原文</a></li>
+<li><strong>来源</strong>：腾讯科技</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：77</li>
+<li><strong>要点</strong>：律师针对Anthropic指控中国大模型公司通过蒸馏技术窃取其模型功能一事进行解读，认为从法律角度看该指控很牵强。核心论据在于，通过API调用获取的AI生成内容缺乏人类作者的智力创造，难以构成受著作权法保护的作品；且蒸馏是行业常见技术迭代手段。文章暗示Anthropic的指控可能意在技术霸权与数字垄断，而非单纯维权。</li>
+</ul>
+<h3 id="16-30-ai">16. 实测可灵3.0 - 属于每个人的AI导演时代。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679720&amp;idx=1&amp;sn=10989908d7c854025ae4b0bae5493afb">阅读原文</a></li>
+<li><strong>来源</strong>：数字生命卡兹克</li>
+<li><strong>评分</strong>：76</li>
+<li><strong>要点</strong>：快手可灵 3.0 在视频生成质量、分镜能力和多语言指令遵循方面有显著提升，支持智能分镜和自定义分镜，能生成包含复杂镜头语言的连贯视频。</li>
+</ul>
+<h3 id="17-figure-03">17. 机器人成精了？Figure 03下厨房，不经意关抽屉那一下，太像人了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652673084&amp;idx=3&amp;sn=98cf2158bea20402903319d46f21e150">阅读原文</a></li>
+<li><strong>来源</strong>：新智元</li>
+<li><strong>日期</strong>：2026-02-08</li>
+<li><strong>评分</strong>：76</li>
+<li><strong>要点</strong>：Figure AI发布最新人形机器人Figure 03，其Helix 02系统实现了全身协同的自主控制，能像人类一样在厨房中流畅完成复杂任务。</li>
+</ul>
+<h3 id="18-ai-63-404">18. 我用 AI 看了一个月新闻，63% 回答有问题，一堆 404 和瞎扯</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651080167&amp;idx=1&amp;sn=1a31c1e25d7eaf0638a9a77d207e2e6a">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-09</li>
+<li><strong>评分</strong>：74</li>
+<li><strong>要点</strong>：通过为期一个月的实验，文章揭示了当前AI聊天机器人在提供新闻摘要时存在严重的事实错误、编造来源和链接失效等问题，其清晰、专业的表述风格会制造一种误导性的可信感。</li>
+</ul>
+<h3 id="19-mvggt3d3d">19. 告别上帝视角！MVGGT提出3D分割新范式，仅凭几张图精准锁定3D目标</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&amp;mid=2247717180&amp;idx=2&amp;sn=c81744bb6ef5bb90b317593e7939cf82">阅读原文</a></li>
+<li><strong>来源</strong>：PaperWeekly</li>
+<li><strong>日期</strong>：2026-01-25</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：文章介绍了一种名为MVGGT的新方法，用于解决在稀疏多视角RGB图像条件下进行3D指代分割的难题，无需依赖完整的稠密点云。</li>
+</ul>
+<h3 id="20-clawdbot-02">20. Clawdbot 教程 02：如何集成飞书，完全国产化！</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&amp;mid=2247495632&amp;idx=1&amp;sn=1bd6e24ae0b61123702c2ab7c9391624">阅读原文</a></li>
+<li><strong>来源</strong>：歸藏的AI工具箱</li>
+<li><strong>日期</strong>：2026-02-05</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：文章提供了将Clawdbot集成到飞书的详细教程，旨在实现完全国产化的AI应用流程。</li>
+</ul>
+<h3 id="21-seedance-20-4">21. Seedance 2.0 最全上手指南：4 大入口、火爆玩法、详细提示词都在这</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651080834&amp;idx=1&amp;sn=8857aafb320e55cb3c295b2ad1f79c30">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-13</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：文章介绍了AI视频生成模型Seedance 2.0的多种火爆玩法，主要包括利用其强大的参考能力，将用户形象替换到电影或视频中，以及结合知名IP形象进行无限创作。</li>
+</ul>
+<h3 id="22-rectified-flowiclr26">22. 西湖大学破解Rectified Flow反演不稳定难题，实现零成本稳定增强｜ICLR'26</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247871223&amp;idx=3&amp;sn=80ffdbb00ad6b5913b1802810cece216">阅读原文</a></li>
+<li><strong>来源</strong>：量子位</li>
+<li><strong>日期</strong>：2026-03-01</li>
+<li><strong>评分</strong>：73</li>
+<li><strong>要点</strong>：西湖大学提出PMI机制，通过在Rectified Flow反演中加入轻量修正项，实现零成本且无需训练的图像编辑稳定性提升。</li>
+</ul>
+<h3 id="23-genie-3">23. 蚂蚁深夜开源比肩Genie 3的世界模型，我也看到了具身智能的未来。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679339&amp;idx=1&amp;sn=9f40ca981e803254db26220dcf701a90">阅读原文</a></li>
+<li><strong>来源</strong>：数字生命卡兹克</li>
+<li><strong>日期</strong>：2026-01-29</li>
+<li><strong>评分</strong>：72</li>
+<li><strong>要点</strong>：蚂蚁集团旗下的灵波科技开源了可实时交互生成的世界模型 LingBot-World，其质量被认为可对标 Google Genie 3。</li>
+</ul>
+<h3 id="24">24. 从代工到品牌，被内容电商重塑的跨境生意</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532551&amp;idx=1&amp;sn=02803e43f741f554291d25d0fb9407db">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-01-30</li>
+<li><strong>评分</strong>：72</li>
+<li><strong>要点</strong>：内容电商（如TikTok Shop）正在重塑跨境生意，通过短视频和直播将隐性消费需求转化为显性购买，帮助中国出海品牌突破认知壁垒并建立品牌心智。</li>
+</ul>
+<h3 id="25">25. 特斯拉停产两款传奇车型，改建产线生产人形机器人</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649789581&amp;idx=2&amp;sn=8ef02a5a67db54cafb9193649dbf8acf">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-01-30</li>
+<li><strong>评分</strong>：71</li>
+<li><strong>要点</strong>：特斯拉宣布将于2026年下半年逐步停产Model S和Model X，并将相关产线改建用于生产Optimus人形机器人，标志着公司向自动驾驶和AI机器人核心的战略转型。</li>
+</ul>
+<h3 id="26-seedance-20-ai">26. 实测即梦 Seedance 2.0：老外急着想注册，这就是中国 AI 视频的「黑神话」时刻</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651080503&amp;idx=1&amp;sn=cff86335b27ac78361b036e41662463d">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-11</li>
+<li><strong>评分</strong>：71</li>
+<li><strong>要点</strong>：字节自研视频生成模型Seedance 2.0因能生成高一致性、复杂运镜的AI视频而在国内外引发广泛关注和讨论。</li>
+</ul>
+<h3 id="27-aisigaigushwork900">27. 速递｜企业需要“被AI找到”：SIG和光速创投领投，AI搜索营销平台Gushwork完成900万美元种子轮融资</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247514273&amp;idx=3&amp;sn=3673ec4098ced497e1ef14d7fe49f57e">阅读原文</a></li>
+<li><strong>来源</strong>：Z Potentials</li>
+<li><strong>日期</strong>：2026-02-26</li>
+<li><strong>评分</strong>：70</li>
+<li><strong>要点</strong>：【主张】AI搜索营销平台Gushwork完成900万美元种子轮融资，帮助企业从ChatGPT、Gemini等AI搜索平台捕获客户线索。
+【论据】Gushwork利用AI代理网络自动生成SEO内容、构建反向链接并追踪线索。其内部数据显示，AI搜索渠道贡献了客户约20%的网站流量，却带来了近40%的入站销售线索。公司年化经常性收入约150万美元，月增长率达50-80%。
+【启示】随着AI搜索工具...</li>
+</ul>
+<h3 id="28-nano-banana-2204k">28. Nano Banana 2深夜空降！一键生成20张图、4K高保真，价格还降了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649790981&amp;idx=1&amp;sn=00202e54dc5dd21a55817d9d118fc5f3">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-27</li>
+<li><strong>评分</strong>：70</li>
+<li><strong>要点</strong>：谷歌悄然发布新一代图像生成模型Nano Banana 2，基于Gemini 3.1 Flash架构，旨在结合高速生成与高质量输出。模型继承了Pro版本的图像检索、文字生成、角色一致性等功能，并在4K分辨率下价格较Pro版本下降约37%，推理速度接近翻倍。官方定位其为综合性价比高的4K生图方案。</li>
+</ul>
+<h3 id="29-90">29. 对话九合王啸：90%具身智能公司没未来，市场名额只有三五家</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247871223&amp;idx=1&amp;sn=9641bd3f73ae711d22e496788736bef7">阅读原文</a></li>
+<li><strong>来源</strong>：量子位</li>
+<li><strong>日期</strong>：2026-03-01</li>
+<li><strong>评分</strong>：70</li>
+<li><strong>要点</strong>：对话九合创投王啸，深入探讨具身智能的泡沫、竞争格局及投资逻辑。</li>
+</ul>
+<h3 id="30-guiopen-cowork">30. 支持远程操控和通用GUI操作，开源版桌面虚拟同事Open Cowork来了！</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651018653&amp;idx=3&amp;sn=76dfe0bb2832efadbd7d245d34f5afe8">阅读原文</a></li>
+<li><strong>来源</strong>：机器之心</li>
+<li><strong>日期</strong>：2026-03-01</li>
+<li><strong>评分</strong>：70</li>
+<li><strong>要点</strong>：开源项目Open Cowork发布，集成了远程控制、GUI操作和文档生成能力，旨在打造桌面端的虚拟AI同事。</li>
+</ul>
+<h3 id="31">31. 马斯克深夜点赞！内容的下一站是：玩！</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NzgzMjA4MQ==&amp;mid=2453480399&amp;idx=1&amp;sn=785cc338cf2c805f3b14400f648a5181">阅读原文</a></li>
+<li><strong>来源</strong>：AGI Hunt</li>
+<li><strong>日期</strong>：2026-02-10</li>
+<li><strong>评分</strong>：69</li>
+<li><strong>要点</strong>：文章探讨了AI时代下一种新的内容形态——互动内容，并以产品Loopit为例，说明AI如何降低互动内容的创作门槛。</li>
+</ul>
+<h3 id="32-ai">32. AI一分钟生成「塞尔达」，游戏巨头市值「雪崩」，任天堂却笑了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651080112&amp;idx=1&amp;sn=b545e0a5378b8c93c49e727b1ab30055">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-07</li>
+<li><strong>评分</strong>：67</li>
+<li><strong>要点</strong>：文章认为，尽管 Genie 3 等 AI 模型能快速生成可交互的 3D 场景，但因其缺乏长期一致性、确定性的物理逻辑和复杂的事件因果链，目前无法替代传统游戏开发中构建鲜活、深度游戏世界的工作。</li>
+</ul>
+<h3 id="33-minimax">33. MiniMax交卷，闫俊杰瞄准三大战场</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mjc1NjM3MjY2MA==&amp;mid=2691565343&amp;idx=1&amp;sn=5a637ae4f2219aa9b095fe56d077f726">阅读原文</a></li>
+<li><strong>来源</strong>：腾讯科技</li>
+<li><strong>日期</strong>：2026-03-03</li>
+<li><strong>评分</strong>：67</li>
+<li><strong>要点</strong>：MiniMax发布上市后首份年报，2025年总收入7904万美元，同比增长158.9%，海外收入占比提升至73%。创始人闫俊杰强调技术迭代速度（108天完成M2系列三代迭代）和增长势头（ARR已超1.5亿美元）。公司构建了全模态能力，并指出视频生成是巨大市场机会。财报显示销售费用大幅下降，而收入高速增长，表明增长由产品驱动。</li>
+</ul>
+<h3 id="34-3dnanobanana">34. 3D领域的NanoBanana也来了，万物皆可用嘴操控。</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679204&amp;idx=1&amp;sn=3ed3b69b86b52f1cbd16b5b8758a6231">阅读原文</a></li>
+<li><strong>来源</strong>：数字生命卡兹克</li>
+<li><strong>日期</strong>：2026-01-26</li>
+<li><strong>评分</strong>：66</li>
+<li><strong>要点</strong>：文章介绍了名为hyper3D的AI工具及其Rodin Gen-2功能，该工具允许用户通过自然语言提示直接编辑任意上传的3D模型，实现了“用嘴改模型”。</li>
+</ul>
+<h3 id="35-pi05lingbot-vla">35. 从Pi0.5，再到LingBot-VLA：一条具身智能的路正在成型</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649104170&amp;idx=1&amp;sn=b0390fdffc65ef17acdfbefc66c9b8cd">阅读原文</a></li>
+<li><strong>来源</strong>：十字路口Crossing</li>
+<li><strong>日期</strong>：2026-01-28</li>
+<li><strong>评分</strong>：66</li>
+<li><strong>要点</strong>：蚂蚁灵波开源了其具身智能通用大模型LingBot-VLA，旨在通过一个通用的视觉-语言-动作（VLA）基础模型，解决机器人领域因场景切换而需重复训练、导致发展碎片化的问题。此举被视为在Physical Intelligence开源Pi0.5模型后，对“VLA+开源”路线的进一步验证和推进。</li>
+</ul>
+<h3 id="36-genie-3-yorollai">36. 深度｜从 Genie 3 到 Yoroll，AI 视频原生游戏正在真正落地</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247514258&amp;idx=1&amp;sn=fb7a50c62ca11fbae0f385bf8dd95fb7">阅读原文</a></li>
+<li><strong>来源</strong>：Z Potentials</li>
+<li><strong>日期</strong>：2026-02-25</li>
+<li><strong>评分</strong>：65</li>
+<li><strong>要点</strong>：AI视频原生游戏正在落地，其核心变化是从“需用游戏引擎”变为“会用故事就能创作”。以Yoroll平台为例，它整合了AI视频生成与游戏逻辑系统，让创作者通过定义世界观和关键节点，即可生成可交互、有剧情的游戏。这降低了游戏制作门槛，可能吸引大量视频创作者进入，并冲击传统游戏引擎与制作公司的商业模式。</li>
+</ul>
+<h3 id="37">37. 晚点独家丨小鹏自动驾驶、智能座舱中心合并，新成立通用智能中心</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532572&amp;idx=2&amp;sn=a622d19bea44ed9408d117d8a8cd20fd">阅读原文</a></li>
+<li><strong>来源</strong>：晚点LatePost</li>
+<li><strong>日期</strong>：2026-02-03</li>
+<li><strong>评分</strong>：63</li>
+<li><strong>要点</strong>：小鹏汽车将自动驾驶中心与智能座舱中心合并为“通用智能中心”，以统一的AI技术中台支撑智驾、座舱及机器人等业务。</li>
+</ul>
+<h3 id="38">38. 从"看得见"到"能干活"，机器人的下一步是拥有触觉 | 对话戴盟机器人段江哗</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649791144&amp;idx=2&amp;sn=decce14447f8f0ad2a633cc02adb72a6">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-03-01</li>
+<li><strong>评分</strong>：63</li>
+<li><strong>要点</strong>：深度对话戴盟机器人，探讨视触觉传感器在具身智能从视觉迈向精细操作中的关键作用。</li>
+</ul>
+<h3 id="39-mureka-v8">39. 周亚辉为什么把时间花在“写歌”上？| 实测Mureka V8</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649104236&amp;idx=1&amp;sn=aced12d6c40c5ae42fae52266adb603f">阅读原文</a></li>
+<li><strong>来源</strong>：十字路口Crossing</li>
+<li><strong>日期</strong>：2026-01-29</li>
+<li><strong>评分</strong>：61</li>
+<li><strong>要点</strong>：昆仑万维发布的AI音乐模型Mureka V8引入了音乐思维链机制，旨在让AI在生成前先理解歌曲的整体结构，以生成更完整、可用的音乐。</li>
+</ul>
+<h3 id="40">40. “会长大”的机器人来了！南科大颠覆人形机器人设计，柔性骨骼身高可缩放</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649789692&amp;idx=1&amp;sn=bfc23681f2b715ffa1bb3d1959bc29ce">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-02</li>
+<li><strong>评分</strong>：61</li>
+<li><strong>要点</strong>：南方科技大学团队受人类骨骼启发，研发出柔性可伸缩的人形机器人 GrowHR，其身高可在 0.49 米至 1.36 米间自由变化。</li>
+</ul>
+<h3 id="41-seedance209n">41. Seedance2.0又新出了9种神级商用玩法，变身骑士已经落后N个版本了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247505146&amp;idx=1&amp;sn=a2113861ffe274ef749036403258fc80">阅读原文</a></li>
+<li><strong>来源</strong>：卡尔的AI沃茨</li>
+<li><strong>日期</strong>：2026-02-26</li>
+<li><strong>评分</strong>：60</li>
+<li><strong>要点</strong>：【主张】文章总结了Seedance 2.0视频生成模型的9种新兴商业用途，展示了其在追热点、广告制作、电商展示等场景下的强大能力。
+【论据】具体案例包括：1) 通过截取关键帧模仿热门电影转场；2) 根据指定产品自动生成包含分镜、配乐、Slogan的完整广告；3) 根据服装图片生成换装卡点视频；4) 为产品生成包含口播、近景展示的直播带货视频，甚至能自动识别产品成分生成对应文案。
+【启示】Se...</li>
+</ul>
+<h3 id="42-openai-dime9">42. 曝OpenAI 首款硬件定名「Dime」，坏消息：成本太高，9月首发只有「阉割版」</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651080119&amp;idx=1&amp;sn=6c74362e25fa79f7ac8bbdb5031258e8">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-08</li>
+<li><strong>评分</strong>：58</li>
+<li><strong>要点</strong>：爆料称OpenAI首款消费级硬件AI耳机定名“Dime”，但因成本问题，首发版本可能仅为功能简化的音频设备。</li>
+</ul>
+<h3 id="43-nano-banana-2">43. 刚刚，Nano Banana 2 发布！便宜又大碗还更懂中文，体验后我发现这些细节</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651082149&amp;idx=1&amp;sn=957ad928b61249010148eb50d0ebb7df">阅读原文</a></li>
+<li><strong>来源</strong>：APPSO</li>
+<li><strong>日期</strong>：2026-02-27</li>
+<li><strong>评分</strong>：58</li>
+<li><strong>要点</strong>：文章实测了谷歌新发布的Nano Banana 2图像生成模型，重点评估了其基于真实世界知识库和搜索能力带来的理解力提升。模型在空间比例、复杂UI场景、中文文字渲染（如诗歌、漫画对白）以及信息图表生成方面表现出色，能更准确地理解并执行复杂、嵌套的提示词，生图结果更具实用性和“常识感”。</li>
+</ul>
+<h3 id="44">44. 百度端侧大模型安全建设实践：在算力与保障之间找到平衡</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274179&amp;idx=2&amp;sn=1143f946cdf9e0035f8927281ca42e0c">阅读原文</a></li>
+<li><strong>来源</strong>：InfoQ</li>
+<li><strong>日期</strong>：2026-02-03</li>
+<li><strong>评分</strong>：56</li>
+<li><strong>要点</strong>：百度分享了在端侧大模型安全建设中的实践，重点是如何在低算力限制下满足内容审核效果，并支持多模态安全审核。</li>
+</ul>
+<h3 id="45-30">45. 实测可灵3.0，普通人的导演梦成真了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247504682&amp;idx=1&amp;sn=d27522425f6fc59f310d33f1359c44f5">阅读原文</a></li>
+<li><strong>来源</strong>：卡尔的AI沃茨</li>
+<li><strong>日期</strong>：2026-02-08</li>
+<li><strong>评分</strong>：55</li>
+<li><strong>要点</strong>：可灵3.0视频生成模型在分镜设计、多角色对话和画面一致性上取得显著进步，让普通人能更便捷地制作具有电影感的视频。</li>
+</ul>
+<h3 id="46-moss-tts-family">46. 复刻、长语音、对话、指令、音效全覆盖！模思智能推出MOSS-TTS Family！</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651016519&amp;idx=3&amp;sn=eba328792bf1d0ae5dc5f240bee98283">阅读原文</a></li>
+<li><strong>来源</strong>：机器之心</li>
+<li><strong>日期</strong>：2026-02-11</li>
+<li><strong>评分</strong>：55</li>
+<li><strong>要点</strong>：模思智能推出并开源MOSS-TTS Family语音生成模型家族，包含五个专门模型，覆盖高保真复刻、对话合成、角色设计、音效生成和实时交互等全场景语音生产需求。</li>
+</ul>
+<h3 id="47-100">47. 一副手套，干翻硅谷炫技派！中国队杀入战场，狂卷100万小时数据</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652675192&amp;idx=1&amp;sn=da4ea7f5daf4741a48a5e8da62d634a6">阅读原文</a></li>
+<li><strong>来源</strong>：新智元</li>
+<li><strong>日期</strong>：2026-02-13</li>
+<li><strong>评分</strong>：55</li>
+<li><strong>要点</strong>：灵初智能通过数据手套采集“人类原生数据”，以解决具身智能领域的数据荒问题，其方案区别于主流的“机器人中心”数据采集模式。</li>
+</ul>
+<h3 id="48-seedance20aaai">48. Seedance2.0炸场后，又一中国黑马登顶AA榜单！AI味没了</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652678480&amp;idx=1&amp;sn=d4ad15f73feb8b31f49cdf2fef402fe8">阅读原文</a></li>
+<li><strong>来源</strong>：新智元</li>
+<li><strong>日期</strong>：2026-02-27</li>
+<li><strong>评分</strong>：55</li>
+<li><strong>要点</strong>：昆仑万维 SkyReels-V4 视频模型发布，在多模态控制和音画同步上表现优异并登顶榜单。</li>
+</ul>
+<h3 id="49-ai">49. 烧光几个亿，奥特曼押注的AI记忆巨头为何突然退场？专家：记住一切，不等于创造价值</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649790715&amp;idx=2&amp;sn=25a0d5bf96fde2913bff05b017e3e27e">阅读原文</a></li>
+<li><strong>来源</strong>：DeepTech深科技</li>
+<li><strong>日期</strong>：2026-02-23</li>
+<li><strong>评分</strong>：53</li>
+<li><strong>要点</strong>：① 主张：曾获奥特曼投资、试图记录用户一生的AI记忆公司Limitless（原Rewind）被Meta收购并关闭服务，案例引发对AI记忆产品市场可行性的反思。② 论据：Limitless的产品能录制并转录用户屏幕和对话，但最终未能走向大众化成功。专家指出，“记住一切”不等于“创造价值”，用户可能不愿为被动记录付费，且存在隐私、数据归属等复杂问题。③ 启示：AI记忆赛道虽受关注，但仅提供“全记...</li>
+</ul>
+<h3 id="50-vidu-q316sora">50. 告别“哑剧”时代！Vidu Q3横空出世：16秒声画同出，硬刚Sora！</h3>
+<ul>
+<li><strong>链接</strong>：<a href="https://mp.weixin.qq.com/s?__biz=MjM5ODU1MzQzOQ==&amp;mid=2451428700&amp;idx=1&amp;sn=0c07d9ebb3df8569c7ba4e67c752c523">阅读原文</a></li>
+<li><strong>来源</strong>：AI产品黄叔</li>
+<li><strong>评分</strong>：50</li>
+<li><strong>要点</strong>：Vidu Q3视频生成模型实现了16秒声画同步直出，标志着AI视频生成从“哑剧”进入实用阶段。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/makinotes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
