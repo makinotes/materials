@@ -324,7 +324,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw
+    Overview
   
 
     
@@ -914,7 +914,7 @@
   <span class="md-ellipsis">
     
   
-    AI 学习笔记
+    Overview
   
 
     
@@ -1414,14 +1414,14 @@
   
 
 
-<h1 id="openclawvps">OpenClaw（小龙虾）VPS 部署实录<a class="headerlink" href="#openclawvps" title="Permanent link">&para;</a></h1>
+<h1 id="openclawvps">OpenClaw（小龙虾）VPS 部署实录</h1>
 <blockquote>
 <p>部署日期：2026-03-04
 部署人：makino
 用途：VPS 部署 OpenClaw + 飞书接入，作为移动端 AI 助手入口</p>
 </blockquote>
 <hr />
-<h2 id="_1">环境信息<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">环境信息</h2>
 <table>
 <thead>
 <tr>
@@ -1469,51 +1469,51 @@
 </tbody>
 </table>
 <hr />
-<h2 id="_2">部署时间线<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1554-">15:54 - 准备工作<a class="headerlink" href="#1554-" title="Permanent link">&para;</a></h3>
+<h2 id="_2">部署时间线</h2>
+<h3 id="1554-">15:54 - 准备工作</h3>
 <ul>
 <li>[x] 生成 SSH Key（ed25519）</li>
 <li>[x] 调研 OpenClaw + 飞书配置方案</li>
 </ul>
-<h3 id="1609-vultr">16:09 - Vultr 账号设置<a class="headerlink" href="#1609-vultr" title="Permanent link">&para;</a></h3>
+<h3 id="1609-vultr">16:09 - Vultr 账号设置</h3>
 <ul>
 <li>[x] GitHub 登录 Vultr</li>
 <li>[x] 支付宝绑定付款（最低 $10）</li>
 <li>[x] 获得 $300 免费额度（30天有效）</li>
 </ul>
-<h3 id="1620-vps-api">16:20 - 创建 VPS（浏览器 → API）<a class="headerlink" href="#1620-vps-api" title="Permanent link">&para;</a></h3>
+<h3 id="1620-vps-api">16:20 - 创建 VPS（浏览器 → API）</h3>
 <ul>
 <li>[x] 尝试 Vultr Beta Deploy UI → 放弃（见踩坑 #1）</li>
 <li>[x] 启用 Vultr API，获取 API Key</li>
 <li>[x] 通过 API 创建实例（~2分钟就绪）</li>
 <li>[x] SSH 连接成功</li>
 </ul>
-<h3 id="1624-openclaw">16:24 - 安装 OpenClaw<a class="headerlink" href="#1624-openclaw" title="Permanent link">&para;</a></h3>
+<h3 id="1624-openclaw">16:24 - 安装 OpenClaw</h3>
 <ul>
 <li>[x] nvm 安装 Node.js v22.22.0</li>
 <li>[x] npm install -g openclaw@latest → v2026.3.2</li>
 <li>[x] 配置本地 SSH 快捷连接（ssh openclaw）</li>
 </ul>
-<h3 id="1635-openclaw">16:35 - 配置 OpenClaw<a class="headerlink" href="#1635-openclaw" title="Permanent link">&para;</a></h3>
+<h3 id="1635-openclaw">16:35 - 配置 OpenClaw</h3>
 <ul>
 <li>[x] 写入 openclaw.json（火山方舟 + 飞书）</li>
 <li>[x] openclaw doctor --fix 修复配置格式（见踩坑 #5）</li>
 <li>[x] 设置 gateway.mode=local + auth token</li>
 <li>[x] 关闭 memorySearch（无 embedding provider）</li>
 </ul>
-<h3 id="1650-systemd">16:50 - 安装 systemd 服务<a class="headerlink" href="#1650-systemd" title="Permanent link">&para;</a></h3>
+<h3 id="1650-systemd">16:50 - 安装 systemd 服务</h3>
 <ul>
 <li>[x] openclaw gateway install 失败（见踩坑 #6）</li>
 <li>[x] 手动创建 /etc/systemd/system/openclaw-gateway.service</li>
 <li>[x] systemctl enable + start 成功</li>
 </ul>
-<h3 id="1652-">16:52 - 飞书测试通过<a class="headerlink" href="#1652-" title="Permanent link">&para;</a></h3>
+<h3 id="1652-">16:52 - 飞书测试通过</h3>
 <ul>
 <li>[x] MK OpenClaw Bot 在飞书中正常回复</li>
 <li>[x] 火山方舟 Coding Plan 模型响应正常</li>
 <li>[x] 无需重新配对（复用 1月30日的配对记录）</li>
 </ul>
-<h3 id="1700-">17:00 - 调教与优化<a class="headerlink" href="#1700-" title="Permanent link">&para;</a></h3>
+<h3 id="1700-">17:00 - 调教与优化</h3>
 <ul>
 <li>[x] 从 Claude Code 导入个人上下文（profile → USER.md, insights → MEMORY.md）</li>
 <li>[x] 精简 AGENTS.md（几百行 → 40 行，去掉群聊/heartbeat 细节）</li>
@@ -1521,28 +1521,28 @@
 <li>[x] 删除 BOOTSTRAP.md（已完成首次引导）</li>
 <li>[x] 卸载本地 OpenClaw（npm uninstall + 删除 ~/.openclaw/）</li>
 </ul>
-<h3 id="1730-review">17:30 - Review 收尾<a class="headerlink" href="#1730-review" title="Permanent link">&para;</a></h3>
+<h3 id="1730-review">17:30 - Review 收尾</h3>
 <ul>
 <li>[x] 确认 contact 权限报错为非致命（飞书通讯录权限，不影响功能）</li>
 <li>[x] 确认飞书防抖 2000ms 为 v3.2 正常行为</li>
 <li>[x] 确认本地 Claude Code 未受影响</li>
 </ul>
-<h3 id="1900-">19:00 - 能力包传达<a class="headerlink" href="#1900-" title="Permanent link">&para;</a></h3>
+<h3 id="1900-">19:00 - 能力包传达</h3>
 <ul>
 <li>[x] 预配置 web tools（web_fetch/web_search/exec）</li>
 <li>[x] Brave Search API 注册留给小龙虾自行完成</li>
 <li>[x] 整理能力包（定位/碎片收集/投资知识/CC联动/沟通风格/安全红线）</li>
 <li>[x] 文档归档到 <code>openclaw/</code> 文件夹</li>
 </ul>
-<h3 id="1950-">19:50 - 安全加固<a class="headerlink" href="#1950-" title="Permanent link">&para;</a></h3>
+<h3 id="1950-">19:50 - 安全加固</h3>
 <ul>
 <li>[x] exec security 改为 full（Berton 确认风险低）</li>
 <li>[x] Gateway 端口从默认 18789 改为 39217（Berton 建议，防 hack 脚本扫描）</li>
 <li>[x] 整理技能学习路线图（heartbeat/cron/MCP/RSS/市场监控）</li>
 </ul>
 <hr />
-<h2 id="_3">踩坑记录<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="1vultr-beta-deploy-ui">坑 #1：Vultr Beta Deploy UI 操作困难<a class="headerlink" href="#1vultr-beta-deploy-ui" title="Permanent link">&para;</a></h3>
+<h2 id="_3">踩坑记录</h2>
+<h3 id="1vultr-beta-deploy-ui">坑 #1：Vultr Beta Deploy UI 操作困难</h3>
 <ul>
 <li><strong>现象</strong>：Beta 版部署页面元素层叠严重，Summary 面板遮挡 Location 按钮，点击超时</li>
 <li><strong>原因</strong>：新 UI 用了大量悬浮面板，浏览器自动化工具难以穿透</li>
@@ -1550,7 +1550,7 @@
 <li><strong>耗时</strong>：UI 折腾 ~10 分钟，API 操作 ~2 分钟</li>
 <li><strong>建议</strong>：直接用 API，别在 UI 上浪费时间</li>
 </ul>
-<h3 id="210mo-plan">坑 #2：$10/mo 基础 Plan 在新加坡不可用<a class="headerlink" href="#210mo-plan" title="Permanent link">&para;</a></h3>
+<h3 id="210mo-plan">坑 #2：$10/mo 基础 Plan 在新加坡不可用</h3>
 <ul>
 <li><strong>现象</strong>：选了 vc2-1c-2gb（$10/mo）后提示 "plan not available in sgp"</li>
 <li><strong>原因</strong>：部分低价 Cloud Compute plan 在亚洲节点无库存</li>
@@ -1558,14 +1558,14 @@
 <li><strong>耗时</strong>：~2 分钟</li>
 <li><strong>建议</strong>：新加坡选 vhf（High Frequency）系列更靠谱，NVMe 磁盘性能也更好</li>
 </ul>
-<h3 id="3vultr-api-ip">坑 #3：Vultr API 默认 IP 白名单限制<a class="headerlink" href="#3vultr-api-ip" title="Permanent link">&para;</a></h3>
+<h3 id="3vultr-api-ip">坑 #3：Vultr API 默认 IP 白名单限制</h3>
 <ul>
 <li><strong>现象</strong>：API Key 创建后，默认只允许一个 IP 调用</li>
 <li><strong>原因</strong>：安全策略，新建 API Key 绑定当前 IP</li>
 <li><strong>解决</strong>：Settings → API → Allow All IPv4（部署完记得改回来）</li>
 <li><strong>耗时</strong>：~1 分钟</li>
 </ul>
-<h3 id="4-240mo">坑 #4：自动备份默认开启，偷偷加 $2.40/mo<a class="headerlink" href="#4-240mo" title="Permanent link">&para;</a></h3>
+<h3 id="4-240mo">坑 #4：自动备份默认开启，偷偷加 $2.40/mo</h3>
 <ul>
 <li><strong>现象</strong>：Summary 显示 $14.40/mo，比预期多 $2.40</li>
 <li><strong>原因</strong>：Vultr 默认开启 Automatic Backups</li>
@@ -1573,15 +1573,15 @@
 <li><strong>建议</strong>：OpenClaw 数据不重要，关掉备份省钱。重要数据自己定期导出</li>
 </ul>
 <hr />
-<h2 id="_4">关键配置备忘<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="ssh">SSH 快捷连接<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
+<h2 id="_4">关键配置备忘</h2>
+<h3 id="ssh">SSH 快捷连接</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># ~/.ssh/config</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Host<span class="w"> </span>openclaw
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>HostName<span class="w"> </span>xxx.xxx.xxx.xxx
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>User<span class="w"> </span>root
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/vultr_openclaw
 </code></pre></div>
-<h3 id="vultr-api">Vultr API 一键部署命令<a class="headerlink" href="#vultr-api" title="Permanent link">&para;</a></h3>
+<h3 id="vultr-api">Vultr API 一键部署命令</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 1. 上传 SSH Key</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>curl<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://api.vultr.com/v2/ssh-keys&quot;</span><span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_API_KEY&quot;</span><span class="w"> </span><span class="se">\</span>
@@ -1606,7 +1606,7 @@
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>curl<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://api.vultr.com/v2/instances/INSTANCE_ID&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_API_KEY&quot;</span>
 </code></pre></div>
-<h3 id="vps">VPS 软件安装<a class="headerlink" href="#vps" title="Permanent link">&para;</a></h3>
+<h3 id="vps">VPS 软件安装</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Node.js 22</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>curl<span class="w"> </span>-o-<span class="w"> </span>https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
@@ -1616,7 +1616,7 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>openclaw@latest
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>openclaw<span class="w"> </span>--version<span class="w">  </span><span class="c1"># 2026.3.2</span>
 </code></pre></div>
-<h3 id="5openclaw">坑 #5：OpenClaw 飞书配置格式自动迁移<a class="headerlink" href="#5openclaw" title="Permanent link">&para;</a></h3>
+<h3 id="5openclaw">坑 #5：OpenClaw 飞书配置格式自动迁移</h3>
 <ul>
 <li><strong>现象</strong>：openclaw doctor 提示 "Moved channels.feishu single-account top-level values into channels.feishu.accounts.default"</li>
 <li><strong>原因</strong>：手写的 JSON 把 appId/appSecret 放在 accounts.main 下，但 OpenClaw 期望的 key 名是 default</li>
@@ -1624,7 +1624,7 @@
 <li><strong>耗时</strong>：~1 分钟</li>
 <li><strong>建议</strong>：配置写完先跑一次 <code>openclaw doctor --fix</code>，让它自动纠正格式</li>
 </ul>
-<h3 id="6root-systemd-user-service">坑 #6：root 用户下 systemd user service 不工作<a class="headerlink" href="#6root-systemd-user-service" title="Permanent link">&para;</a></h3>
+<h3 id="6root-systemd-user-service">坑 #6：root 用户下 systemd user service 不工作</h3>
 <ul>
 <li><strong>现象</strong>：<code>openclaw gateway install</code> 报错 "systemctl --user is-enabled unavailable"</li>
 <li><strong>原因</strong>：root 用户没有 systemd user session，openclaw 默认用 --user 模式</li>
@@ -1632,7 +1632,7 @@
 <li><strong>耗时</strong>：~3 分钟</li>
 <li><strong>建议</strong>：VPS 用 root 跑 OpenClaw 的话，直接手写 systemd service file</li>
 </ul>
-<h3 id="7gatewaymode">坑 #7：gateway.mode 未设置导致启动阻塞<a class="headerlink" href="#7gatewaymode" title="Permanent link">&para;</a></h3>
+<h3 id="7gatewaymode">坑 #7：gateway.mode 未设置导致启动阻塞</h3>
 <ul>
 <li><strong>现象</strong>：gateway 拒绝启动，提示 "gateway.mode is unset"</li>
 <li><strong>原因</strong>：openclaw.json 里没有 gateway.mode 字段</li>
@@ -1640,7 +1640,7 @@
 <li><strong>耗时</strong>：~30 秒</li>
 </ul>
 <hr />
-<h3 id="openclaw">OpenClaw 配置文件<a class="headerlink" href="#openclaw" title="Permanent link">&para;</a></h3>
+<h3 id="openclaw">OpenClaw 配置文件</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// ~/.openclaw/openclaw.json 核心结构</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;models&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1677,7 +1677,7 @@
 <a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">  </span><span class="nt">&quot;gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="systemd">systemd 服务文件<a class="headerlink" href="#systemd" title="Permanent link">&para;</a></h3>
+<h3 id="systemd">systemd 服务文件</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># /etc/systemd/system/openclaw-gateway.service</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">[Unit]</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">Description</span><span class="o">=</span><span class="s">OpenClaw Gateway</span>
@@ -1698,7 +1698,7 @@
 <a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="k">[Install]</span>
 <a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
 </code></pre></div>
-<h3 id="workspace">Workspace 文件（养虾核心）<a class="headerlink" href="#workspace" title="Permanent link">&para;</a></h3>
+<h3 id="workspace">Workspace 文件（养虾核心）</h3>
 <p>VPS 上 <code>~/.openclaw/workspace/</code> 下的文件决定小龙虾的"人格"和"记忆"：</p>
 <table>
 <thead>
@@ -1747,7 +1747,7 @@
 </tbody>
 </table>
 <p><strong>养虾方法</strong>：日常在飞书里聊，它会自动写 memory/ 日记；重要的事说"记住这个"，它会更新 MEMORY.md。性格不满意直接说，它会改 SOUL.md。</p>
-<h3 id="_5">常用运维命令<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">常用运维命令</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh<span class="w"> </span>openclaw<span class="w">                          </span><span class="c1"># 快捷连接</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>systemctl<span class="w"> </span>status<span class="w"> </span>openclaw-gateway<span class="w">     </span><span class="c1"># 查看状态</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>openclaw-gateway<span class="w">    </span><span class="c1"># 重启</span>
@@ -1756,8 +1756,8 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>openclaw<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w">                </span><span class="c1"># OpenClaw 日志</span>
 </code></pre></div>
 <hr />
-<h2 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">耗时<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h2 id="_6">总结</h2>
+<h3 id="_7">耗时</h3>
 <table>
 <thead>
 <tr>
@@ -1800,7 +1800,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_8">费用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_8">费用</h3>
 <table>
 <thead>
 <tr>
@@ -1823,7 +1823,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_9">给新手的建议<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9">给新手的建议</h3>
 <ol>
 <li><strong>别用 Vultr 网页 UI 部署</strong>，直接用 API，3 条 curl 搞定</li>
 <li><strong>新加坡节点选 vhf（High Frequency）系列</strong>，基础 vc2 plan 可能无货</li>
@@ -1839,7 +1839,7 @@
 <li><strong>exec security 可以放 full</strong>，飞书 DM pairing 模式只有你能跟它说话，VPS 独立环境搞坏了重装就行</li>
 </ol>
 <hr />
-<h2 id="_10">本地文档<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_10">本地文档</h2>
 <table>
 <thead>
 <tr>

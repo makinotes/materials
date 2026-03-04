@@ -322,7 +322,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw
+    Overview
   
 
     
@@ -467,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    AI 学习笔记
+    Overview
   
 
     
@@ -1485,11 +1485,11 @@
 
   <h1>Context Engineering</h1>
 
-<h2 id="prompt-engineering-context-engineering">从 Prompt Engineering 到 Context Engineering<a class="headerlink" href="#prompt-engineering-context-engineering" title="Permanent link">&para;</a></h2>
+<h2 id="prompt-engineering-context-engineering">从 Prompt Engineering 到 Context Engineering</h2>
 <p><strong>AI Agent 时代的核心工程能力完全指南</strong></p>
 <p>2026 年 3 月 | 基于 1400+ 篇论文及行业最新实践 | 零基础友好</p>
 <hr />
-<h2 id="context-engineering">一、什么是 Context Engineering（上下文工程）<a class="headerlink" href="#context-engineering" title="Permanent link">&para;</a></h2>
+<h2 id="context-engineering">一、什么是 Context Engineering（上下文工程）</h2>
 <p>如果你用过 ChatGPT 或 Claude 这样的 AI 工具，你一定有过这样的体验：同样一个问题，换一种问法，AI 给出的回答质量天差地别。早期大家把<strong>"怎么跟 AI 说话"</strong>这件事叫做 Prompt Engineering（提示词工程）。而 Context Engineering 是它的进化版本，是一个范围更大、更系统化的工程学科。</p>
 <blockquote>
 <p><strong>💡 一句话理解</strong></p>
@@ -1501,7 +1501,7 @@
 <p><em>Context 指的是在大语言模型（LLM）进行推理时，输入给它的全部 token（信息单元）。Context Engineering 的工程目标，是针对 LLM 的固有限制，优化这些 token 的效用，从而稳定地达成期望的输出结果。</em></p>
 </blockquote>
 <p>翻译成人话就是：LLM 每次生成回答时，能看到的信息量是有限的（就像你的工作台只有那么大）。Context Engineering 就是帮你把这张有限的工作台上，摆满最有用的参考资料，让 AI 交出最好的作业。</p>
-<h3 id="11-prompt-context">1.1 为什么需要从 Prompt 升级到 Context？<a class="headerlink" href="#11-prompt-context" title="Permanent link">&para;</a></h3>
+<h3 id="11-prompt-context">1.1 为什么需要从 Prompt 升级到 Context？</h3>
 <p>2025 年中，Shopify 的 CEO Tobi Lütke 在 X（推特）上发了一条引爆行业的推文，大意是：</p>
 <blockquote>
 <p><em>"我更喜欢'上下文工程'这个词，而不是'提示词工程'。它更好地描述了核心技能：为 LLM 提供所有必要上下文，使任务有可能被解决的艺术。"</em></p>
@@ -1513,7 +1513,7 @@
 <li><strong>信息来源变了：</strong> AI 不再只依赖自身训练数据，还需要实时调用外部工具（搜索引擎、数据库、API），这些工具返回的信息都要被塞进上下文窗口里管理。</li>
 <li><strong>质量要求变了：</strong> 从"能用就行"的 Demo 阶段，进入了"必须稳定可靠"的生产阶段。一个提示词在某些情况好用、某些情况不好用的不确定性，是生产系统无法接受的。</li>
 </ul>
-<h3 id="12-prompt-engineering-vs-context-engineering">1.2 Prompt Engineering vs Context Engineering 对比<a class="headerlink" href="#12-prompt-engineering-vs-context-engineering" title="Permanent link">&para;</a></h3>
+<h3 id="12-prompt-engineering-vs-context-engineering">1.2 Prompt Engineering vs Context Engineering 对比</h3>
 <table>
 <thead>
 <tr>
@@ -1565,8 +1565,8 @@
 <p>Prompt Engineering 关注的是你在上下文窗口里「写了什么」；Context Engineering 关注的是你「用什么来填充」整个上下文窗口。两者不矛盾，而是包含关系——就像 UI 设计是 UX 设计的一部分。</p>
 </blockquote>
 <hr />
-<h2 id="_1">二、核心概念：上下文窗口与注意力预算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="21-context-windowai">2.1 上下文窗口（Context Window）——AI 的"工作台"<a class="headerlink" href="#21-context-windowai" title="Permanent link">&para;</a></h3>
+<h2 id="_1">二、核心概念：上下文窗口与注意力预算</h2>
+<h3 id="21-context-windowai">2.1 上下文窗口（Context Window）——AI 的"工作台"</h3>
 <p>大语言模型在每次生成回答时，能"看到"的信息总量是有限的，这个上限就叫上下文窗口。你可以把它想象成一张书桌——桌子上能放多少参考资料，就决定了 AI 能参考多少信息来回答你的问题。</p>
 <p>上下文窗口的大小以 token 为单位（1 个 token 大约等于 0.75 个英文单词，或约 1.5 个中文字符）。近年来窗口大小经历了爆炸式增长：</p>
 <ul>
@@ -1575,18 +1575,18 @@
 <li>现在（2025-2026）：100 万–1000 万 token（几十本书的量）</li>
 </ul>
 <p>听起来问题应该解决了？窗口这么大，什么信息都放得下。但现实远非如此——这就引出了一个关键问题。</p>
-<h3 id="22-context-rot">2.2 Context Rot（上下文腐烂）——信息越多反而越蠢<a class="headerlink" href="#22-context-rot" title="Permanent link">&para;</a></h3>
+<h3 id="22-context-rot">2.2 Context Rot（上下文腐烂）——信息越多反而越蠢</h3>
 <p>2025 年 7 月，Chroma 实验室发表了一项里程碑式的研究，测试了 18 个顶级 LLM（包括 GPT-4.1、Claude 4、Gemini 2.5 等），发现了一个反直觉的现象：</p>
 <blockquote>
 <p><strong>⚠️ Context Rot 核心发现</strong></p>
 <p>随着输入上下文长度的增加，所有被测试模型的性能都会下降——即使是简单的信息检索任务也不例外。更长的上下文 ≠ 更好的表现。</p>
 </blockquote>
 <p>这就像你的书桌上堆满了几百本参考书，反而找不到你真正需要的那一页。具体来说，Context Rot 有三个核心机制：</p>
-<h4 id="attention-dilution">机制一：注意力稀释（Attention Dilution）<a class="headerlink" href="#attention-dilution" title="Permanent link">&para;</a></h4>
+<h4 id="attention-dilution">机制一：注意力稀释（Attention Dilution）</h4>
 <p>LLM 基于 Transformer 架构，其中每个 token 都要"注意"其他所有 token。当有 n 个 token 时，就有 n² 对注意力关系需要处理。上下文越长，每个 token 分到的"注意力"就越稀薄，就像一个老师班上有 10 个学生和 1000 个学生时，关注度完全不同。</p>
-<h4 id="positional-bias">机制二：位置偏差（Positional Bias）<a class="headerlink" href="#positional-bias" title="Permanent link">&para;</a></h4>
+<h4 id="positional-bias">机制二：位置偏差（Positional Bias）</h4>
 <p>模型对信息位置非常敏感。斯坦福大学的研究发现了"lost-in-the-middle"（中间丢失）问题：放在输入开头和结尾的信息，AI 能很好地利用；但放在中间的信息，准确率从 70-75% 暴跌到 55-60%。想象你读一本很长的书，最记得住的往往是开头和结尾。</p>
-<h4 id="distractor-effect">机制三：干扰效应（Distractor Effect）<a class="headerlink" href="#distractor-effect" title="Permanent link">&para;</a></h4>
+<h4 id="distractor-effect">机制三：干扰效应（Distractor Effect）</h4>
 <p>Chroma 的研究特别指出，当上下文中存在"语义相近但事实无关"的内容时，模型的幻觉（hallucination）率显著上升。比如你让 AI 在代码库里找一个 webhook 处理函数，如果上下文里塞满了测试文件、废弃的旧实现和名字相似的无关函数，AI 反而更容易给出错误答案。</p>
 <blockquote>
 <p><strong>📊 数据说话</strong></p>
@@ -1594,9 +1594,9 @@
 </blockquote>
 <p>这就是为什么 Context Engineering 如此重要——它的核心使命就是对抗 Context Rot，确保模型在每一次推理时都拿到"最小但最精准"的高信号信息集。</p>
 <hr />
-<h2 id="context-engineering_1">三、Context Engineering 的六大支柱<a class="headerlink" href="#context-engineering_1" title="Permanent link">&para;</a></h2>
+<h2 id="context-engineering_1">三、Context Engineering 的六大支柱</h2>
 <p>Weaviate（向量数据库公司）在 2025 年 12 月发表了一个被广泛引用的框架，将 Context Engineering 分解为六个相互依赖的组成部分。每个组件控制着"什么信息在什么时候到达模型"。</p>
-<h3 id="31-instructions-prompting">3.1 指令设计（Instructions / Prompting）<a class="headerlink" href="#31-instructions-prompting" title="Permanent link">&para;</a></h3>
+<h3 id="31-instructions-prompting">3.1 指令设计（Instructions / Prompting）</h3>
 <p>这是最基础的一层，也是 Prompt Engineering 的领地。核心实践包括：</p>
 <ul>
 <li><strong>角色指定：</strong> 告诉模型它是谁（如"你是一个资深金融分析师"）</li>
@@ -1605,14 +1605,14 @@
 <li><strong>Few-shot 示例：</strong> 给出输入-输出的样例，让模型学着做</li>
 </ul>
 <p>在 Context Engineering 的框架下，指令设计不再是孤立的，而是要和其他五个组件协同工作。</p>
-<h3 id="32-context-retrieval-rag">3.2 检索增强（Context Retrieval / RAG）<a class="headerlink" href="#32-context-retrieval-rag" title="Permanent link">&para;</a></h3>
+<h3 id="32-context-retrieval-rag">3.2 检索增强（Context Retrieval / RAG）</h3>
 <p>RAG（Retrieval-Augmented Generation，检索增强生成）是 Context Engineering 最重要的技术之一。原理很简单：当模型需要回答问题时，先去外部知识库里搜索相关信息，再把搜索结果塞进上下文里。</p>
 <ul>
 <li><strong>分块策略（Chunking）：</strong> 把长文档切成小段。小块精度高但缺乏语境，大块信息全但向量检索时噪音多——这是经典工程取舍</li>
 <li><strong>向量嵌入（Embedding）：</strong> 把文本转换成数学向量，用余弦相似度等方法找到最相关的内容</li>
 <li><strong>混合检索：</strong> 同时使用关键词搜索和语义搜索，取长补短</li>
 </ul>
-<h3 id="33-tool-integration">3.3 工具集成（Tool Integration）<a class="headerlink" href="#33-tool-integration" title="Permanent link">&para;</a></h3>
+<h3 id="33-tool-integration">3.3 工具集成（Tool Integration）</h3>
 <p>工具让 AI Agent 能"做事"而不只是"说话"。Anthropic 在博客中特别强调了工具设计的重要性：</p>
 <ul>
 <li><strong>工具发现：</strong> 在系统提示中给 Agent 提供清晰的工具列表和描述，告诉它每个工具什么时候用、怎么用</li>
@@ -1623,7 +1623,7 @@
 <p><strong>🔧 MCP——工具集成的统一标准</strong></p>
 <p>Model Context Protocol（MCP）由 Anthropic 发起，现已移交 Linux Foundation 管理，成为连接 AI Agent 与企业工具的通用标准。截至 2025 年底，MCP 月 SDK 下载量超过 9700 万次，被 Anthropic、OpenAI、Google、Microsoft 共同采用。可以理解为 AI 世界的"USB 接口"。</p>
 </blockquote>
-<h3 id="34-memory">3.4 记忆系统（Memory）<a class="headerlink" href="#34-memory" title="Permanent link">&para;</a></h3>
+<h3 id="34-memory">3.4 记忆系统（Memory）</h3>
 <p>无状态的 LLM 不知道 5 分钟前发生了什么。记忆系统让 AI 有了"时间感"，核心分为三层：</p>
 <ul>
 <li><strong>短期记忆（Short-term）：</strong> 当前对话的上下文窗口内容——最近的对话、推理步骤、工具输出</li>
@@ -1631,33 +1631,33 @@
 <li><strong>长期记忆（Long-term）：</strong> 持久存储的用户偏好、领域知识、历史决策，需要时按需检索</li>
 </ul>
 <p>记忆系统的核心挑战不是"能存多少"，而是"现在应该把什么放到模型面前"。</p>
-<h3 id="35-query-augmentation">3.5 查询增强（Query Augmentation）<a class="headerlink" href="#35-query-augmentation" title="Permanent link">&para;</a></h3>
+<h3 id="35-query-augmentation">3.5 查询增强（Query Augmentation）</h3>
 <p>用户的原始输入往往是模糊的。查询增强是在用户的请求到达模型之前，先对其进行丰富和精炼。例如：</p>
 <ul>
 <li>自动补充当前日期和时间（否则模型会猜，导致搜索结果不准）</li>
 <li>将模糊查询改写为更精确的搜索关键词</li>
 <li>根据用户画像自动注入偏好和背景信息</li>
 </ul>
-<h3 id="36-agent-agent-orchestration">3.6 Agent 编排（Agent Orchestration）<a class="headerlink" href="#36-agent-agent-orchestration" title="Permanent link">&para;</a></h3>
+<h3 id="36-agent-agent-orchestration">3.6 Agent 编排（Agent Orchestration）</h3>
 <p>Agent 既是上下文的设计者，也是上下文的使用者。它动态决定什么时候检索知识、什么时候调用工具、什么时候记录信息。编排层的核心是控制流的设计——决定 Agent 在每一步应该做什么，以及如何处理错误和异常。</p>
 <hr />
-<h2 id="context-rot">四、对抗 Context Rot 的四大核心策略<a class="headerlink" href="#context-rot" title="Permanent link">&para;</a></h2>
+<h2 id="context-rot">四、对抗 Context Rot 的四大核心策略</h2>
 <p>Anthropic 和 FlowHunt 在各自的技术文档中，总结了生产级 AI 系统中最有效的上下文管理策略。</p>
-<h3 id="41-compaction">4.1 上下文压缩（Compaction）<a class="headerlink" href="#41-compaction" title="Permanent link">&para;</a></h3>
+<h3 id="41-compaction">4.1 上下文压缩（Compaction）</h3>
 <p>当对话或任务持续时间很长时，上下文窗口会被撑满。Compaction 的思路是：用 LLM 自身来"压缩"历史信息，只保留关键要点。</p>
 <ul>
 <li><strong>自动摘要：</strong> 定期让模型对前面的对话生成摘要，用摘要替换原始内容</li>
 <li><strong>选择性保留：</strong> 只保留与当前任务最相关的历史片段</li>
 <li><strong>知识交接：</strong> Cognition AI 透露他们在 Agent 之间传递知识时，使用微调过的专用摘要模型来压缩信息</li>
 </ul>
-<h3 id="42-structured-note-taking-scratchpad">4.2 结构化笔记（Structured Note-taking / Scratchpad）<a class="headerlink" href="#42-structured-note-taking-scratchpad" title="Permanent link">&para;</a></h3>
+<h3 id="42-structured-note-taking-scratchpad">4.2 结构化笔记（Structured Note-taking / Scratchpad）</h3>
 <p>就像人类处理复杂问题时会在纸上记笔记一样，AI Agent 也需要"便签本"来持久化关键信息。这是所有策略中最简单但最强大的一个。</p>
 <ul>
 <li>Agent 在执行过程中，将重要发现、中间结论、待办事项写入结构化的笔记区域</li>
 <li>这些笔记存储在上下文窗口之外，需要时再取回</li>
 <li>核心原则：不要强迫模型记住所有东西，让它把关键信息"写下来"</li>
 </ul>
-<h3 id="43-context-trimming">4.3 上下文修剪（Context Trimming）<a class="headerlink" href="#43-context-trimming" title="Permanent link">&para;</a></h3>
+<h3 id="43-context-trimming">4.3 上下文修剪（Context Trimming）</h3>
 <p>与压缩不同，修剪是更"粗暴"但高效的策略：直接用硬编码规则删除不需要的内容。</p>
 <ul>
 <li>按时间裁剪：删除较旧的消息</li>
@@ -1668,7 +1668,7 @@
 <p><strong>🎯 关键洞察</strong></p>
 <p>一个聚焦的 300 token 上下文，往往比一个杂乱的 113,000 token 上下文表现更好。你删掉什么，可能跟你保留什么一样重要。</p>
 </blockquote>
-<h3 id="44-context-isolation-multi-agent">4.4 上下文隔离（Context Isolation / Multi-Agent）<a class="headerlink" href="#44-context-isolation-multi-agent" title="Permanent link">&para;</a></h3>
+<h3 id="44-context-isolation-multi-agent">4.4 上下文隔离（Context Isolation / Multi-Agent）</h3>
 <p>最高级的策略是：不要把所有信息塞进一个模型的窗口里。而是把任务分配给多个专门的 Agent，每个 Agent 在自己独立的上下文窗口中工作，只返回最终结果。</p>
 <ul>
 <li>主 Agent 负责任务分解和结果汇总</li>
@@ -1682,8 +1682,8 @@
 <li><strong>默认最小化：</strong> 每次模型调用只看到完成当前任务所需的最少上下文</li>
 </ul>
 <hr />
-<h2 id="_2">五、学术前沿与研究方向<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="51">5.1 里程碑论文一览<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<h2 id="_2">五、学术前沿与研究方向</h2>
+<h3 id="51">5.1 里程碑论文一览</h3>
 <table>
 <thead>
 <tr>
@@ -1720,14 +1720,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="52-ace-agent">5.2 ACE 框架：让 Agent 自己进化上下文<a class="headerlink" href="#52-ace-agent" title="Permanent link">&para;</a></h3>
+<h3 id="52-ace-agent">5.2 ACE 框架：让 Agent 自己进化上下文</h3>
 <p>2025 年 10 月的 ACE（Agentic Context Engineering）论文提出了一个前沿思路：不是人类工程师来设计上下文，而是让 Agent 自己通过"生成→反思→策展"的循环来持续优化自己的上下文。</p>
 <ul>
 <li>将上下文视为不断演进的"剧本"（Playbook），通过结构化增量更新来积累策略</li>
 <li>解决了两个关键问题：简洁偏差（摘要丢失领域洞察）和上下文坍塌（迭代改写侵蚀细节）</li>
 <li>实验结果：Agent 任务提升 10.6%，金融领域提升 8.6%，且不需要标注数据，仅利用执行反馈</li>
 </ul>
-<h3 id="53-1400">5.3 1400+ 论文综述的关键发现<a class="headerlink" href="#53-1400" title="Permanent link">&para;</a></h3>
+<h3 id="53-1400">5.3 1400+ 论文综述的关键发现</h3>
 <p>2025 年 7 月的大规模综述论文建立了 Context Engineering 的完整分类体系：</p>
 <ul>
 <li><strong>基础组件：</strong> 上下文检索与生成、上下文处理、上下文管理</li>
@@ -1735,8 +1735,8 @@
 <li><strong>核心发现：</strong> 当前模型在"理解"复杂上下文方面已经很强，但在"生成"同等复杂的长文本输出方面存在显著短板——这是未来研究的关键方向</li>
 </ul>
 <hr />
-<h2 id="context-engineering_2">六、实操指南：如何落地 Context Engineering<a class="headerlink" href="#context-engineering_2" title="Permanent link">&para;</a></h2>
-<h3 id="61-agent">6.1 Agent 开发者清单<a class="headerlink" href="#61-agent" title="Permanent link">&para;</a></h3>
+<h2 id="context-engineering_2">六、实操指南：如何落地 Context Engineering</h2>
+<h3 id="61-agent">6.1 Agent 开发者清单</h3>
 <table>
 <thead>
 <tr>
@@ -1773,7 +1773,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="62">6.2 日常使用者实用技巧<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<h3 id="62">6.2 日常使用者实用技巧</h3>
 <p>即使你不是开发者，只是日常使用 AI 聊天工具，了解 Context Rot 也能帮你获得更好的体验：</p>
 <ul>
 <li><strong>对话变长时主动开新窗口：</strong> 研究表明超过 15 轮对话后性能明显下降。切换新话题时，开启新对话</li>
@@ -1781,7 +1781,7 @@
 <li><strong>让 AI 先总结再继续：</strong> 长对话中，可以让 AI 总结到目前为止的结论，再用总结开启新对话</li>
 <li><strong>避免信息灌入：</strong> 不要把整个文档复制粘贴进去，只提供最相关的部分</li>
 </ul>
-<h3 id="63">6.3 技术栈与工具链<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<h3 id="63">6.3 技术栈与工具链</h3>
 <p>2026 年的 Context Engineering 生态已经相当成熟：</p>
 <ul>
 <li><strong>编排框架：</strong> LangChain/LangGraph（Python）、AutoGen（Microsoft）、CrewAI（多 Agent）</li>
@@ -1792,14 +1792,14 @@
 <li><strong>缓存方案：</strong> Redis LangCache（语义缓存，避免重复 API 调用）</li>
 </ul>
 <hr />
-<h2 id="_3">七、未来展望与行业趋势<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="71-context-engineering">7.1 Context Engineering 的三个发展方向<a class="headerlink" href="#71-context-engineering" title="Permanent link">&para;</a></h3>
+<h2 id="_3">七、未来展望与行业趋势</h2>
+<h3 id="71-context-engineering">7.1 Context Engineering 的三个发展方向</h3>
 <ul>
 <li><strong>自适应上下文：</strong> 从人工设计上下文到 Agent 自主进化上下文（如 ACE 框架），减少人工干预</li>
 <li><strong>上下文即基础设施：</strong> Google ADK 的思路——将上下文管理视为独立的系统工程，有自己的存储、转换和观测层</li>
 <li><strong>跨模态上下文：</strong> 不仅管理文本，还要管理图像、音频、视频等多模态信息的上下文</li>
 </ul>
-<h3 id="72">7.2 对从业者的意义<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<h3 id="72">7.2 对从业者的意义</h3>
 <p>对于 AI 产品和 Agent 的构建者来说，Context Engineering 正在成为核心竞争力：</p>
 <ul>
 <li>它是"模型能力"和"产品质量"之间的桥梁——同样的模型，上下文工程做得好与不好，效果天差地别</li>
@@ -1807,7 +1807,7 @@
 <li>它跨越"能用"和"好用"的鸿沟——Cognition AI 观察到，Context Engineering 已经成为构建 AI Agent 工程师的首要职责</li>
 </ul>
 <hr />
-<h2 id="_4">八、一页总结<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">八、一页总结</h2>
 <blockquote>
 <p><strong>📝 Context Engineering 核心要点速查</strong></p>
 <ol>
@@ -1821,7 +1821,7 @@
 </ol>
 </blockquote>
 <hr />
-<h2 id="_5">参考来源<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">参考来源</h2>
 <ol>
 <li>Anthropic, "Effective context engineering for AI agents", 2025.9</li>
 <li>Chroma, "Context Rot: How Increasing Input Tokens Impacts LLM Performance", 2025.7</li>
