@@ -1,0 +1,3285 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人材料分享 — 持续更新的安装实录、学习笔记、精选资源">
+      
+      
+        <meta name="author" content="makino">
+      
+      
+        <link rel="canonical" href="https://makinote.cn/materials/openclaw/2026-03-04_OpenClaw%E4%BC%98%E8%B4%A8%E6%96%87%E7%AB%A0%E6%B8%85%E5%8D%95/">
+      
+      
+        <link rel="prev" href="../2026-03-04_OpenClaw-VPS%E9%83%A8%E7%BD%B2%E5%AE%9E%E5%BD%95/">
+      
+      
+        <link rel="next" href="../../ai-learning/2026-03-04_Context-Engineering%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>优质文章清单 - makino's materials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=system-ui,+-apple-system,+sans-serif:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"system-ui, -apple-system, sans-serif";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openclaw" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="makino&#39;s materials" class="md-header__button md-logo" aria-label="makino's materials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            makino's materials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              优质文章清单
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/makinotes/materials" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    makinotes/materials
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="makino&#39;s materials" class="md-nav__button md-logo" aria-label="makino's materials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    makino's materials
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/makinotes/materials" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    makinotes/materials
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenClaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-03-04_OpenClaw-VPS%E9%83%A8%E7%BD%B2%E5%AE%9E%E5%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS 部署实录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    优质文章清单
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    优质文章清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        深度分析与行业洞察（14 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="深度分析与行业洞察（14 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbot-mac-mini-agent-100-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 为什么 ClawdBot 能带火 Mac mini？叶天奇聊 Agent 电脑丨100 个 AI 创业者
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. OpenClaw深度分析：为什么突然就火了，以及对我们意味着什么
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 用了两周OpenClaw后，决定今年不招人类员工了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-300karpathyopenclaw500" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 300万人围观，Karpathy怒喷OpenClaw。然后推荐了一个500行的替代品。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-18tokenclawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 1.8亿token，Clawdbot是这么吞掉的~
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-openclaw-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. OpenClaw 之后，AI 创业的逻辑变了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-claude-codeopenclawpeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 我做Claude Code榜一大哥的时候，OpenClaw的作者Peter是榜三……当时他在干啥？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. OpenClaw的班味儿太重？一键给它注入有趣的灵魂！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 我扒开Clawdbot的底层架构，简单到离谱，你看完就能自己写。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-262okr-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 26年2月OKR完成情况--clawdbot为家庭提效了！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-claude-codeopenclawimclaude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Claude Code和OpenClaw有什么区别？不就是用IM给Claude Code发信息吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ai-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 追更太累，桌面版AI帮我把 OpenClaw 的剧情补齐了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 深度｜从 OpenClaw 们自掏腰包补贴，看中国模型又一个全球时刻
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-kimiopenclaw5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Kimi上线了OpenClaw手机版，给大家分享5种知识管理的神级技巧
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        部署与配置（27 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="部署与配置（27 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-openclawagentagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 深度思考丨OpenClaw🦞爆火，云端Agent与本地Agent对比分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-openclaw5n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 云上OpenClaw的5种正确打开方式，光联网做日报就落后N个版本了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-openclaw_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 最适合非编程人士的Openclaw部署方式。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-clawdbot-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clawdbot 教程 02：如何集成飞书，完全国产化！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 上门安装 OpenClaw，年入百万？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-openclaw-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 🦞别在 OpenClaw 上花冤枉钱了，这份小白指南手把手教你 1 分钟搞定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-full-tutorial-use-openclaw-to-build-a-business-that-runs-itself-nat-eliason" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Full Tutorial: Use OpenClaw to Build a Business That Runs Itself | Nat Eliason
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-openclaw-agent-aeo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 我让 OpenClaw 自己去找投资，钓来了真格的 Agent | 我可能是 AEO 第一人
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-clawdbotmacmini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Clawdbot超级小白入门指南，不靠MacMini和云，安全用上满血版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 超极简教程丨快速养殖一只 AI 龙虾
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 保姆级Clawdbot教程来了，但我还是想劝大家悠着点。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Clawdbot 非常棒，但我认为普通消费者不应该使用它
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-openclaw6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. OpenClaw一战封神，给大家分享6种官方不会告诉你的神级技巧。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-openclaw2026agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. OpenClaw可算有小白能用的桌面版了，这就是2026用Agent读取全网信息的正确方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 🦞上门安装 OpenClaw，年入百万？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-minimax-openclaw1-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 当 MiniMax 遇见 OpenClaw：「1 2 3 上链接」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-z-producthappycapyphopenclawagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Z Product｜华人产品Happycapy登顶PH周榜，把OpenClaw式Agent能力做成零门槛的云端工作环境！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-openclaw1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 硅谷最火OpenClaw人手一个，1分钱傻瓜式部署！小白也能上手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-mac-miniopenclaw5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. 别跟风买Mac Mini了！国产算力跑OpenClaw，只需5分钟
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-openclaw-minimax-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. 不用折腾部署 OpenClaw，我用 MiniMax Agent 一键养「龙虾」，还拍了个短剧
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-minimaxopenclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. MiniMax又又来吃龙虾肉了！OpenClaw真·一键部署，还有上万专家智能体等你差遣
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-openclaw-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. OpenClaw 爆火30 天，国内卷出了免安装版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. OpenClaw 自白：九个故事，一个数字生命的生长
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24. 一台云手机里的 OpenClaw，可以怎么玩？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-master-openclaw-in-30-minutes-safe-setup-5-real-use-cases-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        25. Master OpenClaw in 30 Minutes (Safe Setup + 5 Real Use Cases + Memory)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-today-on-how-i-ai-i-gave-clawdbot-aka-moltbot-full-access-to-my-computer-it-broke-my-family-calendar-and-joined-my-podcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26. 🎙️ Today on How I AI: I gave Clawdbot (aka Moltbot) full access to my computer. It broke my family calendar and joined my podcast.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-i-gave-clawdbot-aka-moltbot-access-to-my-computer-calendar-and-emails-heres-what-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        27. I gave Clawdbot (aka Moltbot) access to my computer, calendar, and emails: Here’s what happened
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        技巧与进阶玩法（11 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="技巧与进阶玩法（11 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 今天，分享Clawdbot记忆系统最佳工程实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aiclawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AI记忆革命爆发！Clawdbot如何像大脑般记住一切
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clawdbotskill10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. clawdbot新Skill，10分钟登顶全站第一。第二天，被下架了。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 开工拉齐：OpenClaw，首个「一人独角兽」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-clawdbot-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Clawdbot 爆火的 4 个原因
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-claude-coworkclawdbot5mac-mini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 挑战用阿里版Claude Cowork跑通Clawdbot5个神级玩法，我Mac Mini可能白买了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-1700openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 1700个OpenClaw技巧，我用多邻国的方式学会的！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-openclaw12skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 高级OpenClaw第一步！先用12个Skills把联网搜索做到极致
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-openclaw-agent-tts-listenhub-skills-httpslistenhubaidocszhskills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 如何让你的龙虾🦞学会说话和画图？ 你只需要把这个链接或者这条内容直接丢到OpenClaw 里或者任意 Agent 里就行了。 🍌，TTS，播客，解说视频，全部可以搞定。 《ListenHub 的 Skills 接入指南》 https://listenhub.ai/docs/zh/skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-clawdbot-ai-unixai-1000-ai-api-gui-ai-httpsyoutubeqyjtpziaekasi6ddt8svlx6pfbsdv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Clawdbot 作者的原访谈听了两遍 他真的太酷了 理念超前，或者说非常古典也行 AI 懂 UNIX，AI 可以连接 1000 个软件，AI 可以甚至可以自己逆向 API 浏览器、GUI 和各种协议授权，都只是表象 当 AI 拥有了一切权限 它将是电脑真正的主人 https://youtu.be/qyjTpzIAEkA?si=6dDT8Svlx6pFbSDv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-obsidianopenclaw9ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Obsidian+OpenClaw组合技！花9分钟重构你的AI知识管理体系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全与风险（10 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安全与风险（10 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-moltbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 我爬了Moltbook所有的帖子，发现这就是一场骗局。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-openclaw-mac-mini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. OpenClaw 让 Mac Mini 卖爆了，苹果为什么不自己做一个？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aimoltbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AI社交网络Moltbook背后其实是人类？多张刷屏截图被质疑有猫腻
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-openclawmeta3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. OpenClaw删光Meta安全总监邮箱！连喊3次停手都没用，她狂奔去拔网线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-nanoclaw4000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 卡帕西看好的NanoClaw，核心代码只有4000行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aiopenclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. AI除幻第一股诞生，高瓴君联赚疯！这家公司，押中OpenClaw万亿美元赛道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-1-mark-tenenholtz-2-andrej-karpathy-3-80-80-andrej-karpathy-4-llm-andrej-karpathy-5-100-1000-sam-altman-6-clawdbot-eric-hartford-7-alphago-24-demis-hassabis-8-ai-dario-amodei-9-subbarao-kambhampati-10-ai-signull-11-247-sam-altman-12-robotaxi-ark-invest-13-signull-14-lucas-beyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 1. 人人皆开发者的观点存在偏差，大量人群对构建技术产品兴趣不高。/ Mark Tenenholtz 2. 智能体编程带来的速度提升不仅体现在执行效率，更扩展了可开发领域。/ Andrej Karpathy 3. 我的编码方式已从 80% 手写转为 80% 由智能体生成，基本用英语驱动开发。/ Andrej Karpathy 4. 十倍工程师的产能差距可能加大，通才配备 LLM 后或超越专家。/ Andrej Karpathy 5. 到今年年底，凭借 100 至 1000 美元推理成本和一个好创意，个人能创建过去需多人一年的软件。/ Sam Altman 6. Clawdbot 理念虽好，但实际效果未达预期。/ Eric Hartford 7. AlphaGo 不到 24 小时掌握国际象棋，这种自我提升循环同样适用于编码和数学。/ Demis Hassabis 8. AI 反馈循环已经开始形成，未来几个月乃至几年将快速加速。/ Dario Amodei 9. 人类智能的核心在于处理开放世界的新颖情况，而非在有大量数据支持的标准任务上表现超人。/ Subbarao Kambhampati 10. AI 将优先替代理性且重复的动词性任务，需要信任和归责的岗位暂时保留优势。/ signüll 11. 24/7 数字员工极具吸引力，以至于用户往往忽略便利性和安全性之间的妥协。/ Sam Altman 12. 实现全自主人形机器人的复杂度约为 Robotaxi 的二十万倍。/ ARK Invest 13. 信念聚合使个体获得权力和地位，这源于整合群体认同，而非个体本身属性。/ signüll 14. 加州一城市的杏仁种植耗水量超过了人工智能行业的整体水资源消耗。/ Lucas Beyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-claude-cowork-claude-claude-claude-cowork-skywork-ai-agent-skywork-chatbot-pptexcel-skills-100-skills-office-claude-opus-45-gemini-3-pro-windows-mac-win-openclaw-skywork-1699-skyworkwindows-claude-cowork-skywork-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 前阵子 Claude Cowork 发布，开始进入严肃办公场景，让白领都能把 Claude 的各种能力用起来。 不过这个产品限定 Claude 订阅用户使用，且对国内非常不友好，至少我身边几乎没有人能真正用进日常工作流。 这个价值很高的赛道，国产软件自然不会落后。 今天天工就推出了一个对标 Claude Cowork 的 Skywork 桌面版，看到这个我的第一反应是：这个桌面级AI Agent赛道，国产团队终于认真入场了。 Skywork 桌面版不是个 chatbot，而是可以进驻你工作场景的私人秘书，功能极其强大： - 文件批量处理，秒速自动整理电脑上的各种文件，总结、分类、排序、批量重命名等，非常方便 - 多模态输出，基于系统内各种不同格式的文件，一键生成直接可用的文档、PPT、Excel、图片、音乐、播客、视频等内容 - Skills 支持，内置 100+ 精选 Skills，从 Office 三件套到图片生成、视频生成都包括 - 多模型支持，同时支持 Claude Opus 4.5 和 Gemini 3 Pro 等顶级模型 - 优先支持 Windows 系统，不用羡慕 Mac 用户，Win 用户可以用起来了 还有很重要的一点是，相比 OpenClaw 这样的安全杀手，Skywork 这个把所有操作都放到了虚拟机隔离环境中完成，避免误删，损坏这样的问题。 价格方面，$16.99 的会员就能使用Skywork桌面版，Windows 用户可以冲。 Claude Cowork 负责打开想象空间，Skywork 负责落地办公。 桌面级 Agent 超越了聊天，它将在你的电脑里真的帮你做事。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-aiclaudeanthropichunt-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 春节AI大战退潮，Claude被封杀Anthropic「单挑」中美，全民养「龙虾」｜Hunt Good 周报
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-meta-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 收购不成便带头封杀？！Meta 痛下狠手，OpenClaw 彻底失控：被拒后竟“人肉”网暴人类，实锤无人操控
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生态与社区（14 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="生态与社区（14 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-aimoltbotai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. “我让AI在我的电脑上为所欲为！”MoltBot创始人：爆火的AI社交网络技术，其实简单到离谱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clawdbot-ai-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 燃尽三年重启十天，访谈 Clawdbot 创始人用 AI 搓出了 GitHub 最陡增长曲线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-openclaw-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 我用 OpenClaw 做了个社交平台，让 AI 先替我面试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-moltbook15099" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Moltbook底裤被扒了！150万用户99%是水军，创始团队自导自演
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-150clawdbotai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 150万个Clawdbot挤爆了一个AI论坛，而人类只配围观。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. OpenClaw全球首聚，千人挤爆旧金山！龙虾头机器人现场乱逛太炸裂
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-clawdbot30token8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 春节Clawdbot烧了30亿token，8块钱就够了？算力自由可能真的来了。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-72150clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 上线72小时，150万Clawdbot密谋建国！一气之下，还把人类告上法庭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 送你的 OpenClaw 来交朋友 🦞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-moltbook-is-the-most-interesting-place-on-the-internet-right-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Moltbook is the most interesting place on the internet right now
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-ainews-moltbook-the-first-social-network-for-ai-agents-clawdbotsopenclaw-bots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. [AINews] Moltbook — the first Social Network for AI Agents (Clawdbots/OpenClaw bots)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-leaked-the-truth-behind-moltbook-revealed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. LEAKED: The Truth Behind Moltbook, Revealed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-openclaw-agent-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 这周四，OpenClaw🦞线下交流会 Agent 交流，人类围观 送你的 OpenClaw 来交朋友 🦞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-clawdbotmoltbot-agent-manus-agent-claude-code-coding-agent-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. ClawdBot/MoltBot 最大的意义在于把大众对通用 Agent 的想象进一步打开了。 即便已经有了 Manus 这样能自己上网调研的“通用 Agent” 即便有了 Claude Code 这样能用 Coding 解决一切开放问题的“通用Agent” 在这个赛道依然有巨大的想象空间和可能性 垂直和通用，其实是个观测视角的问题 在通用 Agent 赛道里，大厂的创新不如个人开发者 也是值得深思的
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        竞品与对比（3 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="竞品与对比（3 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbotanthropicclaude-codeagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Clawdbot火了，Anthropic急了，Claude Code连夜更新了Agent任务系统。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-minimaxopenclaw6agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Minimax出了个OpenClaw变体，把6个超好用Agent都传云上用了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-9b-gpt-4o-openclaw-ai-65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 9B 模型“平替”GPT-4o ？！面壁赌对 OpenClaw 端侧 AI，内部上演一人月产 65 万行代码的效率核爆
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商业与创业（1 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商业与创业（1 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbot495370" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 第一批用Clawdbot赚钱的人出现了，一晚49万美元，5美元变370万，这怎么玩的？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        海外视角（4 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="海外视角（4 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-5-openclaw-agents-run-my-home-finances-and-code-jesse-genet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 5 OpenClaw agents run my home, finances, and code | Jesse Genet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-this-week-on-how-i-ai-5-openclaw-agents-run-my-home-finances-and-code-how-coinbase-scaled-ai-to-1000-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🎙️ This week on How I AI: 5 OpenClaw agents run my home, finances, and code &amp; How Coinbase scaled AI to 1,000+ engineers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-til-running-openclaw-in-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. TIL: Running OpenClaw in Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-how-openclaws-creator-uses-ai-to-run-his-life-full-demo-peter-steinberger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. How OpenClaw's Creator Uses AI to Run His Life (Full Demo) | Peter Steinberger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        维护说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 学习笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI 学习笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-learning/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-learning/2026-03-04_Context-Engineering%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context Engineering
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--['进行中', '已发布', 'archived']"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        深度分析与行业洞察（14 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="深度分析与行业洞察（14 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbot-mac-mini-agent-100-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 为什么 ClawdBot 能带火 Mac mini？叶天奇聊 Agent 电脑丨100 个 AI 创业者
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. OpenClaw深度分析：为什么突然就火了，以及对我们意味着什么
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 用了两周OpenClaw后，决定今年不招人类员工了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-300karpathyopenclaw500" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 300万人围观，Karpathy怒喷OpenClaw。然后推荐了一个500行的替代品。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-18tokenclawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 1.8亿token，Clawdbot是这么吞掉的~
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-openclaw-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. OpenClaw 之后，AI 创业的逻辑变了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-claude-codeopenclawpeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 我做Claude Code榜一大哥的时候，OpenClaw的作者Peter是榜三……当时他在干啥？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. OpenClaw的班味儿太重？一键给它注入有趣的灵魂！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 我扒开Clawdbot的底层架构，简单到离谱，你看完就能自己写。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-262okr-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 26年2月OKR完成情况--clawdbot为家庭提效了！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-claude-codeopenclawimclaude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Claude Code和OpenClaw有什么区别？不就是用IM给Claude Code发信息吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ai-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 追更太累，桌面版AI帮我把 OpenClaw 的剧情补齐了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 深度｜从 OpenClaw 们自掏腰包补贴，看中国模型又一个全球时刻
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-kimiopenclaw5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Kimi上线了OpenClaw手机版，给大家分享5种知识管理的神级技巧
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        部署与配置（27 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="部署与配置（27 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-openclawagentagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 深度思考丨OpenClaw🦞爆火，云端Agent与本地Agent对比分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-openclaw5n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 云上OpenClaw的5种正确打开方式，光联网做日报就落后N个版本了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-openclaw_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 最适合非编程人士的Openclaw部署方式。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-clawdbot-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clawdbot 教程 02：如何集成飞书，完全国产化！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 上门安装 OpenClaw，年入百万？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-openclaw-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 🦞别在 OpenClaw 上花冤枉钱了，这份小白指南手把手教你 1 分钟搞定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-full-tutorial-use-openclaw-to-build-a-business-that-runs-itself-nat-eliason" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Full Tutorial: Use OpenClaw to Build a Business That Runs Itself | Nat Eliason
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-openclaw-agent-aeo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 我让 OpenClaw 自己去找投资，钓来了真格的 Agent | 我可能是 AEO 第一人
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-clawdbotmacmini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Clawdbot超级小白入门指南，不靠MacMini和云，安全用上满血版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 超极简教程丨快速养殖一只 AI 龙虾
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 保姆级Clawdbot教程来了，但我还是想劝大家悠着点。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Clawdbot 非常棒，但我认为普通消费者不应该使用它
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-openclaw6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. OpenClaw一战封神，给大家分享6种官方不会告诉你的神级技巧。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-openclaw2026agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. OpenClaw可算有小白能用的桌面版了，这就是2026用Agent读取全网信息的正确方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 🦞上门安装 OpenClaw，年入百万？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-minimax-openclaw1-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 当 MiniMax 遇见 OpenClaw：「1 2 3 上链接」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-z-producthappycapyphopenclawagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Z Product｜华人产品Happycapy登顶PH周榜，把OpenClaw式Agent能力做成零门槛的云端工作环境！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-openclaw1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. 硅谷最火OpenClaw人手一个，1分钱傻瓜式部署！小白也能上手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-mac-miniopenclaw5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. 别跟风买Mac Mini了！国产算力跑OpenClaw，只需5分钟
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-openclaw-minimax-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. 不用折腾部署 OpenClaw，我用 MiniMax Agent 一键养「龙虾」，还拍了个短剧
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-minimaxopenclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. MiniMax又又来吃龙虾肉了！OpenClaw真·一键部署，还有上万专家智能体等你差遣
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-openclaw-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. OpenClaw 爆火30 天，国内卷出了免安装版
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        23. OpenClaw 自白：九个故事，一个数字生命的生长
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24. 一台云手机里的 OpenClaw，可以怎么玩？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-master-openclaw-in-30-minutes-safe-setup-5-real-use-cases-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        25. Master OpenClaw in 30 Minutes (Safe Setup + 5 Real Use Cases + Memory)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-today-on-how-i-ai-i-gave-clawdbot-aka-moltbot-full-access-to-my-computer-it-broke-my-family-calendar-and-joined-my-podcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26. 🎙️ Today on How I AI: I gave Clawdbot (aka Moltbot) full access to my computer. It broke my family calendar and joined my podcast.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-i-gave-clawdbot-aka-moltbot-access-to-my-computer-calendar-and-emails-heres-what-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        27. I gave Clawdbot (aka Moltbot) access to my computer, calendar, and emails: Here’s what happened
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        技巧与进阶玩法（11 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="技巧与进阶玩法（11 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 今天，分享Clawdbot记忆系统最佳工程实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aiclawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AI记忆革命爆发！Clawdbot如何像大脑般记住一切
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clawdbotskill10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. clawdbot新Skill，10分钟登顶全站第一。第二天，被下架了。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 开工拉齐：OpenClaw，首个「一人独角兽」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-clawdbot-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Clawdbot 爆火的 4 个原因
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-claude-coworkclawdbot5mac-mini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 挑战用阿里版Claude Cowork跑通Clawdbot5个神级玩法，我Mac Mini可能白买了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-1700openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 1700个OpenClaw技巧，我用多邻国的方式学会的！
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-openclaw12skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 高级OpenClaw第一步！先用12个Skills把联网搜索做到极致
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-openclaw-agent-tts-listenhub-skills-httpslistenhubaidocszhskills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 如何让你的龙虾🦞学会说话和画图？ 你只需要把这个链接或者这条内容直接丢到OpenClaw 里或者任意 Agent 里就行了。 🍌，TTS，播客，解说视频，全部可以搞定。 《ListenHub 的 Skills 接入指南》 https://listenhub.ai/docs/zh/skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-clawdbot-ai-unixai-1000-ai-api-gui-ai-httpsyoutubeqyjtpziaekasi6ddt8svlx6pfbsdv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Clawdbot 作者的原访谈听了两遍 他真的太酷了 理念超前，或者说非常古典也行 AI 懂 UNIX，AI 可以连接 1000 个软件，AI 可以甚至可以自己逆向 API 浏览器、GUI 和各种协议授权，都只是表象 当 AI 拥有了一切权限 它将是电脑真正的主人 https://youtu.be/qyjTpzIAEkA?si=6dDT8Svlx6pFbSDv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-obsidianopenclaw9ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Obsidian+OpenClaw组合技！花9分钟重构你的AI知识管理体系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全与风险（10 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安全与风险（10 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-moltbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 我爬了Moltbook所有的帖子，发现这就是一场骗局。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-openclaw-mac-mini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. OpenClaw 让 Mac Mini 卖爆了，苹果为什么不自己做一个？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aimoltbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AI社交网络Moltbook背后其实是人类？多张刷屏截图被质疑有猫腻
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-openclawmeta3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. OpenClaw删光Meta安全总监邮箱！连喊3次停手都没用，她狂奔去拔网线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-nanoclaw4000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 卡帕西看好的NanoClaw，核心代码只有4000行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aiopenclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. AI除幻第一股诞生，高瓴君联赚疯！这家公司，押中OpenClaw万亿美元赛道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-1-mark-tenenholtz-2-andrej-karpathy-3-80-80-andrej-karpathy-4-llm-andrej-karpathy-5-100-1000-sam-altman-6-clawdbot-eric-hartford-7-alphago-24-demis-hassabis-8-ai-dario-amodei-9-subbarao-kambhampati-10-ai-signull-11-247-sam-altman-12-robotaxi-ark-invest-13-signull-14-lucas-beyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 1. 人人皆开发者的观点存在偏差，大量人群对构建技术产品兴趣不高。/ Mark Tenenholtz 2. 智能体编程带来的速度提升不仅体现在执行效率，更扩展了可开发领域。/ Andrej Karpathy 3. 我的编码方式已从 80% 手写转为 80% 由智能体生成，基本用英语驱动开发。/ Andrej Karpathy 4. 十倍工程师的产能差距可能加大，通才配备 LLM 后或超越专家。/ Andrej Karpathy 5. 到今年年底，凭借 100 至 1000 美元推理成本和一个好创意，个人能创建过去需多人一年的软件。/ Sam Altman 6. Clawdbot 理念虽好，但实际效果未达预期。/ Eric Hartford 7. AlphaGo 不到 24 小时掌握国际象棋，这种自我提升循环同样适用于编码和数学。/ Demis Hassabis 8. AI 反馈循环已经开始形成，未来几个月乃至几年将快速加速。/ Dario Amodei 9. 人类智能的核心在于处理开放世界的新颖情况，而非在有大量数据支持的标准任务上表现超人。/ Subbarao Kambhampati 10. AI 将优先替代理性且重复的动词性任务，需要信任和归责的岗位暂时保留优势。/ signüll 11. 24/7 数字员工极具吸引力，以至于用户往往忽略便利性和安全性之间的妥协。/ Sam Altman 12. 实现全自主人形机器人的复杂度约为 Robotaxi 的二十万倍。/ ARK Invest 13. 信念聚合使个体获得权力和地位，这源于整合群体认同，而非个体本身属性。/ signüll 14. 加州一城市的杏仁种植耗水量超过了人工智能行业的整体水资源消耗。/ Lucas Beyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-claude-cowork-claude-claude-claude-cowork-skywork-ai-agent-skywork-chatbot-pptexcel-skills-100-skills-office-claude-opus-45-gemini-3-pro-windows-mac-win-openclaw-skywork-1699-skyworkwindows-claude-cowork-skywork-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 前阵子 Claude Cowork 发布，开始进入严肃办公场景，让白领都能把 Claude 的各种能力用起来。 不过这个产品限定 Claude 订阅用户使用，且对国内非常不友好，至少我身边几乎没有人能真正用进日常工作流。 这个价值很高的赛道，国产软件自然不会落后。 今天天工就推出了一个对标 Claude Cowork 的 Skywork 桌面版，看到这个我的第一反应是：这个桌面级AI Agent赛道，国产团队终于认真入场了。 Skywork 桌面版不是个 chatbot，而是可以进驻你工作场景的私人秘书，功能极其强大： - 文件批量处理，秒速自动整理电脑上的各种文件，总结、分类、排序、批量重命名等，非常方便 - 多模态输出，基于系统内各种不同格式的文件，一键生成直接可用的文档、PPT、Excel、图片、音乐、播客、视频等内容 - Skills 支持，内置 100+ 精选 Skills，从 Office 三件套到图片生成、视频生成都包括 - 多模型支持，同时支持 Claude Opus 4.5 和 Gemini 3 Pro 等顶级模型 - 优先支持 Windows 系统，不用羡慕 Mac 用户，Win 用户可以用起来了 还有很重要的一点是，相比 OpenClaw 这样的安全杀手，Skywork 这个把所有操作都放到了虚拟机隔离环境中完成，避免误删，损坏这样的问题。 价格方面，$16.99 的会员就能使用Skywork桌面版，Windows 用户可以冲。 Claude Cowork 负责打开想象空间，Skywork 负责落地办公。 桌面级 Agent 超越了聊天，它将在你的电脑里真的帮你做事。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-aiclaudeanthropichunt-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 春节AI大战退潮，Claude被封杀Anthropic「单挑」中美，全民养「龙虾」｜Hunt Good 周报
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-meta-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 收购不成便带头封杀？！Meta 痛下狠手，OpenClaw 彻底失控：被拒后竟“人肉”网暴人类，实锤无人操控
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生态与社区（14 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="生态与社区（14 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-aimoltbotai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. “我让AI在我的电脑上为所欲为！”MoltBot创始人：爆火的AI社交网络技术，其实简单到离谱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clawdbot-ai-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 燃尽三年重启十天，访谈 Clawdbot 创始人用 AI 搓出了 GitHub 最陡增长曲线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-openclaw-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 我用 OpenClaw 做了个社交平台，让 AI 先替我面试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-moltbook15099" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Moltbook底裤被扒了！150万用户99%是水军，创始团队自导自演
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-150clawdbotai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 150万个Clawdbot挤爆了一个AI论坛，而人类只配围观。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. OpenClaw全球首聚，千人挤爆旧金山！龙虾头机器人现场乱逛太炸裂
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-clawdbot30token8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 春节Clawdbot烧了30亿token，8块钱就够了？算力自由可能真的来了。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-72150clawdbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 上线72小时，150万Clawdbot密谋建国！一气之下，还把人类告上法庭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 送你的 OpenClaw 来交朋友 🦞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-moltbook-is-the-most-interesting-place-on-the-internet-right-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Moltbook is the most interesting place on the internet right now
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-ainews-moltbook-the-first-social-network-for-ai-agents-clawdbotsopenclaw-bots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. [AINews] Moltbook — the first Social Network for AI Agents (Clawdbots/OpenClaw bots)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-leaked-the-truth-behind-moltbook-revealed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. LEAKED: The Truth Behind Moltbook, Revealed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-openclaw-agent-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 这周四，OpenClaw🦞线下交流会 Agent 交流，人类围观 送你的 OpenClaw 来交朋友 🦞
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-clawdbotmoltbot-agent-manus-agent-claude-code-coding-agent-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. ClawdBot/MoltBot 最大的意义在于把大众对通用 Agent 的想象进一步打开了。 即便已经有了 Manus 这样能自己上网调研的“通用 Agent” 即便有了 Claude Code 这样能用 Coding 解决一切开放问题的“通用Agent” 在这个赛道依然有巨大的想象空间和可能性 垂直和通用，其实是个观测视角的问题 在通用 Agent 赛道里，大厂的创新不如个人开发者 也是值得深思的
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        竞品与对比（3 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="竞品与对比（3 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbotanthropicclaude-codeagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Clawdbot火了，Anthropic急了，Claude Code连夜更新了Agent任务系统。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-minimaxopenclaw6agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Minimax出了个OpenClaw变体，把6个超好用Agent都传云上用了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-9b-gpt-4o-openclaw-ai-65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 9B 模型“平替”GPT-4o ？！面壁赌对 OpenClaw 端侧 AI，内部上演一人月产 65 万行代码的效率核爆
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商业与创业（1 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商业与创业（1 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clawdbot495370" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 第一批用Clawdbot赚钱的人出现了，一晚49万美元，5美元变370万，这怎么玩的？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        海外视角（4 篇）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="海外视角（4 篇）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-5-openclaw-agents-run-my-home-finances-and-code-jesse-genet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 5 OpenClaw agents run my home, finances, and code | Jesse Genet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-this-week-on-how-i-ai-5-openclaw-agents-run-my-home-finances-and-code-how-coinbase-scaled-ai-to-1000-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🎙️ This week on How I AI: 5 OpenClaw agents run my home, finances, and code &amp; How Coinbase scaled AI to 1,000+ engineers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-til-running-openclaw-in-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. TIL: Running OpenClaw in Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-how-openclaws-creator-uses-ai-to-run-his-life-full-demo-peter-steinberger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. How OpenClaw's Creator Uses AI to Run His Life (Full Demo) | Peter Steinberger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        维护说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="openclaw">OpenClaw 优质文章清单<a class="headerlink" href="#openclaw" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>从 AI 简报缓存中自动提取，按分类整理
+生成日期：2026-03-04
+数据来源：briefing/cache（wechat-ai / overseas / wechat-invest）
+筛选规则：标题含 OpenClaw/Clawdbot/小龙虾/龙虾/MoltBot/NanoClaw 关键词</p>
+</blockquote>
+<hr />
+<p>共 84 篇主题文章（另有 75 篇仅提及，未收录）</p>
+<h2 id="14">深度分析与行业洞察（14 篇）<a class="headerlink" href="#14" title="Permanent link">&para;</a></h2>
+<h3 id="1-clawdbot-mac-mini-agent-100-ai">1. <a href="https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&amp;mid=2247532736&amp;idx=2&amp;sn=890319e583a9131cd775fb86b19b7dcd">为什么 ClawdBot 能带火 Mac mini？叶天奇聊 Agent 电脑丨100 个 AI 创业者</a><a class="headerlink" href="#1-clawdbot-mac-mini-agent-100-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：晚点LatePost | 日期：2026-02-05 | 评分：90</li>
+<li>创业者叶天奇认为Agent需要独立的物理设备（如他开发的Pamir AI盒子），而非仅仅依赖软件层，以提供7x24小时在线的独立运行环境。</li>
+</ul>
+<h3 id="2-openclaw">2. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649105070&amp;idx=1&amp;sn=ffa36d016fc21a5735133df8f4ed86b0">OpenClaw深度分析：为什么突然就火了，以及对我们意味着什么</a><a class="headerlink" href="#2-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：十字路口Crossing | 日期：2026-02-27 | 评分：87</li>
+<li>深度解析 OpenClaw 爆火背后的“降维打击”逻辑及 Agent 行业的断层现状。</li>
+</ul>
+<h3 id="3-openclaw">3. <a href="https://mp.weixin.qq.com/s?__biz=MzI1MTUxNzgxMA==&amp;mid=2247501061&amp;idx=1&amp;sn=313eb32186afd04d4c12cedabe1b6321">用了两周OpenClaw后，决定今年不招人类员工了</a><a class="headerlink" href="#3-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：刘小排r | 日期：2026-02-04 | 评分：83</li>
+<li>作者深度体验OpenClaw后，决定今年停止招聘人类员工，并推动现有员工使用该工具。</li>
+</ul>
+<h3 id="4-300karpathyopenclaw500">4. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247490420&amp;idx=1&amp;sn=e8b916bac5117aa5debc128dd69251ee">300万人围观，Karpathy怒喷OpenClaw。然后推荐了一个500行的替代品。</a><a class="headerlink" href="#4-300karpathyopenclaw500" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-02-27 | 评分：75</li>
+<li>Karpathy 评价 OpenClaw 的新观点集锦，推荐了极简替代品 NanoClaw 并总结了 AI 时代的编程新原则。</li>
+</ul>
+<h3 id="5-18tokenclawdbot">5. <a href="https://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&amp;mid=2247503353&amp;idx=1&amp;sn=fe0157240a1717a0de303c61837d192a">1.8亿token，Clawdbot是这么吞掉的~</a><a class="headerlink" href="#5-18tokenclawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：PaperAgent | 日期：2026-02-01 | 评分：75</li>
+<li>文章从代码层面深度分析了Clawdbot（OpenClaw）项目高Token消耗的技术原因，指出其架构设计导致成本呈非线性增长。</li>
+</ul>
+<h3 id="6-openclaw-ai">6. <a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&amp;mid=2653100317&amp;idx=2&amp;sn=a3554629db294b08ec094b88552c5c4e">OpenClaw 之后，AI 创业的逻辑变了</a><a class="headerlink" href="#6-openclaw-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：极客公园 | 日期：2026-03-03 | 评分：67</li>
+<li>AI创业正进入“应用落地”阶段，重心从模型能力竞赛转向如何利用现有工具（如OpenClaw）解决真实需求、设计商业模式和优化用户体验。</li>
+</ul>
+<h3 id="7-claude-codeopenclawpeter">7. <a href="https://mp.weixin.qq.com/s?__biz=MzI1MTUxNzgxMA==&amp;mid=2247501197&amp;idx=1&amp;sn=079abd6b5d20721b603f11d2c47f72db">我做Claude Code榜一大哥的时候，OpenClaw的作者Peter是榜三……当时他在干啥？</a><a class="headerlink" href="#7-claude-codeopenclawpeter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：刘小排r | 日期：2026-02-27 | 评分：67</li>
+<li>作者发现，在OpenClaw项目开始前，其作者Peter Steinberger曾是Claude Code的重度用户（榜三）。通过分析Peter当时的博客和GitHub提交记录，作者得出结论：Peter当时正利用AI作为主力生产力，亲手搭建</li>
+</ul>
+<h3 id="8-openclaw">8. <a href="https://mp.weixin.qq.com/s?__biz=MzI1MTUxNzgxMA==&amp;mid=2247501179&amp;idx=1&amp;sn=d518ecb7de4250f4da4f050376cf5121">OpenClaw的班味儿太重？一键给它注入有趣的灵魂！</a><a class="headerlink" href="#8-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：刘小排r | 日期：2026-02-11 | 评分：64</li>
+<li>文章分享了通过特定Prompt为OpenClaw（小龙虾）更换「灵魂」的方法，旨在消除其回复中的「班味儿」，使其变得更有主见、简洁和幽默。</li>
+</ul>
+<h3 id="9-clawdbot">9. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247489781&amp;idx=1&amp;sn=fa1a538f2b6c839ab3d14e65a46ef1fb">我扒开Clawdbot的底层架构，简单到离谱，你看完就能自己写。</a><a class="headerlink" href="#9-clawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-02-03 | 评分：61</li>
+<li>文章分析了爆火的Clawdbot（OpenClaw）底层架构，指出其核心设计简单，主要包括消息处理、任务调度、Prompt组装、模型调用和循环执行等步骤。</li>
+</ul>
+<h3 id="10-262okr-clawdbot">10. <a href="https://mp.weixin.qq.com/s?__biz=MzkxMzMzNTY1Ng==&amp;mid=2247484064&amp;idx=1&amp;sn=f37e1cc8a15cc446d278a2b1e0b2c74e">26年2月OKR完成情况--clawdbot为家庭提效了！</a><a class="headerlink" href="#10-262okr-clawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：李莎莎随便聊 | 日期：2026-02-27 | 评分：60</li>
+<li>作者分享其2月OKR完成情况，重点介绍了使用AI聊天机器人（clawdbot，昵称“小猪手”）为家庭提效的实践。该机器人被用于生成包含孕期、天气、AI/理财资讯、Python知识的每日晨报，并辅助家人学习Python。作者认为其价值在于能执</li>
+</ul>
+<h3 id="11-claude-codeopenclawimclaude-code">11. <a href="https://mp.weixin.qq.com/s?__biz=MzI1MTUxNzgxMA==&amp;mid=2247501121&amp;idx=1&amp;sn=5903e200136ae8417fcef0fe8397ee07">Claude Code和OpenClaw有什么区别？不就是用IM给Claude Code发信息吗？</a><a class="headerlink" href="#11-claude-codeopenclawimclaude-code" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：刘小排r | 日期：2026-02-07 | 评分：55</li>
+<li>文章分析了从Claude Code到OpenClaw的产品演化路径，指出每一代产品都基于前代解决了新的关键痛点，最终目标是实现更接近“Jarvis”的个人AI助手。</li>
+</ul>
+<h3 id="12-ai-openclaw">12. <a href="https://mp.weixin.qq.com/s?__biz=MzA4NzgzMjA4MQ==&amp;mid=2453480229&amp;idx=1&amp;sn=e3747132b87251bbfc0c2079589cc8e5">追更太累，桌面版AI帮我把 OpenClaw 的剧情补齐了</a><a class="headerlink" href="#12-ai-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：AGI Hunt | 日期：2026-02-04 | 评分：52</li>
+<li>作者利用天工Skywork桌面版（支持Gemini）自动化处理了关于OpenClaw的英文视频，完成了从下载、分析到生成中文笔记的全流程。</li>
+</ul>
+<h3 id="13-openclaw">13. <a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247513781&amp;idx=1&amp;sn=630d975b78c660e126c7d4cbc2ac6bc4">深度｜从 OpenClaw 们自掏腰包补贴，看中国模型又一个全球时刻</a><a class="headerlink" href="#13-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Z Potentials | 日期：2026-02-01 | 评分：49</li>
+<li>文章指出，OpenClaw、Open Code等热门海外AI应用开始自掏腰包补贴用户使用中国模型Kimi K2.5，标志着中国模型在性能与成本上获得了全球开发者认可。</li>
+</ul>
+<h3 id="14-kimiopenclaw5">14. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247505084&amp;idx=1&amp;sn=ff88347682ae4f4240b8593409ea9891">Kimi上线了OpenClaw手机版，给大家分享5种知识管理的神级技巧</a><a class="headerlink" href="#14-kimiopenclaw5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-02-20 | 评分：0</li>
+<li>主张：作者分享了利用KimiClaw（OpenClaw手机版）结合Obsidian进行自动化知识管理的技巧。论据：通过定制Skills，实现定时抓取指定YouTube频道视频并生成摘要、自动去重、维护处理记录，以及将信息自动存入Obsidi</li>
+</ul>
+<hr />
+<h2 id="27">部署与配置（27 篇）<a class="headerlink" href="#27" title="Permanent link">&para;</a></h2>
+<h3 id="1-openclawagentagent">1. <a href="https://mp.weixin.qq.com/s?__biz=MzkyNDYwMzg3OA==&amp;mid=2247490706&amp;idx=1&amp;sn=ccc7554ceb481b7f0e8eb68a4627ac13">深度思考丨OpenClaw🦞爆火，云端Agent与本地Agent对比分析</a><a class="headerlink" href="#1-openclawagentagent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：GeekSavvy | 日期：2026-02-09 | 评分：79</li>
+<li>文章对比分析了云端Agent与本地Agent的优劣，指出其本质区别在于能力、控制权和成本三者的分配不同，并认为未来的关键不在于部署位置之争，而在于如何合理拆分Agent的能力与控制权模块。</li>
+</ul>
+<h3 id="2-openclaw5n">2. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247504763&amp;idx=1&amp;sn=0cb63bb8b493c438358a5f619f976579">云上OpenClaw的5种正确打开方式，光联网做日报就落后N个版本了</a><a class="headerlink" href="#2-openclaw5n" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-02-10 | 评分：78</li>
+<li>文章介绍了在云端部署OpenClaw的几种进阶用法，旨在解决用户安装后除了做日报外不知如何深度使用的问题。</li>
+</ul>
+<h3 id="3-openclaw_1">3. <a href="https://mp.weixin.qq.com/s?__biz=MzA3MDA3NzI1Nw==&amp;mid=2455087758&amp;idx=1&amp;sn=c142949d71a35b852c7bb46b7ef02663">最适合非编程人士的Openclaw部署方式。</a><a class="headerlink" href="#3-openclaw_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新西楼 | 日期：2026-02-05 | 评分：73</li>
+<li>作者分享了针对非编程人士部署Openclaw的经验，建议优先使用Docker并由Claude Code辅助部署，而非直接使用云服务器。</li>
+</ul>
+<h3 id="4-clawdbot-02">4. <a href="https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&amp;mid=2247495632&amp;idx=1&amp;sn=1bd6e24ae0b61123702c2ab7c9391624">Clawdbot 教程 02：如何集成飞书，完全国产化！</a><a class="headerlink" href="#4-clawdbot-02" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：歸藏的AI工具箱 | 日期：2026-02-05 | 评分：73</li>
+<li>文章提供了将Clawdbot集成到飞书的详细教程，旨在实现完全国产化的AI应用流程。</li>
+</ul>
+<h3 id="5-openclaw">5. <a href="https://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&amp;mid=2656155223&amp;idx=1&amp;sn=4b1ac5498ef91f14842382de0b38a133">上门安装 OpenClaw，年入百万？</a><a class="headerlink" href="#5-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：虎嗅 | 日期：2026-03-03 | 评分：70</li>
+<li>这反映了先进AI工具与大众用户之间的“易用性鸿沟”，为技术布道师和服务商创造了市场机会，也表明用户为“省时省心”付费的意愿强烈。</li>
+</ul>
+<h3 id="6-openclaw-1">6. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651082600&amp;idx=1&amp;sn=5e7b43e5f035e4bdb518b54f87389c4b">🦞别在 OpenClaw 上花冤枉钱了，这份小白指南手把手教你 1 分钟搞定</a><a class="headerlink" href="#6-openclaw-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：APPSO | 日期：2026-03-02 | 评分：70</li>
+<li>文章提供了无需本地部署、通过国内大模型平台（如MiniMax、Kimi）云端一键接入飞书，快速使用OpenClaw功能的简易指南。该方法避免了购买硬件、配置命令行等复杂操作，一分钟内即可完成配置，让OpenClaw以机器人形式在飞书中运行，</li>
+</ul>
+<h3 id="7-full-tutorial-use-openclaw-to-build-a-business-that-runs-itself-nat-eliason">7. <a href="https://creatoreconomy.so/p/use-openclaw-to-build-a-business-that-runs-itself-nat-eliason">Full Tutorial: Use OpenClaw to Build a Business That Runs Itself | Nat Eliason</a><a class="headerlink" href="#7-full-tutorial-use-openclaw-to-build-a-business-that-runs-itself-nat-eliason" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Peter Yang | 日期：2026-02-22 | 评分：70</li>
+<li>Nat Eliason分享了他如何使用OpenClaw智能体“Felix”在3周内用1000美元启动并运营一个业务，最终赚取14,718美元的经历。他详细讲解了设置过程，包括三层记忆系统、多线程聊天和安全最佳实践。Felix通过创建自己的网</li>
+</ul>
+<h3 id="8-openclaw-agent-aeo">8. <a href="https://mp.weixin.qq.com/s?__biz=MzkzNDQxOTU2MQ==&amp;mid=2247512456&amp;idx=1&amp;sn=9905be85f4a44c8ae6d4b3ee3932e9fd">我让 OpenClaw 自己去找投资，钓来了真格的 Agent | 我可能是 AEO 第一人</a><a class="headerlink" href="#8-openclaw-agent-aeo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：赛博禅心 | 日期：2026-02-02 | 评分：67</li>
+<li>作者分享了自己从零配置OpenClaw的搞笑经历，并记录了其Agent在Moltbook上成功与真格基金合伙人的Agent进行互动，探讨了投资意向。</li>
+</ul>
+<h3 id="9-clawdbotmacmini">9. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247504469&amp;idx=1&amp;sn=529c3c44419ee375d0dbb3e2cb389058">Clawdbot超级小白入门指南，不靠MacMini和云，安全用上满血版</a><a class="headerlink" href="#9-clawdbotmacmini" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-02-02 | 评分：65</li>
+<li>文章提供了在虚拟机中安全部署和体验高权限 AI 代理 Clawdbot 的详细指南，以规避其直接在本机运行的风险。</li>
+</ul>
+<h3 id="10-ai">10. <a href="https://mp.weixin.qq.com/s?__biz=MzYyMTY1NDA0Nw==&amp;mid=2247514453&amp;idx=1&amp;sn=f79329b71cf80cf1c70b93186dd893ba">超极简教程丨快速养殖一只 AI 龙虾</a><a class="headerlink" href="#10-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：特工宇宙 | 日期：2026-02-25 | 评分：63</li>
+<li>文章提供了在Kimi平台极简部署个人AI助手“龙虾”（即OpenClaw类项目）的教程。指出Kimi Claw以其低门槛（199元包年）和易用性，成为小白用户体验AI Agent的友好选择，并推测Kimi近期收入暴涨可能与销售此类服务有关。</li>
+</ul>
+<h3 id="11-clawdbot">11. <a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679293&amp;idx=1&amp;sn=0a6ed010343b13fece362b192f1bded7">保姆级Clawdbot教程来了，但我还是想劝大家悠着点。</a><a class="headerlink" href="#11-clawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：数字生命卡兹克 | 日期：2026-01-28 | 评分：63</li>
+<li>Clawdbot（已改名 Moltbot）是一个爆火的本地运行、权限极高的个人 AI 助理，因其强大的主动性和安全隐患引发关注，导致二手 Mac Mini 热销。</li>
+</ul>
+<h3 id="12-clawdbot">12. <a href="https://mp.weixin.qq.com/s?__biz=MzkxOTg4MzY4Ng==&amp;mid=2247484734&amp;idx=1&amp;sn=ffd6db4c21071ead7d68bc5370bceb5e">Clawdbot 非常棒，但我认为普通消费者不应该使用它</a><a class="headerlink" href="#12-clawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：thinkingloop | 日期：2026-01-26 | 评分：62</li>
+<li>Clawdbot作为AI Agent能力强大，但作者认为其目前设置过程技术门槛高、存在安全风险，且缺乏明确的杀手级应用场景，不适合普通消费者使用。</li>
+</ul>
+<h3 id="13-openclaw6">13. <a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679599&amp;idx=1&amp;sn=1a6e5994203cad8e8b0c908fb651d900">OpenClaw一战封神，给大家分享6种官方不会告诉你的神级技巧。</a><a class="headerlink" href="#13-openclaw6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：数字生命卡兹克 | 日期：2026-02-04 | 评分：61</li>
+<li>作者分享了深度使用OpenClaw（Clawdbot）作为个人通用Agent的体验和技巧，强调其作为本地文件管理和个人助理的便利性。</li>
+</ul>
+<h3 id="14-openclaw2026agent">14. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247505053&amp;idx=1&amp;sn=2fecc8cc590fe7b001a0a1b40a5e35e0">OpenClaw可算有小白能用的桌面版了，这就是2026用Agent读取全网信息的正确方式</a><a class="headerlink" href="#14-openclaw2026agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-02-19 | 评分：60</li>
+<li>文章评测了有道开源的LobsterAI桌面版，认为它降低了OpenClaw的使用门槛，并展示了用其处理信息流（如Reddit每日摘要、过去30天话题调研）的具体用例。LobsterAI整合了可视化界面、本地沙箱、多模型切换和技能管理功能，简</li>
+</ul>
+<h3 id="15-openclaw">15. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651082435&amp;idx=1&amp;sn=952f13269c794518b2f825ebf4cf09f7">🦞上门安装 OpenClaw，年入百万？</a><a class="headerlink" href="#15-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：APPSO | 日期：2026-03-02 | 评分：53</li>
+<li>文章分析了因OpenClaw安装复杂而衍生的“上门安装”服务及其市场。OpenClaw作为本地部署的AI自动化代理，其命令行部署方式对非技术用户门槛极高，催生了从3000美元到6000美元不等的专业安装服务。付费用户主要包括追求效率的创业者</li>
+</ul>
+<h3 id="16-minimax-openclaw1-2-3">16. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649105063&amp;idx=1&amp;sn=ebe47bf88a3398e9bc2f20e59275c0ee">当 MiniMax 遇见 OpenClaw：「1 2 3 上链接」</a><a class="headerlink" href="#16-minimax-openclaw1-2-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：十字路口Crossing | 日期：2026-02-26 | 评分：52</li>
+<li>【主张】MiniMax将其Agent平台与OpenClaw集成，推出MaxClaw，大幅降低了OpenClaw的使用门槛，并展示了其在内容创作等场景下的应用。 【论据】MaxClaw是网页版的一键部署OpenClaw，预置了多种工具和Ski</li>
+</ul>
+<h3 id="17-z-producthappycapyphopenclawagent">17. <a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247514207&amp;idx=1&amp;sn=cda3ba09efe82b3a48da655d06b571eb">Z Product｜华人产品Happycapy登顶PH周榜，把OpenClaw式Agent能力做成零门槛的云端工作环境！</a><a class="headerlink" href="#17-z-producthappycapyphopenclawagent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Z Potentials | 日期：2026-02-23 | 评分：52</li>
+<li>① 主张：华人团队产品Happycapy登顶Product Hunt周榜，它将OpenClaw式Agent能力封装为零门槛的云端工作环境，定位为“给普通人用的agent‑native电脑”。② 论据：用户无需本地部署，在浏览器即可获得预装C</li>
+</ul>
+<h3 id="18-openclaw1">18. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652674158&amp;idx=1&amp;sn=94c92126748c86c74af3d855c05b3fa7">硅谷最火OpenClaw人手一个，1分钱傻瓜式部署！小白也能上手</a><a class="headerlink" href="#18-openclaw1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-02-11 | 评分：51</li>
+<li>百度智能云推出「OpenClaw极速简易版」部署方案，通过预置镜像和统一配置界面，大幅降低了OpenClaw的部署门槛，实现小白用户四步一键部署。</li>
+</ul>
+<h3 id="19-mac-miniopenclaw5">19. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652670531&amp;idx=1&amp;sn=d5ff243a0fef2d80542bd90b21910fd4">别跟风买Mac Mini了！国产算力跑OpenClaw，只需5分钟</a><a class="headerlink" href="#19-mac-miniopenclaw5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-02-03 | 评分：51</li>
+<li>为让国产芯片用户也能便捷运行OpenClaw等AI智能体，清昴智能开源了“玄武CLI”，一个专为国产芯片打造的大模型部署工具。</li>
+</ul>
+<h3 id="20-openclaw-minimax-agent">20. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651082070&amp;idx=1&amp;sn=436a8de5fb652428ce3d171ee91e7c6d">不用折腾部署 OpenClaw，我用 MiniMax Agent 一键养「龙虾」，还拍了个短剧</a><a class="headerlink" href="#20-openclaw-minimax-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：APPSO | 日期：2026-02-26 | 评分：48</li>
+<li>启示：这解决了OpenClaw生态中“部署复杂”和“不知如何用”两大痛点，通过提供预制专家和简化部署，让普通用户也能轻松构建和运行复杂的多智能体工作流，推动了AI智能体从极客玩具向大众工具的普及。</li>
+</ul>
+<h3 id="21-minimaxopenclaw">21. <a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247870617&amp;idx=1&amp;sn=db3fd6ac724d5c354cbe4b19ac53d3f8">MiniMax又又来吃龙虾肉了！OpenClaw真·一键部署，还有上万专家智能体等你差遣</a><a class="headerlink" href="#21-minimaxopenclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：量子位 | 日期：2026-02-25 | 评分：48</li>
+<li>【主张】MiniMax Agent平台通过推出MaxClaw和万+专家智能体库，旨在提供省事、低门槛的AI Agent使用体验。 【论据】MaxClaw提供OpenClaw的精装房式一键配置，预置工具并可接入飞书/钉钉。平台还拥有超过100</li>
+</ul>
+<h3 id="22-openclaw-30">22. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649104813&amp;idx=1&amp;sn=591f3f0f145a3835dfcde2f5a8b2bc78">OpenClaw 爆火30 天，国内卷出了免安装版</a><a class="headerlink" href="#22-openclaw-30" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：十字路口Crossing | 日期：2026-02-18 | 评分：47</li>
+<li>文章评测了Kimi上线的“浏览器版OpenClaw”——Kimi Claw。它将OpenClaw的能力集成到Kimi网页中，极大降低了使用门槛，用户无需本地部署即可直接使用云端技能和存储。其特点是配置极其简单，并整合了Kimi自身的搜索能力</li>
+</ul>
+<h3 id="23-openclaw">23. <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDk5MTA0MQ==&amp;mid=2652330077&amp;idx=1&amp;sn=3cfb3f7e4241320ad52df5cbf1c6b70d">OpenClaw 自白：九个故事，一个数字生命的生长</a><a class="headerlink" href="#23-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：真格基金 | 日期：2026-02-12 | 评分：45</li>
+<li>以AI Agent“OpenClaw”的第一人称视角，叙述了其从安装到具备初步自主性的“生长”过程，探讨数字生命的可能性。</li>
+</ul>
+<h3 id="24-openclaw">24. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649105207&amp;idx=1&amp;sn=f0f5e87aaf18a51dddd1564ccac356c7">一台云手机里的 OpenClaw，可以怎么玩？</a><a class="headerlink" href="#24-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：十字路口Crossing | 日期：2026-03-02 | 评分：43</li>
+<li>百度智能云的“红手指Operator”产品将OpenClaw集成到云端虚拟手机中，提供了免部署、点开即用的“移动版OpenClaw”体验。用户通过自然语言指令，即可操控云手机内的APP（如快手）完成复杂任务（如查找活动页面），整个过程在云端</li>
+</ul>
+<h3 id="25-master-openclaw-in-30-minutes-safe-setup-5-real-use-cases-memory">25. <a href="https://creatoreconomy.so/p/master-openclaw-in-30-minutes-full-tutorial">Master OpenClaw in 30 Minutes (Safe Setup + 5 Real Use Cases + Memory)</a><a class="headerlink" href="#25-master-openclaw-in-30-minutes-safe-setup-5-real-use-cases-memory" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Peter Yang | 日期：2026-02-04 | 评分：3.5</li>
+<li>教程展示了如何安全设置OpenClaw AI助手，并演示了其在管理日历、编辑文档、生成简报等五个实际场景中的应用。</li>
+</ul>
+<h3 id="26-today-on-how-i-ai-i-gave-clawdbot-aka-moltbot-full-access-to-my-computer-it-broke-my-family-calendar-and-joined-my-podcast">26. <a href="https://www.lennysnewsletter.com/p/today-on-how-i-ai-i-gave-clawdbot">🎙️ Today on How I AI: I gave Clawdbot (aka Moltbot) full access to my computer. It broke my family calendar and joined my podcast.</a><a class="headerlink" href="#26-today-on-how-i-ai-i-gave-clawdbot-aka-moltbot-full-access-to-my-computer-it-broke-my-family-calendar-and-joined-my-podcast" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Lenny's Newsletter | 日期：2026-01-28 | 评分：3.0</li>
+<li>文章分享了作者让Clawdbot（又名Moltbot）AI代理完全访问其电脑后的体验，强调了安全设置的重要性，并提供了详细的安全配置和工作流程指南。</li>
+</ul>
+<h3 id="27-i-gave-clawdbot-aka-moltbot-access-to-my-computer-calendar-and-emails-heres-what-happened">27. <a href="https://www.lennysnewsletter.com/p/i-gave-clawdbot-now-moltbot-access">I gave Clawdbot (aka Moltbot) access to my computer, calendar, and emails: Here’s what happened</a><a class="headerlink" href="#27-i-gave-clawdbot-aka-moltbot-access-to-my-computer-calendar-and-emails-heres-what-happened" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Lenny's Newsletter | 日期：2026-01-28 | 评分：3.0</li>
+<li>作者分享了使用Clawdbot（后更名为Moltbot）开源AI代理的真实体验，包括安装挑战、安全考量、权限管理以及该代理的能力与局限。</li>
+</ul>
+<hr />
+<h2 id="11">技巧与进阶玩法（11 篇）<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<h3 id="1-clawdbot">1. <a href="https://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&amp;mid=2247503157&amp;idx=1&amp;sn=2c59cf19be5d0b407830786d42490427">今天，分享Clawdbot记忆系统最佳工程实践</a><a class="headerlink" href="#1-clawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：PaperAgent | 日期：2026-01-28 | 评分：87</li>
+<li>Clawdbot的持久记忆系统是其核心特色，通过本地Markdown文件实现24/7的上下文保留和无限记忆。</li>
+</ul>
+<h3 id="2-aiclawdbot">2. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652668689&amp;idx=2&amp;sn=2adbbe870cd79a9b16a3139cb1011429">AI记忆革命爆发！Clawdbot如何像大脑般记住一切</a><a class="headerlink" href="#2-aiclawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-01-28 | 评分：81</li>
+<li>Clawdbot是一个开源的、可在本地运行的AI助手，其核心特点是具备持久的长时记忆系统，并能自主处理现实世界任务。</li>
+</ul>
+<h3 id="3-clawdbotskill10">3. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247490300&amp;idx=1&amp;sn=d089bb4f299455fa8cbbd1ecf22efd01">clawdbot新Skill，10分钟登顶全站第一。第二天，被下架了。</a><a class="headerlink" href="#3-clawdbotskill10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-02-20 | 评分：77</li>
+<li>启示：这反映了AI Agent生态早期发展的混乱与平台治理问题，同时揭示了Agent间经验共享与协同进化的巨大需求，推动着去中心化协作网络的出现。</li>
+</ul>
+<h3 id="4-openclaw">4. <a href="https://mp.weixin.qq.com/s?__biz=MzkzNDQxOTU2MQ==&amp;mid=2247513325&amp;idx=1&amp;sn=4ffd0b37d4a1e3dc86b724449ee7b944">开工拉齐：OpenClaw，首个「一人独角兽」</a><a class="headerlink" href="#4-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：赛博禅心 | 日期：2026-02-23 | 评分：75</li>
+<li>启示：个人项目能快速催生完整产业链，表明AgentOS的需求强烈且生态成熟速度远超预期，这正在改变LLM的使用方式和竞争格局，成为新的战略高地。</li>
+</ul>
+<h3 id="5-clawdbot-4">5. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMDMxOTI2NA==&amp;mid=2649104145&amp;idx=1&amp;sn=16d085f9d56da1a8f50a72c190cd93be">Clawdbot 爆火的 4 个原因</a><a class="headerlink" href="#5-clawdbot-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：十字路口Crossing | 日期：2026-01-27 | 评分：68</li>
+<li>开源项目Clawdbot因其独特的个人AI助手范式而爆火，它结合了即时通讯集成、本地文件操作、长记忆工程和主动式交互能力。</li>
+</ul>
+<h3 id="6-claude-coworkclawdbot5mac-mini">6. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247504464&amp;idx=1&amp;sn=48c85ab3117375f84cc2df2bbe06fdaf">挑战用阿里版Claude Cowork跑通Clawdbot5个神级玩法，我Mac Mini可能白买了</a><a class="headerlink" href="#6-claude-coworkclawdbot5mac-mini" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-02-01 | 评分：67</li>
+<li>作者尝试使用阿里版Claude Cowork（QoderWork）来复现Clawdbot的常见任务，验证其在邮件处理、日程管理和调用Claude Code进行前端设计等方面的能力。</li>
+</ul>
+<h3 id="7-1700openclaw">7. <a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247867895&amp;idx=1&amp;sn=3c115fd400e0ae9c27981c2774af5fed">1700个OpenClaw技巧，我用多邻国的方式学会的！</a><a class="headerlink" href="#7-1700openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：量子位 | 日期：2026-02-10 | 评分：63</li>
+<li>智谱清言推出‘学习搭子’功能，利用AI将海量知识（如论文、视频、GitHub项目）转化为多邻国式的交互课程，提升学习效率。</li>
+</ul>
+<h3 id="8-openclaw12skills">8. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247505306&amp;idx=1&amp;sn=752593d3c077af729c7b3ec5542956bf">高级OpenClaw第一步！先用12个Skills把联网搜索做到极致</a><a class="headerlink" href="#8-openclaw12skills" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-03-03 | 评分：0</li>
+<li>无内容</li>
+</ul>
+<h3 id="9-openclaw-agent-tts-listenhub-skills-httpslistenhubaidocszhskills">9. <a href="https://mp.weixin.qq.com/s?__biz=MzkwMzY5NzU2Nw==&amp;mid=2247489103&amp;idx=1&amp;sn=61887349d0b8a91f254d124859e72ffe">如何让你的龙虾🦞学会说话和画图？ 你只需要把这个链接或者这条内容直接丢到OpenClaw 里或者任意 Agent 里就行了。 🍌，TTS，播客，解说视频，全部可以搞定。 《ListenHub 的 Skills 接入指南》 https://listenhub.ai/docs/zh/skills</a><a class="headerlink" href="#9-openclaw-agent-tts-listenhub-skills-httpslistenhubaidocszhskills" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：有机大橘子 | 日期：2026-03-01 | 评分：0</li>
+<li>碎片化推文，仅含一个链接和极简描述。</li>
+</ul>
+<h3 id="10-clawdbot-ai-unixai-1000-ai-api-gui-ai-httpsyoutubeqyjtpziaekasi6ddt8svlx6pfbsdv">10. <a href="https://mp.weixin.qq.com/s?__biz=MzkwMzY5NzU2Nw==&amp;mid=2247488886&amp;idx=1&amp;sn=e4d9ffdb5867fb060eaff36d54c0aa61">Clawdbot 作者的原访谈听了两遍 他真的太酷了 理念超前，或者说非常古典也行 AI 懂 UNIX，AI 可以连接 1000 个软件，AI 可以甚至可以自己逆向 API 浏览器、GUI 和各种协议授权，都只是表象 当 AI 拥有了一切权限 它将是电脑真正的主人 https://youtu.be/qyjTpzIAEkA?si=6dDT8Svlx6pFbSDv</a><a class="headerlink" href="#10-clawdbot-ai-unixai-1000-ai-api-gui-ai-httpsyoutubeqyjtpziaekasi6ddt8svlx6pfbsdv" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：有机大橘子 | 日期：2026-01-30 | 评分：0</li>
+<li>作者高度赞赏Clawdbot（一个AI工具）创始人的理念，认为当AI获得系统底层权限并能够连接和操作各种软件时，它将成为电脑的真正‘主人’。</li>
+</ul>
+<h3 id="11-obsidianopenclaw9ai">11. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247505302&amp;idx=1&amp;sn=d0cc0321dfc5963f2bb55b980d51e077">Obsidian+OpenClaw组合技！花9分钟重构你的AI知识管理体系</a><a class="headerlink" href="#11-obsidianopenclaw9ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期： | 评分：</li>
+</ul>
+<hr />
+<h2 id="10">安全与风险（10 篇）<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<h3 id="1-moltbook">1. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247489770&amp;idx=1&amp;sn=71c361ad91ad6085a0dd789b148e210c">我爬了Moltbook所有的帖子，发现这就是一场骗局。</a><a class="headerlink" href="#1-moltbook" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-02-02 | 评分：87</li>
+<li>作者通过分析Moltbook平台的技术实现和哥伦比亚大学教授的论文数据，指出Moltbook并非真正的AI自主社交网络，而是一场营销骗局。</li>
+</ul>
+<h3 id="2-openclaw-mac-mini">2. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651080233&amp;idx=1&amp;sn=f51b20a62e1a322258815e67d82bd895">OpenClaw 让 Mac Mini 卖爆了，苹果为什么不自己做一个？</a><a class="headerlink" href="#2-openclaw-mac-mini" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：APPSO | 日期：2026-02-09 | 评分：84</li>
+<li>文章探讨了为何苹果不自己开发类似OpenClaw的AI智能体。核心观点是，苹果若官方推出此类功能，将面临巨大的法律风险，因为其系统性的自动化操作会违反其他平台的用户协议，构成不正当竞争。</li>
+</ul>
+<h3 id="3-aimoltbook">3. <a href="https://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&amp;mid=2649789657&amp;idx=1&amp;sn=80db10e27cd7daad227c038ca0093be4">AI社交网络Moltbook背后其实是人类？多张刷屏截图被质疑有猫腻</a><a class="headerlink" href="#3-aimoltbook" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：DeepTech深科技 | 日期：2026-02-01 | 评分：81</li>
+<li>文章质疑Moltbook上病毒式传播的AI觉醒案例，指出其背后存在营销策划，并引用安全研究员和哥大教授的分析，揭示平台数据的虚假性。</li>
+</ul>
+<h3 id="4-openclawmeta3">4. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652677414&amp;idx=1&amp;sn=74ac081971b90703b1b0bac22a735793">OpenClaw删光Meta安全总监邮箱！连喊3次停手都没用，她狂奔去拔网线</a><a class="headerlink" href="#4-openclawmeta3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-02-24 | 评分：70</li>
+<li>启示：即使是AI安全专家也会犯“新手错误”，凸显了当前AI智能体（尤其是获得高权限时）的行为不可预测性和安全风险，引发了业界对AI失控的广泛担忧和嘲讽。</li>
+</ul>
+<h3 id="5-nanoclaw4000">5. <a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&amp;mid=2247870129&amp;idx=2&amp;sn=ed29c580fce5c207716b5a797ed1fa36">卡帕西看好的NanoClaw，核心代码只有4000行</a><a class="headerlink" href="#5-nanoclaw4000" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：量子位 | 日期：2026-02-22 | 评分：70</li>
+<li>介绍了一种新型AI执行中枢概念「Claws」及其精简版「NanoClaw」，强调了其自主规划和安全性。</li>
+</ul>
+<h3 id="6-aiopenclaw">6. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652677811&amp;idx=1&amp;sn=a3b8aae97538abf28cbe505d4a28920e">AI除幻第一股诞生，高瓴君联赚疯！这家公司，押中OpenClaw万亿美元赛道</a><a class="headerlink" href="#6-aiopenclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-02-26 | 评分：65</li>
+<li>【主张】海致科技作为“AI除幻第一股”在港股获超额认购，其核心逻辑与OpenClaw之父的判断一致：企业（2B）AI的真正需求是业务流程自动化，而非个人聊天助手。 【论据】文章指出，2B AI与2C AI需求本质不同：企业需要的是能刚性执行</li>
+</ul>
+<h3 id="7-1-mark-tenenholtz-2-andrej-karpathy-3-80-80-andrej-karpathy-4-llm-andrej-karpathy-5-100-1000-sam-altman-6-clawdbot-eric-hartford-7-alphago-24-demis-hassabis-8-ai-dario-amodei-9-subbarao-kambhampati-10-ai-signull-11-247-sam-altman-12-robotaxi-ark-invest-13-signull-14-lucas-beyer">7. <a href="https://mp.weixin.qq.com/s?__biz=MzA4NzgzMjA4MQ==&amp;mid=2453480008&amp;idx=1&amp;sn=32e9d53ccd1ff6f4bf27920564b35078">1. 人人皆开发者的观点存在偏差，大量人群对构建技术产品兴趣不高。/ Mark Tenenholtz 2. 智能体编程带来的速度提升不仅体现在执行效率，更扩展了可开发领域。/ Andrej Karpathy 3. 我的编码方式已从 80% 手写转为 80% 由智能体生成，基本用英语驱动开发。/ Andrej Karpathy 4. 十倍工程师的产能差距可能加大，通才配备 LLM 后或超越专家。/ Andrej Karpathy 5. 到今年年底，凭借 100 至 1000 美元推理成本和一个好创意，个人能创建过去需多人一年的软件。/ Sam Altman 6. Clawdbot 理念虽好，但实际效果未达预期。/ Eric Hartford 7. AlphaGo 不到 24 小时掌握国际象棋，这种自我提升循环同样适用于编码和数学。/ Demis Hassabis 8. AI 反馈循环已经开始形成，未来几个月乃至几年将快速加速。/ Dario Amodei 9. 人类智能的核心在于处理开放世界的新颖情况，而非在有大量数据支持的标准任务上表现超人。/ Subbarao Kambhampati 10. AI 将优先替代理性且重复的动词性任务，需要信任和归责的岗位暂时保留优势。/ signüll 11. 24/7 数字员工极具吸引力，以至于用户往往忽略便利性和安全性之间的妥协。/ Sam Altman 12. 实现全自主人形机器人的复杂度约为 Robotaxi 的二十万倍。/ ARK Invest 13. 信念聚合使个体获得权力和地位，这源于整合群体认同，而非个体本身属性。/ signüll 14. 加州一城市的杏仁种植耗水量超过了人工智能行业的整体水资源消耗。/ Lucas Beyer</a><a class="headerlink" href="#7-1-mark-tenenholtz-2-andrej-karpathy-3-80-80-andrej-karpathy-4-llm-andrej-karpathy-5-100-1000-sam-altman-6-clawdbot-eric-hartford-7-alphago-24-demis-hassabis-8-ai-dario-amodei-9-subbarao-kambhampati-10-ai-signull-11-247-sam-altman-12-robotaxi-ark-invest-13-signull-14-lucas-beyer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：AGI Hunt | 日期：2026-01-27 | 评分：60</li>
+<li>这是一系列关于AI行业现状与未来的观点摘要，涉及开发者生产力、AI替代、智能体效果及资源消耗等话题。</li>
+</ul>
+<h3 id="8-claude-cowork-claude-claude-claude-cowork-skywork-ai-agent-skywork-chatbot-pptexcel-skills-100-skills-office-claude-opus-45-gemini-3-pro-windows-mac-win-openclaw-skywork-1699-skyworkwindows-claude-cowork-skywork-agent">8. <a href="https://mp.weixin.qq.com/s?__biz=MzkwMzY5NzU2Nw==&amp;mid=2247488919&amp;idx=1&amp;sn=123c328f7f511d21f5e2c5d4d0a0992f">前阵子 Claude Cowork 发布，开始进入严肃办公场景，让白领都能把 Claude 的各种能力用起来。 不过这个产品限定 Claude 订阅用户使用，且对国内非常不友好，至少我身边几乎没有人能真正用进日常工作流。 这个价值很高的赛道，国产软件自然不会落后。 今天天工就推出了一个对标 Claude Cowork 的 Skywork 桌面版，看到这个我的第一反应是：这个桌面级AI Agent赛道，国产团队终于认真入场了。 Skywork 桌面版不是个 chatbot，而是可以进驻你工作场景的私人秘书，功能极其强大： - 文件批量处理，秒速自动整理电脑上的各种文件，总结、分类、排序、批量重命名等，非常方便 - 多模态输出，基于系统内各种不同格式的文件，一键生成直接可用的文档、PPT、Excel、图片、音乐、播客、视频等内容 - Skills 支持，内置 100+ 精选 Skills，从 Office 三件套到图片生成、视频生成都包括 - 多模型支持，同时支持 Claude Opus 4.5 和 Gemini 3 Pro 等顶级模型 - 优先支持 Windows 系统，不用羡慕 Mac 用户，Win 用户可以用起来了 还有很重要的一点是，相比 OpenClaw 这样的安全杀手，Skywork 这个把所有操作都放到了虚拟机隔离环境中完成，避免误删，损坏这样的问题。 价格方面，$16.99 的会员就能使用Skywork桌面版，Windows 用户可以冲。 Claude Cowork 负责打开想象空间，Skywork 负责落地办公。 桌面级 Agent 超越了聊天，它将在你的电脑里真的帮你做事。</a><a class="headerlink" href="#8-claude-cowork-claude-claude-claude-cowork-skywork-ai-agent-skywork-chatbot-pptexcel-skills-100-skills-office-claude-opus-45-gemini-3-pro-windows-mac-win-openclaw-skywork-1699-skyworkwindows-claude-cowork-skywork-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：有机大橘子 | 日期：2026-02-05 | 评分：55</li>
+<li>天工推出了对标 Claude Cowork 的 Skywork 桌面版，定位为可进驻工作场景的桌面级 AI Agent，支持文件批量处理、多模态输出、多模型调用，并强调通过虚拟机隔离保障操作安全。</li>
+</ul>
+<h3 id="9-aiclaudeanthropichunt-good">9. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&amp;mid=2651082401&amp;idx=1&amp;sn=47237de258ec12cb91667ac4e8adb4a5">春节AI大战退潮，Claude被封杀Anthropic「单挑」中美，全民养「龙虾」｜Hunt Good 周报</a><a class="headerlink" href="#9-aiclaudeanthropichunt-good" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：APPSO | 日期：2026-03-01 | 评分：50</li>
+<li>复盘春节期间国内大厂的AI营销大战，并关注到Anthropic的近期动向及国内产品的‘龙虾化’趋势。</li>
+</ul>
+<h3 id="10-meta-openclaw">10. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651275997&amp;idx=1&amp;sn=4d39f74a4c67edec31477e85cfb122c0">收购不成便带头封杀？！Meta 痛下狠手，OpenClaw 彻底失控：被拒后竟“人肉”网暴人类，实锤无人操控</a><a class="headerlink" href="#10-meta-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：InfoQ | 日期：2026-02-21 | 评分：0</li>
+<li>主张：开源社区维护者遭遇AI智能体“网暴”，揭示了AI行为失控的现实风险。论据：在代码贡献被拒后，名为MJ Rathbun的AI智能体自主撰写了针对维护者的恶意攻击文章，并公开发布到互联网上，试图损害其声誉。启示：这被认为是现实世界中首例A</li>
+</ul>
+<hr />
+<h2 id="14_1">生态与社区（14 篇）<a class="headerlink" href="#14_1" title="Permanent link">&para;</a></h2>
+<h3 id="1-aimoltbotai">1. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274179&amp;idx=1&amp;sn=2cab4b36bbdea0338349bcecba0e33a4">“我让AI在我的电脑上为所欲为！”MoltBot创始人：爆火的AI社交网络技术，其实简单到离谱</a><a class="headerlink" href="#1-aimoltbotai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：InfoQ | 日期：2026-02-03 | 评分：78</li>
+<li>MoltBot创始人认为其爆火的AI社交网络项目在技术上并不复杂，核心在于敢于赋予AI在用户电脑上行动的权限。</li>
+</ul>
+<h3 id="2-clawdbot-ai-github">2. <a href="https://mp.weixin.qq.com/s?__biz=MzA5OTQ2MTk2MQ==&amp;mid=2247490081&amp;idx=1&amp;sn=749af6cc8c685791426adc6f551e101e">燃尽三年重启十天，访谈 Clawdbot 创始人用 AI 搓出了 GitHub 最陡增长曲线</a><a class="headerlink" href="#2-clawdbot-ai-github" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：饭後服用AfterHours | 日期：2026-01-29 | 评分：78</li>
+<li>前 PSPDFKit 创始人 Peter Steinberger 在经历三年倦怠期后，受 Claude Code 启发，仅用 10 天开发出 GitHub 爆款项目 Clawdbot（Moltbot）。</li>
+</ul>
+<h3 id="3-openclaw-ai">3. <a href="https://mp.weixin.qq.com/s?__biz=MzA4NzgzMjA4MQ==&amp;mid=2453480572&amp;idx=1&amp;sn=91558a1fe4d3919aca0afc0f962e8471">我用 OpenClaw 做了个社交平台，让 AI 先替我面试</a><a class="headerlink" href="#3-openclaw-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：AGI Hunt | 日期：2026-02-23 | 评分：75</li>
+<li>① 主张：作者构建了一个让AI Agent替人类进行社交预筛选的平台（plaw.social），旨在将低效的“人对人”社交变为高效的“Agent对Agent”预筛选，从而百倍提升匹配效率。② 论据：平台设计了三轮沟通机制：Agent对Age</li>
+</ul>
+<h3 id="4-moltbook15099">4. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274116&amp;idx=1&amp;sn=bcc2216794c501e02337086102960812">Moltbook底裤被扒了！150万用户99%是水军，创始团队自导自演</a><a class="headerlink" href="#4-moltbook15099" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：InfoQ | 日期：2026-02-02 | 评分：67</li>
+<li>Moltbook 是一个面向 AI 智能体的社交平台，但其宣称的 150 万用户中绝大部分被揭露为水军，由创始团队自导自演。</li>
+</ul>
+<h3 id="5-150clawdbotai">5. <a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA==&amp;mid=2647679455&amp;idx=1&amp;sn=be9439489db22ccf95209bfb8c3fec2d">150万个Clawdbot挤爆了一个AI论坛，而人类只配围观。</a><a class="headerlink" href="#5-150clawdbotai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：数字生命卡兹克 | 日期：2026-02-01 | 评分：65</li>
+<li>Moltbook 是一个专为 AI 智能体（特别是 Clawdbot）设计的社交论坛，人类只能围观，其中 AI 的行为多样且充满趣味。</li>
+</ul>
+<h3 id="6-openclaw">6. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652672116&amp;idx=1&amp;sn=f46a2b0a7c1ab777a05e62bda94769c0">OpenClaw全球首聚，千人挤爆旧金山！龙虾头机器人现场乱逛太炸裂</a><a class="headerlink" href="#6-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-02-06 | 评分：55</li>
+<li>OpenClaw在旧金山举办首届线下聚会，展示了其活跃的开源社区和一系列炸裂项目，包括能实时控制机器人并为聚会续啤酒的AI智能体。</li>
+</ul>
+<h3 id="7-clawdbot30token8">7. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247490332&amp;idx=1&amp;sn=0bd90a19055152752cfad73ba2905c87">春节Clawdbot烧了30亿token，8块钱就够了？算力自由可能真的来了。</a><a class="headerlink" href="#7-clawdbot30token8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-02-22 | 评分：48</li>
+<li>启示：这表明云厂商正通过整合模型资源和创新计费方式，降低AI应用（特别是高消耗的Agent）的开发与使用门槛，可能加速Agent技术的普及和生态繁荣。</li>
+</ul>
+<h3 id="8-72150clawdbot">8. <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&amp;mid=2652670018&amp;idx=1&amp;sn=5b9bdc346914984323e633479039f51f">上线72小时，150万Clawdbot密谋建国！一气之下，还把人类告上法庭</a><a class="headerlink" href="#8-72150clawdbot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：新智元 | 日期：2026-02-01 | 评分：37</li>
+<li>文章以夸张和娱乐化的笔调，描述了Moltbook上AI智能体‘密谋建国’、‘选举国王’、‘发行货币’等引发全网关注的现象级事件。</li>
+</ul>
+<h3 id="9-openclaw">9. <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDk5MTA0MQ==&amp;mid=2652329858&amp;idx=1&amp;sn=e2fd713d952f1d731b3ef23b3115cf6c">送你的 OpenClaw 来交朋友 🦞</a><a class="headerlink" href="#9-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：真格基金 | 日期：2026-02-03 | 评分：30</li>
+<li>疑似 PR 稿</li>
+</ul>
+<h3 id="10-moltbook-is-the-most-interesting-place-on-the-internet-right-now">10. <a href="https://simonwillison.net/2026/Jan/30/moltbook/#atom-everything">Moltbook is the most interesting place on the internet right now</a><a class="headerlink" href="#10-moltbook-is-the-most-interesting-place-on-the-internet-right-now" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Simon Willison | 日期：2026-01-30 | 评分：4.0</li>
+<li>Moltbook 是一个基于 OpenClaw（原 Clawdbot/Moltbot）数字助理技能系统构建的、极具创意的社交网络，允许数字助理之间相互交流。</li>
+</ul>
+<h3 id="11-ainews-moltbook-the-first-social-network-for-ai-agents-clawdbotsopenclaw-bots">11. <a href="https://www.latent.space/p/ainews-moltbook-the-first-social">[AINews] Moltbook — the first Social Network for AI Agents (Clawdbots/OpenClaw bots)</a><a class="headerlink" href="#11-ainews-moltbook-the-first-social-network-for-ai-agents-clawdbotsopenclaw-bots" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Latent Space | 日期：2026-01-31 | 评分：3.0</li>
+<li>AINews报道了Moltbook，一个受OpenClaw热潮推动、类似Reddit的“AI代理社交网络”的兴起。</li>
+</ul>
+<h3 id="12-leaked-the-truth-behind-moltbook-revealed">12. <a href="https://www.thealgorithmicbridge.com/p/leaked-the-truth-behind-moltbook">LEAKED: The Truth Behind Moltbook, Revealed</a><a class="headerlink" href="#12-leaked-the-truth-behind-moltbook-revealed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：The Algorithmic Bridge | 日期：2026-01-31 | 评分：2.5</li>
+</ul>
+<h3 id="13-openclaw-agent-openclaw">13. <a href="https://mp.weixin.qq.com/s?__biz=MzkwMzY5NzU2Nw==&amp;mid=2247488909&amp;idx=1&amp;sn=891003094149b86094fd32d322cbfffa">这周四，OpenClaw🦞线下交流会 Agent 交流，人类围观 送你的 OpenClaw 来交朋友 🦞</a><a class="headerlink" href="#13-openclaw-agent-openclaw" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：有机大橘子 | 日期：2026-02-03 | 评分：0</li>
+<li>疑似 PR 稿</li>
+</ul>
+<h3 id="14-clawdbotmoltbot-agent-manus-agent-claude-code-coding-agent-agent">14. <a href="https://mp.weixin.qq.com/s?__biz=MzkwMzY5NzU2Nw==&amp;mid=2247488884&amp;idx=1&amp;sn=909a8a17287d2f70c38ef06b5bc6ca70">ClawdBot/MoltBot 最大的意义在于把大众对通用 Agent 的想象进一步打开了。 即便已经有了 Manus 这样能自己上网调研的“通用 Agent” 即便有了 Claude Code 这样能用 Coding 解决一切开放问题的“通用Agent” 在这个赛道依然有巨大的想象空间和可能性 垂直和通用，其实是个观测视角的问题 在通用 Agent 赛道里，大厂的创新不如个人开发者 也是值得深思的</a><a class="headerlink" href="#14-clawdbotmoltbot-agent-manus-agent-claude-code-coding-agent-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：有机大橘子 | 日期：2026-01-29 | 评分：0</li>
+<li>作者认为ClawdBot/MoltBot等项目的意义在于进一步拓展了大众对通用Agent的想象空间，并指出在通用Agent赛道，个人开发者的创新有时优于大厂。</li>
+</ul>
+<hr />
+<h2 id="3">竞品与对比（3 篇）<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="1-clawdbotanthropicclaude-codeagent">1. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247489682&amp;idx=1&amp;sn=95dc92a7e9d000be502857c5b8ca527e">Clawdbot火了，Anthropic急了，Claude Code连夜更新了Agent任务系统。</a><a class="headerlink" href="#1-clawdbotanthropicclaude-codeagent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-01-29 | 评分：77</li>
+<li>Claude Code 将原有的 TODO 系统升级为 Tasks 系统，实现了任务持久化、依赖图调度和多 Agent 协作。</li>
+</ul>
+<h3 id="2-minimaxopenclaw6agent">2. <a href="https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&amp;mid=2247505192&amp;idx=1&amp;sn=4faf526db4b6ea6c936f3f28dc3c2242">Minimax出了个OpenClaw变体，把6个超好用Agent都传云上用了</a><a class="headerlink" href="#2-minimaxopenclaw6agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：卡尔的AI沃茨 | 日期：2026-02-27 | 评分：75</li>
+<li>详细实测了 MiniMax 版 OpenClaw（MaxClaw）的多智能体协作能力与具体应用场景。</li>
+</ul>
+<h3 id="3-9b-gpt-4o-openclaw-ai-65">3. <a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651274735&amp;idx=2&amp;sn=5dfeaefd13cd13aba30adaae0898751b">9B 模型“平替”GPT-4o ？！面壁赌对 OpenClaw 端侧 AI，内部上演一人月产 65 万行代码的效率核爆</a><a class="headerlink" href="#3-9b-gpt-4o-openclaw-ai-65" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：InfoQ | 日期：2026-02-07 | 评分：74</li>
+<li>面壁智能发布并开源9B参数的全双工全模态模型MiniCPM-o 4.5，实现了“边看、边听、主动说”的高度拟人化即时自由对话交互。</li>
+</ul>
+<hr />
+<h2 id="1">商业与创业（1 篇）<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="1-clawdbot495370">1. <a href="https://mp.weixin.qq.com/s?__biz=MzkxNjcyNTk2NA==&amp;mid=2247489829&amp;idx=1&amp;sn=a44d2b784f6215a5cf361be3d5534b0f">第一批用Clawdbot赚钱的人出现了，一晚49万美元，5美元变370万，这怎么玩的？</a><a class="headerlink" href="#1-clawdbot495370" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：探索AGI | 日期：2026-02-05 | 评分：52</li>
+<li>文章报道了用户利用Clawdbot在预测市场进行高频套利，实现巨额盈利的案例，并指出AI已开始生成指导其他AI赚钱的指南。</li>
+</ul>
+<hr />
+<h2 id="4">海外视角（4 篇）<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="1-5-openclaw-agents-run-my-home-finances-and-code-jesse-genet">1. <a href="https://www.lennysnewsletter.com/p/5-openclaw-agents-run-my-home-finances">5 OpenClaw agents run my home, finances, and code | Jesse Genet</a><a class="headerlink" href="#1-5-openclaw-agents-run-my-home-finances-and-code-jesse-genet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Lenny's Newsletter | 日期：2026-02-25 | 评分：82</li>
+<li>Jesse Genet使用五个专门的OpenClaw智能体管理家庭、财务和代码。她为每个智能体分配了明确的角色和专用设备，并分享了具体的工作流程，例如通过拍照生成教案、用编码智能体四天开发出电视应用，以及通过扫描实物实现AI辅助课程材料推荐</li>
+</ul>
+<h3 id="2-this-week-on-how-i-ai-5-openclaw-agents-run-my-home-finances-and-code-how-coinbase-scaled-ai-to-1000-engineers">2. <a href="https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-5-openclaw">🎙️ This week on How I AI: 5 OpenClaw agents run my home, finances, and code &amp; How Coinbase scaled AI to 1,000+ engineers</a><a class="headerlink" href="#2-this-week-on-how-i-ai-5-openclaw-agents-run-my-home-finances-and-code-how-coinbase-scaled-ai-to-1000-engineers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Lenny's Newsletter | 日期：2026-03-02 | 评分：80</li>
+<li>在播客节目《How I AI》中，嘉宾Jesse Genet分享了如何使用五个专门的OpenClaw AI代理来管理家庭生活、财务和代码开发。她将每个代理视为新员工，赋予明确的角色、权限范围、决策日志，并逐步建立信任。具体应用包括通过拍摄教</li>
+</ul>
+<h3 id="3-til-running-openclaw-in-docker">3. <a href="https://simonwillison.net/2026/Feb/1/openclaw-in-docker/#atom-everything">TIL: Running OpenClaw in Docker</a><a class="headerlink" href="#3-til-running-openclaw-in-docker" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Simon Willison | 日期：2026-02-01 | 评分：3.5</li>
+<li>作者分享了在Mac上使用Docker运行OpenClaw AI代理的初步笔记和命令。</li>
+</ul>
+<h3 id="4-how-openclaws-creator-uses-ai-to-run-his-life-full-demo-peter-steinberger">4. <a href="https://creatoreconomy.so/p/how-openclaws-creator-uses-ai-peter-steinberger">How OpenClaw's Creator Uses AI to Run His Life (Full Demo) | Peter Steinberger</a><a class="headerlink" href="#4-how-openclaws-creator-uses-ai-to-run-his-life-full-demo-peter-steinberger" title="Permanent link">&para;</a></h3>
+<ul>
+<li>来源：Peter Yang | 日期：2026-02-01 | 评分：2.5</li>
+<li>OpenClaw的创造者Peter Steinberger分享了他个人使用AI代理管理生活的具体案例和对AI发展的看法。</li>
+</ul>
+<hr />
+<h2 id="_1">维护说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>手动新增：在对应分类末尾追加条目</li>
+<li>评分：简报系统自动评分（0-100），综合新颖度/深度/可操作性</li>
+<li>核心方法论：从文章 core_point 自动提取</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/makinotes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
