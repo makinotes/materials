@@ -1,6 +1,6 @@
 site_name: makino's materials
 site_url: https://makinote.cn/materials/
-site_description: 个人材料分享 — 持续更新的安装实录、学习笔记、精选资源
+site_description: 个人材料分享 — 部署实录、学习笔记、精选阅读
 site_author: makino
 
 repo_url: https://github.com/makinotes/materials
@@ -17,7 +17,7 @@ theme:
     text: system-ui, -apple-system, sans-serif
     code: JetBrains Mono
   features:
-    - navigation.sections
+    - navigation.indexes
     - navigation.expand
     - navigation.top
     - search.suggest
@@ -44,16 +44,27 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
-      permalink: true
+      permalink: false
   - attr_list
   - md_in_html
+  - def_list
 
 nav:
   - Home: index.md
-  - 小龙虾安装实录:
-    - lobster/index.md
-  - AI 学习笔记:
-    - ai-learning/index.md
+  - 部署实录:
+    - deploy/index.md
+    - OpenClaw VPS 部署: "deploy/OpenClaw-VPS部署实录.md"
+  - 学习笔记:
+    - notes/index.md
+    - Context Engineering: "notes/Context-Engineering上下文工程.md"
+  - 精选阅读:
+    - reading-lists/index.md
+    - AI Agent 实践: "reading-lists/AI-Agent实践.md"
+    - AI 编程: "reading-lists/AI编程.md"
+    - AI 认知与趋势: "reading-lists/AI认知与趋势.md"
+    - AI 学术与前沿: "reading-lists/AI学术与前沿.md"
+    - AI 多模态: "reading-lists/AI多模态.md"
+    - OpenClaw: "reading-lists/OpenClaw.md"
 
 extra:
   social:
