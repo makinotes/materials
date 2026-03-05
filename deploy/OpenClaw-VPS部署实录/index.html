@@ -2255,7 +2255,7 @@
 </tr>
 <tr>
 <td>IP</td>
-<td>149.28.130.118</td>
+<td><YOUR_VPS_IP></td>
 </tr>
 <tr>
 <td>IM 频道</td>
@@ -2376,7 +2376,7 @@
 <h3 id="ssh">SSH 快捷连接</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># ~/.ssh/config</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Host<span class="w"> </span>openclaw
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>HostName<span class="w"> </span><span class="m">149</span>.28.130.118
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>HostName<span class="w"> </span>&lt;YOUR_VPS_IP&gt;
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>User<span class="w"> </span>root
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/vultr_openclaw
 </code></pre></div>
@@ -2939,7 +2939,7 @@
 </table>
 <p><strong><code>.zshrc</code> alias 改造</strong>：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 走 Vultr SGP SOCKS5 代理</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">cc</span><span class="o">=</span><span class="s1">&#39;cd &quot;/Users/makino/Desktop/claude code&quot; &amp;&amp; ALL_PROXY=socks5://127.0.0.1:1090 claude&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">cc</span><span class="o">=</span><span class="s1">&#39;cd &quot;~/workspace&quot; &amp;&amp; ALL_PROXY=socks5://127.0.0.1:1090 claude&#39;</span>
 </code></pre></div></p>
 <p><strong>验证</strong>：<code>curl --socks5 127.0.0.1:1090 https://ipinfo.io</code> 应返回新加坡 IP。</p>
 <h3 id="3x-ui">3x-ui 管理面板安全加固</h3>
@@ -2963,17 +2963,17 @@
 <tbody>
 <tr>
 <td>FearDesk</td>
-<td>http://175.178.108.118:8088</td>
+<td>http://<YOUR_CLOUD_IP>:8088</td>
 <td>100%</td>
 </tr>
 <tr>
 <td>wechat2rss</td>
-<td>http://175.178.108.118:8080</td>
+<td>http://<YOUR_CLOUD_IP>:8080</td>
 <td>~94%（偶尔超时）</td>
 </tr>
 <tr>
 <td>wewe-rss</td>
-<td>http://175.178.108.118:4000</td>
+<td>http://<YOUR_CLOUD_IP>:4000</td>
 <td>100%</td>
 </tr>
 </tbody>
@@ -2992,11 +2992,11 @@
 <tbody>
 <tr>
 <td>Bot</td>
-<td>@makino_monitor_bot</td>
+<td>@your_bot_name</td>
 </tr>
 <tr>
 <td>Chat ID</td>
-<td>8524851579</td>
+<td><code>&lt;YOUR_CHAT_ID&gt;</code></td>
 </tr>
 <tr>
 <td>通知范围</td>
