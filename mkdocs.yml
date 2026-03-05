@@ -27,6 +27,9 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
+hooks:
+  - hooks/update_dates.py
+
 plugins:
   - search:
       lang:
