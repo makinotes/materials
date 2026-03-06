@@ -1080,7 +1080,68 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#03-06-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03-06 飞书官方插件升级 + Cron 修复
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03-06 飞书官方插件升级 + Cron 修复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        插件能力覆盖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        踩坑
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        给新手的补充建议
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
     <span class="md-ellipsis">
       
         本地文档
@@ -2183,7 +2244,68 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#03-06-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03-06 飞书官方插件升级 + Cron 修复
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03-06 飞书官方插件升级 + Cron 修复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        插件能力覆盖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        踩坑
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        给新手的补充建议
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
     <span class="md-ellipsis">
       
         本地文档
@@ -3053,7 +3175,122 @@
 <li><strong>Telegram Bot 做告警比飞书方便</strong>，个人版飞书没有自定义机器人，Telegram BotFather 秒建</li>
 </ol>
 <hr />
-<h2 id="_20">本地文档</h2>
+<h2 id="03-06-cron">03-06 飞书官方插件升级 + Cron 修复</h2>
+<blockquote>
+<p>从 stock feishu 插件（v2026.3.2，社区维护）升级到官方 <code>@larksuiteoapi/feishu-openclaw-plugin</code>（v2026.3.6）。
+能力从"纯消息通道"扩展为"飞书办公操作系统入口"。</p>
+</blockquote>
+<h3 id="_20">核心变更</h3>
+<ol>
+<li><strong>安装官方飞书插件</strong>：<code>npm install -g @larksuiteoapi/feishu-plugin-onboard &amp;&amp; feishu-plugin-onboard install</code></li>
+<li><strong>飞书开放平台配置</strong>：导入 70+ 权限（Playwright 自动化）、事件订阅、回调配置、版本发布 1.0.3</li>
+<li><strong>修复 <code>tools.profile</code></strong>：从 <code>messaging</code> 改为 <code>full</code>（否则飞书工具无法加载）</li>
+<li><strong>用户授权</strong>：69 个权限分 2 批授权（<code>/feishu auth</code>）</li>
+<li><strong>Cron 修复</strong>：<code>market-open-flash</code> timeout 从 120s 提到 180s（超时导致报错）</li>
+</ol>
+<h3 id="_21">插件能力覆盖</h3>
+<table>
+<thead>
+<tr>
+<th>能力域</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IM/聊天</td>
+<td>收发消息、搜索历史、下载图片文件</td>
+</tr>
+<tr>
+<td>日历</td>
+<td>日程 CRUD、参会人管理、忙闲查询</td>
+</tr>
+<tr>
+<td>任务</td>
+<td>任务/清单/子任务/评论</td>
+</tr>
+<tr>
+<td>多维表格</td>
+<td>建库建表、记录 CRUD、字段视图管理</td>
+</tr>
+<tr>
+<td>云文档</td>
+<td>读取/创建/更新飞书文档、评论</td>
+</tr>
+<tr>
+<td>知识库</td>
+<td>Wiki 空间和节点管理</td>
+</tr>
+<tr>
+<td>云空间</td>
+<td>列文件、上传下载</td>
+</tr>
+<tr>
+<td>搜索</td>
+<td>搜索文档和知识库</td>
+</tr>
+</tbody>
+</table>
+<p>插件自带 9 个 Skill（bitable/calendar/create-doc/fetch-doc/im-read/task/channel-rules/troubleshoot/update-doc）。</p>
+<h3 id="_22">踩坑</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>问题</th>
+<th>解决</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td><code>feishu-plugin-onboard install</code> 交互式提示，SSH 管道不可靠</td>
+<td>Python 脚本直接改 JSON</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>tools.profile: messaging</code> 限制工具加载</td>
+<td>改为 <code>full</code></td>
+</tr>
+<tr>
+<td>19</td>
+<td>Monaco 编辑器 overlay 拦截 Playwright 点击</td>
+<td><code>focus()</code> + <code>Meta+a</code> + clipboard API</td>
+</tr>
+<tr>
+<td>20</td>
+<td>权限模板 CDN URL 变更</td>
+<td>从更新后的文档获取新 URL</td>
+</tr>
+<tr>
+<td>21</td>
+<td>JSON 粘贴与旧内容拼接</td>
+<td>先全选清空再粘贴</td>
+</tr>
+<tr>
+<td>22</td>
+<td>授权后首次 API 调用被拦（token 缓存）</td>
+<td>重试一次即可</td>
+</tr>
+<tr>
+<td>23</td>
+<td><code>market-open-flash</code> cron 超时（120s 不够）</td>
+<td>改为 180s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_23">给新手的补充建议</h3>
+<ol>
+<li><strong>官方飞书插件比 stock 插件强太多</strong>，覆盖文档/日历/任务/多维表格全套</li>
+<li><strong>装完插件必须改 <code>tools.profile</code> 为 <code>full</code></strong></li>
+<li><strong>飞书权限分 tenant 和 user 两类</strong>，user 权限需用户在飞书中 <code>/feishu auth</code> 单独授权</li>
+<li><strong>版本发布选"免审核"</strong>，个人应用秒过</li>
+<li><strong>Playwright 操作 Monaco 编辑器</strong>要用 <code>focus()</code> + 键盘快捷键 + clipboard API</li>
+<li><strong>cron 任务 timeout 统一设 180s</strong>，7 个 RSS feed + LLM 分析需要 90-150s</li>
+<li><strong>用户授权后首次 API 调用可能失败</strong>，token 缓存有延迟，重试即可</li>
+</ol>
+<hr />
+<h2 id="_24">本地文档</h2>
 <table>
 <thead>
 <tr>
