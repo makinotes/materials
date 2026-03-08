@@ -1151,6 +1151,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-03-08-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-08 系统优化（飞书文档双写 + 文档体系补强 + cron 升级）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-08 系统优化（飞书文档双写 + 文档体系补强 + cron 升级）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        飞书文档写入权限打通
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        飞书文档双写机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron 脚本升级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文档体系补强
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据流全景（当前架构）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2315,6 +2387,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-03-08-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-08 系统优化（飞书文档双写 + 文档体系补强 + cron 升级）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-08 系统优化（飞书文档双写 + 文档体系补强 + cron 升级）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        飞书文档写入权限打通
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        飞书文档双写机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron 脚本升级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文档体系补强
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据流全景（当前架构）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3309,6 +3453,104 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="2026-03-08-cron">2026-03-08 系统优化（飞书文档双写 + 文档体系补强 + cron 升级）</h2>
+<h3 id="_25">飞书文档写入权限打通</h3>
+<p><strong>问题</strong>：cron 脚本需要把输出归档到飞书文档，但 Bot 没有文档写入权限。</p>
+<p><strong>解决过程</strong>：</p>
+<ol>
+<li>飞书开发者控制台启用 5 个 API scope：<code>docx:document</code>、<code>docx:document:create</code>、<code>docx:document:write_only</code>、<code>docx:document.block:convert</code>、<code>drive:drive</code></li>
+<li>Bot 无法通过搜索添加为文档协作者（个人版限制）</li>
+<li>Workaround：将文档设为「互联网获得链接的人可编辑」</li>
+<li>写入 API：<code>POST /docx/v1/documents/{doc_id}/blocks/{doc_id}/children</code></li>
+</ol>
+<p><strong>踩坑 #31：飞书个人版三层权限模型</strong></p>
+<p>飞书文档写入需要三层权限全通：</p>
+<ul>
+<li><strong>API scope</strong>（开发者后台）→ 控制哪些 API 可调用</li>
+<li><strong>文档共享权限</strong> → 控制 Bot 能访问哪些文档</li>
+<li><strong>tenant_access_token</strong> → 请求认证</li>
+</ul>
+<p>个人版 Bot 不能通过用户搜索添加为协作者，只能通过设置文档公开链接权限解决。</p>
+<h3 id="_26">飞书文档双写机制</h3>
+<p><strong>规则</strong>：凡写飞书文档，必须同时写本地 <code>shared/</code> markdown 备份。</p>
+<p><strong>实现</strong>：内置到 <code>scripts/feishu_doc_append.py</code> 的 <code>_sync_local()</code>，调用方无需额外处理。飞书写入失败时仍写本地（保底）。</p>
+<p><strong>注册表维护</strong>：新增飞书文档时，需在 <code>feishu_doc_append.py</code> 的 <code>DOC_LOCAL_MAP</code> 和 <code>export_feishu_doc.py</code> 的 <code>DOCS</code> 两处同步注册。</p>
+<h3 id="cron_1">Cron 脚本升级</h3>
+<table>
+<thead>
+<tr>
+<th>脚本</th>
+<th>改动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ai_radar.py</td>
+<td>新增飞书文档归档（双写）</td>
+</tr>
+<tr>
+<td>options_radar.py</td>
+<td>重写信源：Reddit RSS 直抓 r/options + r/wsb（替代 DDG 间接），新增双写</td>
+</tr>
+<tr>
+<td>github-trending-crawler.py</td>
+<td>从 requests 库改为标准库 urllib，新增双写</td>
+</tr>
+<tr>
+<td>feishu_doc_append.py</td>
+<td>新增 <code>_sync_local()</code> 自动本地备份</td>
+</tr>
+<tr>
+<td>export_feishu_doc.py</td>
+<td>DOCS 注册表新增 3 个文档</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_27">文档体系补强</h3>
+<p>运营几天后发现的问题：Bot 回复状态模糊（"好""我继续"没有信息量）、内容写错容器（旅行攻略写进养虾实录）。系统性修复：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>改动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOUL.md</td>
+<td>新增「做事规矩」：状态汇报三种状态表、容器纪律写入前三问、任务闭环 5 条铁律、写入质量回读验证</td>
+</tr>
+<tr>
+<td>IDENTITY.md</td>
+<td>补充性格特质：自称方式、犯错态度、吐槽分寸</td>
+</tr>
+<tr>
+<td>MEMORY.md</td>
+<td>新增 AI/技术知识库，平衡投资/AI/认知三方向</td>
+</tr>
+<tr>
+<td>AGENTS.md</td>
+<td>Memory 归档规则、写入三问+翻车记录、碎片收集强化、承诺管理「绝对禁止」清单</td>
+</tr>
+<tr>
+<td>self-improvements.md</td>
+<td>从日记改为硬规则索引（错误→原因→规则）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>踩坑 #32：Agent 状态汇报必须结构化</strong></p>
+<p>"好""我继续""收到"这类回复没有任何信息量。必须强制三选一：「正在做，预计 X 分钟」/「后台在跑，好了告诉你」/「做完了：[结果]」。</p>
+<p><strong>踩坑 #33：容器写错比不写更危险</strong></p>
+<p>写入前必须做三问：内容主题是什么→对应哪个容器→目标文件匹配吗。不匹配就停下来找对的文件。</p>
+<h3 id="_28">数据流全景（当前架构）</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>信息输入（飞书对话）
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  → 碎片分流（AGENTS.md 决策树，10 种输入类型）
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  → 任务执行（5 个 cron + 飞书指令）
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  → 产出双写（飞书文档 + shared/ md）
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  → 同步到本地（sync_openclaw_shared.sh，每日 08:20 随简报流水线）
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  → 本地消费（CC 读 openclaw/shared/）
+</code></pre></div>
 
 
 
