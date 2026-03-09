@@ -12,7 +12,7 @@
         <meta name="author" content="makino">
       
       
-        <link rel="canonical" href="https://makinote.cn/materials/deploy/OpenClaw-VPS%E9%83%A8%E7%BD%B2%E5%AE%9E%E5%BD%95/">
+        <link rel="canonical" href="https://makinote.cn/materials/deploy/OpenClaw-%E5%85%BB%E8%99%BE%E5%AE%9E%E5%BD%95/">
       
       
         <link rel="prev" href="../">
@@ -29,7 +29,7 @@
     
     
       
-        <title>OpenClaw VPS 部署 - makino's materials</title>
+        <title>OpenClaw 养虾实录 - makino's materials</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openclawvps" class="md-skip">
+        <a href="#openclaw" class="md-skip">
           跳转至
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenClaw VPS 部署
+              OpenClaw 养虾实录
             
           </span>
         </div>
@@ -347,7 +347,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw VPS 部署
+    OpenClaw 养虾实录
   
 
     
@@ -365,7 +365,7 @@
   <span class="md-ellipsis">
     
   
-    OpenClaw VPS 部署
+    OpenClaw 养虾实录
   
 
     
@@ -679,7 +679,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#openclaw" class="md-nav__link">
+  <a href="#openclaw_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         OpenClaw 配置文件
@@ -1214,6 +1214,67 @@
     <span class="md-ellipsis">
       
         数据流全景（当前架构）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-09tavily-firecrawl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-09：工具集成——Tavily + Firecrawl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-09：工具集成——Tavily + Firecrawl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么加这两个
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron-7-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron 精简：7 → 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        搜索能力分层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        教训
       
     </span>
   </a>
@@ -1943,7 +2004,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#openclaw" class="md-nav__link">
+  <a href="#openclaw_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         OpenClaw 配置文件
@@ -2489,6 +2550,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-03-09tavily-firecrawl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-09：工具集成——Tavily + Firecrawl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-09：工具集成——Tavily + Firecrawl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么加这两个
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron-7-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron 精简：7 → 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        搜索能力分层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        教训
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2509,7 +2631,7 @@
   
 
 
-<h1 id="openclawvps">OpenClaw（小龙虾）VPS 部署实录</h1>
+<h1 id="openclaw">OpenClaw（小龙虾）养虾实录</h1>
 <blockquote>
 <p>部署日期：2026-03-04
 部署人：makino
@@ -2735,7 +2857,7 @@
 <li><strong>耗时</strong>：~30 秒</li>
 </ul>
 <hr />
-<h3 id="openclaw">OpenClaw 配置文件</h3>
+<h3 id="openclaw_1">OpenClaw 配置文件</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// ~/.openclaw/openclaw.json 核心结构</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;models&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3576,11 +3698,66 @@
 <h3 id="_28">数据流全景（当前架构）</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>信息输入（飞书对话）
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  → 碎片分流（AGENTS.md 决策树，10 种输入类型）
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  → 任务执行（5 个 cron + 飞书指令）
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  → 任务执行（2 个 cron + 飞书指令）
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  → 产出双写（飞书文档 + shared/ md）
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  → 同步到本地（sync_openclaw_shared.sh，每日 08:20 随简报流水线）
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  → 本地消费（CC 读 openclaw/shared/）
 </code></pre></div>
+<hr />
+<h2 id="2026-03-09tavily-firecrawl">2026-03-09：工具集成——Tavily + Firecrawl</h2>
+<h3 id="_29">为什么加这两个</h3>
+<p>之前的搜索能力是 multi-search-engine（17 引擎聚合，免费但浅）+ web-reader（读网页正文）。两个短板：</p>
+<ol>
+<li><strong>搜出来的东西太浅</strong>：搜索引擎返回标题+摘要，判断素材质量全靠猜</li>
+<li>
+<p><strong>JS 重的页面读不动</strong>：web-reader 遇到 SPA/动态加载就废了</p>
+</li>
+<li>
+<p><strong>Tavily</strong>：AI 语义搜索，返回结构化结果 + AI summary，免费 1000 次/月</p>
+</li>
+<li><strong>Firecrawl</strong>：专业爬虫 API，什么页面都能抓成干净 markdown，还能整站爬、结构化提取</li>
+</ol>
+<h3 id="cron-7-2">Cron 精简：7 → 2</h3>
+<p>不是"加了两个工具"，而是借机会重构信息管线。</p>
+<p>之前 7 个 cron 各管各的（隔夜消息、盘前异动、开盘速报、RSS 扫描、AI日报、AI周报、交易雷达），碎片化严重。</p>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>频率</th>
+<th>管线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>交易信息面</strong></td>
+<td>工作日 08:00</td>
+<td>RSS 快扫 → Tavily 深搜信号 → Stock Lookup 补数据 → Firecrawl 读全文</td>
+</tr>
+<tr>
+<td><strong>AI逮虾户雷达</strong></td>
+<td>每天 09:00（周一含周报）</td>
+<td>Tavily 语义搜索 → blogwatcher RSS → Firecrawl 深读 → 输出</td>
+</tr>
+</tbody>
+</table>
+<p>核心思路：<strong>每个 cron 是一条完整的信息处理管线（发现→筛选→深读→输出），不是单点工具调用</strong>。</p>
+<h3 id="_30">搜索能力分层</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Tavily = 主力搜索（语义 + AI answer，深度调研）
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>multi-search-engine = 快速查询 / 中文内容（备选）
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Firecrawl = 全文抓取（精选条目深读）
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>news-feeds = RSS 快讯（金融新闻）
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>stock-lookup = 实时数据（行情）
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>agent-browser = 最后手段（被墙 / 需交互）
+</code></pre></div>
+<h3 id="_31">教训</h3>
+<ul>
+<li><strong>工具不是越多越好，关键是串成管线</strong>。7 个碎片化 cron 不如 2 个完整管线</li>
+<li><strong>新工具等有明确痛点再加</strong>，不是"看起来不错先装上"</li>
+<li><strong>API Key 统一管理</strong>：systemd 环境变量，不散落在 .bashrc / .env / 脚本里</li>
+</ul>
+<p><strong>踩坑 #34：feishu_doc_append.py 中文 URL 编码</strong></p>
+<p>脚本第一个参数必须传 <code>doc_id</code>（如 <code>GuOEd0zhgoMtqsx4pMac0CmGnCc</code>），不能传中文文档名。Python <code>urllib</code> 的 <code>Request</code> 会对 URL 做 ascii 编码，中文字符直接报 <code>UnicodeEncodeError</code>。</p>
 
 
 
