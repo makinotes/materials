@@ -56,7 +56,8 @@ nav:
   - Home: index.md
   - 部署实录:
     - deploy/index.md
-    - OpenClaw VPS 部署: "deploy/OpenClaw-VPS部署实录.md"
+    - OpenClaw 养虾实录: "deploy/OpenClaw-养虾实录.md"
+    - 给家人部署 AI 助手: "deploy/OpenClaw-Family-Bot-Setup.md"
   - 学习笔记:
     - notes/index.md
     - Context Engineering: "notes/Context-Engineering上下文工程.md"
